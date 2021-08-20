@@ -1,0 +1,152 @@
+.header {
+  padding-top: 20px;
+  position: fixed;
+  background-color: transparent;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 16px;
+  color: $black;
+  .frosted {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $white;
+    border-radius: 15px;
+    padding: 29px 44px;
+  }
+
+  &__nav{
+    flex-grow: 1;
+  }
+
+  &__logo {
+    position: relative;
+    display: block;
+    max-width: 202px;
+    padding-right: 47px;
+    &:after{
+      position: absolute;
+      content: '';
+      display: block;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $white;
+      width: 1px;
+      height: 46px;
+      z-index: 1;
+    }
+  }
+
+  &__logo-site{
+    display: block;
+    max-width: 132px;
+    margin-left: 48px;
+  }
+
+  .btn-burger {
+    border: none;
+    background-color: transparent;
+    display: none;
+    padding: 5px;
+    width: 31px;
+    height: 27px;
+
+    .line {
+      display: block;
+      width: 21px;
+      height: 1px;
+      margin-bottom: 7px;
+      background-color: #707070;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .btn-close {
+    position: absolute;
+    right: 24px;
+    top: 40px;
+    border: none;
+    background-color: transparent;
+    display: none;
+    background-image: url(../assets/img/svg/btnClose.svg);
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  &__nav-bar{
+    display: none;
+  }
+
+  .switch-lang{
+    margin-left: 20px;
+  }
+
+  @include respond-to($md) {
+
+    .btn-close,
+    .btn-burger ,
+    &__nav-bar {
+      display: block;
+    }
+    .header__nav {
+      padding: 40px 37px 40px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      max-width: 380px;
+      width: 100%;
+      background-color: #fff;
+      min-height: 475px;
+      text-align: left;
+      transition: transform .5s;
+      transform: translateX(100%);
+      z-index: 999;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      .menu {
+        flex-direction: column;
+
+        &__item {
+          font-size: 22px;
+          margin-bottom: 20px;
+          padding-left: 0;
+          margin-left: 0;
+
+          &:before {
+            display: none;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .2;
+  z-index: 500;
+}
+
+

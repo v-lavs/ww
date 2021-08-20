@@ -1,0 +1,67 @@
+body {
+  font: 400 16px $main-font;
+
+}
+
+.frosted{
+  background: rgba(255, 255, 255, 0.6);
+}
+@supports (backdrop-filter: none) {
+  .frosted {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+  }
+}
+.wrapper {
+  overflow: hidden;
+}
+
+.hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.text_uppercase{
+  text-transform: uppercase;
+}
+.color_white{
+  color: $white;
+}
+
+.section{
+  &__heading{
+    position: relative;
+    padding-bottom: 50px;
+    &:after{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 271px;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      border-width: 3px;
+      border-style: solid;
+      border-image: linear-gradient(to right, rgba(0, 0, 0, 0) , #ffffff , rgba(0, 0, 0, 0)) 0 0 100% 0;
+
+    }
+    .icon-logo{
+      max-width: 512px;
+      display: block;
+      margin: -10px auto 0;
+    }
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+
+  }
+}
+

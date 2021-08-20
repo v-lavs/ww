@@ -1,0 +1,22 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1;
+  color: $black;
+  &__item {
+    padding: 5px 22px;
+  }
+
+  &__link {
+    display: inline-block;
+    transition: .35s;
+
+    &:hover,
+    &:focus {
+      -webkit-text-stroke: .5px $black;
+      text-shadow: 0 0 2px #D8E7F2;
+    }
+  }
+}

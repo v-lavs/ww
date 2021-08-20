@@ -1,0 +1,25 @@
+.heading {
+
+  &_big {
+    font-size: 120px;
+  }
+
+  &_xl {
+    font-size: 70px;
+  }
+
+  &_lg {
+    font-size: 44px;
+  }
+}
+
+.text{
+  &_huge{
+    font-size: 144px;
+    line-height: .5;
+  }
+  &_big{
+    font-size: 90px;
+  }
+}
+

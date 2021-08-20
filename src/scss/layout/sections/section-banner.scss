@@ -1,0 +1,38 @@
+.section-banner{
+  position: relative;
+  padding-top: 120px;
+  min-height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:before,
+  &:after{
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  &:before{
+    top: 0;
+    height: 30%;
+    background: linear-gradient(180deg, #9BE2EF -97.22%, #9BE2EF -97.2%, rgba(155, 226, 239, 0) 86.51%);
+  }
+  &:after{
+    bottom: 0;
+    height: 22%;
+    background: linear-gradient(180deg, rgba(37, 163, 229, 0) 0%, #25A3E5 100%);
+  }
+
+  &__slogan{
+    width: 100%;
+    max-width: 670px;
+    font-size: 64px;
+    font-weight: 700;
+    color: $blue;
+    line-height: .95;
+    margin-bottom: 60px;
+    text-shadow: 0 4px 15px rgba(134, 200, 234, 0.25);
+  }
+}

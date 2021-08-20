@@ -1,0 +1,21 @@
+//swiper pagination-bullets
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 0;
+  z-index: 10;
+}
+.swiper-pagination-bullets .swiper-pagination-bullet{
+  width: 13px;
+  height: 13px;
+  background-color: transparent;
+  //border: 1px solid $warning;
+  margin: 0 7px;
+  opacity: 1;
+  &.swiper-pagination-bullet-active{
+    //background-color: $warning;
+  }
+}
+
+.swiper-container-initialized .swiper-wrapper {
+  flex-wrap: nowrap!important;
+}
