@@ -1,0 +1,21 @@
+.selection-drug {
+  padding-top: 77px;
+  padding-bottom: 142px;
+
+  .bg-section {
+    min-height: 906px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 188px;
+  }
+
+  .section__heading:after {
+    border-image: linear-gradient(to right, rgba(59, 178, 57, 0), #3BB239, rgba(59, 178, 57, 0)) 0 0 100% 0;
+  }
+
+  .section__text {
+    text-align: center;
+    color: #909090;
+  }
+}

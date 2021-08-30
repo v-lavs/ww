@@ -1,0 +1,55 @@
+.types-cystitis {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 655px;
+  min-height: 400px;
+  height: 100%;
+  padding: 20px 25px;
+  margin: 0 auto 85px;
+  background-image: url(../assets/img/outline-list.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+
+  .card-types {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(222.87deg, #FFFFFF 21%, #F5F5F5 93%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 23px;
+    min-height: 303px;
+    height: 70%;
+    width: 256px;
+    padding: 22px 24px 25px 29px;
+
+    &:nth-child(1) {
+      margin-top: 60px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 60px;
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: 28px;
+      text-align: center;
+      color: $green;
+      min-height: 67px;
+      margin-bottom: 44px;
+    }
+
+    &__content {
+      font-size: 18px;
+      line-height: 18px;
+      color: $black-blue;
+
+      p {
+        margin-bottom: 23px;
+      }
+    }
+  }
+
+}

@@ -6,17 +6,40 @@
   right: 0;
   z-index: 999;
   font-size: 16px;
-  color: $black;
+  color: $black-blue;
+
   .frosted {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     border: 1px solid $white;
     border-radius: 15px;
     padding: 29px 44px;
+    overflow: hidden;
+    background-color: transparent;
+    .container-inner {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+
+    &:before {
+
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      z-index: 2;
+    }
+
   }
 
-  &__nav{
+  &__nav {
     flex-grow: 1;
   }
 
@@ -25,7 +48,8 @@
     display: block;
     max-width: 202px;
     padding-right: 47px;
-    &:after{
+
+    &:after {
       position: absolute;
       content: '';
       display: block;
@@ -39,7 +63,7 @@
     }
   }
 
-  &__logo-site{
+  &__logo-site {
     display: block;
     max-width: 132px;
     margin-left: 48px;
@@ -82,22 +106,22 @@
     background-size: cover;
   }
 
-  &__nav-bar{
+  &__nav-bar {
     display: none;
   }
 
-  .switch-lang{
+  .switch-lang {
     margin-left: 20px;
   }
 
   @include respond-to($md) {
 
     .btn-close,
-    .btn-burger ,
+    .btn-burger,
     &__nav-bar {
       display: block;
     }
-    .header__nav {
+    &__nav {
       padding: 40px 37px 40px;
       position: fixed;
       right: 0;

@@ -1,0 +1,40 @@
+.page{
+  background-color: #fbf7fd;
+  &__heading{
+    display: flex;
+    align-items: center;
+    max-width: 1269px;
+    margin: 0 auto 120px;
+    width: 100%;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    min-height: 184px;
+    padding: 47px 47px 47px 105px;
+
+    @supports (backdrop-filter: none) {
+      &.frosted {
+        backdrop-filter: blur(5px);
+      }
+    }
+
+  }
+  &__title{
+    position: relative;
+    width: 38%;
+    padding: 0 32px;
+    color: $blue-100;
+    line-height: 1;
+    flex-shrink: 0;
+    &:before{
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 7px;
+      height: 90px;
+      background-color: $blue-100;
+      z-index: 1;
+    }
+  }
+}

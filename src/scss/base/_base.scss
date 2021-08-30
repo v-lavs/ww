@@ -1,19 +1,35 @@
 body {
-  font: 400 16px $main-font;
+  font: 400 18px $main-font;
 
 }
-
-.frosted{
+.body_bg{
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '';
+    background-image: url(../assets/img/bg-soty.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    min-height: 1005px;
+    z-index: 0;
+  }
+}
+.frosted {
   background: rgba(255, 255, 255, 0.6);
 }
+
 @supports (backdrop-filter: none) {
   .frosted {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
   }
 }
+
+
 .wrapper {
-  overflow: hidden;
 }
 
 .hide {
@@ -27,18 +43,39 @@ body {
   border: 0;
 }
 
-.text_uppercase{
+.d_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_uppercase {
   text-transform: uppercase;
 }
-.color_white{
+
+.color_white {
   color: $white;
 }
 
-.section{
-  &__heading{
+.color_green{
+  color: $green-100;
+}
+
+.page{
+  padding-top: 208px;
+}
+.blog{
+  padding-top: 134px;
+}
+
+.section {
+  &__heading {
     position: relative;
+    display: flex;
+    justify-content: center;
     padding-bottom: 50px;
-    &:after{
+
+    &:after {
       position: absolute;
       content: '';
       display: block;
@@ -48,20 +85,63 @@ body {
       transform: translateX(-50%);
       border-width: 3px;
       border-style: solid;
-      border-image: linear-gradient(to right, rgba(0, 0, 0, 0) , #ffffff , rgba(0, 0, 0, 0)) 0 0 100% 0;
+      border-image: linear-gradient(to right, rgba(0, 0, 0, 0), #ffffff, rgba(0, 0, 0, 0)) 0 0 100% 0;
 
     }
-    .icon-logo{
+
+    .wrap-content {
+      display: inline-block;
+    }
+
+    .icon-logo {
       max-width: 512px;
       display: block;
       margin: -10px auto 0;
     }
   }
-  &__title{
+
+  &__title {
     font-weight: 700;
     font-size: 38px;
-    text-align: center;
+    text-align: right;
+    padding-right: 30px;
 
+  }
+}
+
+.card-mob {
+  background: linear-gradient(222.87deg, #FFFFFF 21.75%, #F5F5F5 93.36%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 23px;
+}
+
+.dynamic-content {
+  p{
+    font-size: 16px;
+    margin-bottom: 26px;
+  }
+
+  ul {
+    padding-left: 14px;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      line-height: 1.13;
+      margin-bottom: 5px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $black-blue;
+        left: 0;
+        top: 5%;
+        transform: translateY(-50%);
+      }
+    }
   }
 }
 

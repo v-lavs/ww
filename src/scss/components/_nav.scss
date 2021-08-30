@@ -4,7 +4,7 @@
   width: 100%;
   font-size: 16px;
   line-height: 1;
-  color: $black;
+  color: $black-blue;
   &__item {
     padding: 5px 22px;
   }
@@ -15,7 +15,7 @@
 
     &:hover,
     &:focus {
-      -webkit-text-stroke: .5px $black;
+      -webkit-text-stroke: .5px $black-blue;
       text-shadow: 0 0 2px #D8E7F2;
     }
   }

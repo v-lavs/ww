@@ -1,0 +1,50 @@
+.single-article {
+  .inner-content {
+    width: 100%;
+    padding: 0 11.5%;
+  }
+}
+
+.article {
+  padding-top: 95px;
+  padding-bottom: 54px;
+  &__header {
+    position: relative;
+    padding-bottom: 30px;
+    color: $black-blue;
+    margin-bottom: 58px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100px;
+      height: 2px;
+      background-color: #24243F;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+
+    .heading {
+      text-align: center;
+      max-width: 895px;
+      margin: 0 auto;
+    }
+  }
+
+  &__thumb {
+    width: 100%;
+    display: block;
+    height: auto;
+    margin-bottom: 76px;
+    border-radius: 10px;
+  }
+  .card-post__author{
+    padding-top: 24px;
+  }
+  .card-post__avatar{
+    width: 60px;
+    height: 60px;
+  }
+}

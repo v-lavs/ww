@@ -1,0 +1,20 @@
+.section-related-post{
+  .section__header{
+    border-bottom: 1px solid #C8C8C8;
+    padding-bottom: 20px;
+    margin-bottom: 14px;
+  }
+
+}
+.related-post{
+  padding-bottom: 0;
+  .card-post{
+    &__date{
+      font-size: 13px;
+      font-family: $secondary-font;
+    }
+    &__thumb{
+      min-height: 193px;
+    }
+  }
+}

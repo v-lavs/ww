@@ -4,12 +4,12 @@
   max-width: 1430px;
   padding: 0 15px;
   margin: 0 auto;
-  @include respond-to($laptop-md){
-    max-width: 1240px;
-  }
-  @include respond-to($laptop){
-    max-width: 1120px;
-  }
+  //@include respond-to($laptop-md){
+  //  max-width: 1240px;
+  //}
+  //@include respond-to($laptop){
+  //  max-width: 1120px;
+  //}
   @include respond-to($lg){
     max-width: 940px;
   }

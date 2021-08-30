@@ -9,6 +9,12 @@
 @import 'components/nav';
 @import 'components/slider';
 @import 'components/form';
+@import 'components/pagination';
+@import 'components/widget-share';
+@import 'components/block-more-info';
+@import 'components/card-post';
+@import 'components/card-drug';
+@import 'components/types-cystitis';
 
 
 @import 'layout/layout';
@@ -17,9 +23,19 @@
 @import 'layout/footer';
 @import 'layout/sections/section-banner';
 @import 'layout/sections/section-help';
+@import 'layout/sections/section-slider';
+@import 'layout/sections/section-reason';
+@import 'layout/sections/symptoms';
+@import 'layout/sections/consequences';
+@import 'layout/sections/type-disease';
+@import 'layout/sections/section-related-post';
+@import 'layout/sections/section-members';
+@import 'layout/sections/selection-drug';
 
 
-//@import 'pages/page-service';
+@import 'pages/blog';
+@import 'pages/single-article';
+@import 'pages/page';
 
 
 

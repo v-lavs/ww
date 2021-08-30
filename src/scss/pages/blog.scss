@@ -1,0 +1,31 @@
+.blog {
+  padding-bottom: 79px;
+  background-color: #E5E5E5;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.link-back {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  color: $black-blue;
+}
+
+.icon-back {
+  width:24px;
+  height:24px;
+  margin-right: 12px;
+}
+
+.page-count{
+  font-size: 12px;
+  color: #999CA0;
+  .dark-text{
+    font-weight: 700;
+    color: $black-blue;
+  }
+}

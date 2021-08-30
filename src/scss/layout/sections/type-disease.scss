@@ -1,0 +1,95 @@
+.types-disease {
+  &__inner {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__header {
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(188, 229, 251, 0.75);
+    padding: 47px 30px 110px;
+    border-radius: 110px;
+  }
+
+  &__heading {
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    color: $green-100;
+    .strong{
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+  }
+}
+
+.disease-list {
+  display: flex;
+  justify-content: center;
+  margin-top: -80px;
+
+  &__item {
+    width: 30.33%;
+    text-align: center;
+    background-color: transparent;
+    padding: 0 25px;
+
+    &:nth-of-type(2n) {
+      .disease-bg {
+        background-image: url(../assets/img/svg/ureterolithiasis.svg),
+        linear-gradient(180deg, #F0F83C -10.73%, #2FA02D 118.64%);
+      }
+    }
+
+    &:nth-of-type(3n) {
+      .disease-bg {
+        background-image: url(../assets/img/svg/cystolithiasis.svg),
+        linear-gradient(180deg, #F0F83C -10.73%, #2FA02D 118.64%);
+      }
+    }
+
+  }
+
+  &__icon {
+    position: relative;
+    padding-bottom: 88px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 15px;
+      height: 88px;
+      background-image: url(../assets/img/svg/decor-card-disease.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .disease-bg {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 22px solid #ffffff;
+    box-shadow: 0px 0px 25px rgba(188, 229, 251, 0.75);
+    background-image: url(../assets/img/svg/nephrolitithiasis.svg),
+    linear-gradient(180deg, #F0F83C -10.73%, #2FA02D 118.64%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 88px 68px, contain;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    color: #0088EC;
+     }
+}

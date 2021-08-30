@@ -1,11 +1,16 @@
 
 $white: #ffffff;
-$black: #000000;
-$blue: #0062B3;
+$black-blue: #24243F;
 
+$blue: #0062B3;
+$blue-100: #0088EC;
+$sky-blue: #25A3E5;
+$green: #59CE57;
+$green-100: #3BB239;
 
 
 $main-font: 'Calibri', sans-serif;
+$secondary-font:'Work Sans', sans-serif;
 
 
 // Screen Variables
@@ -15,8 +20,8 @@ $xs: '(max-width: 580px)';
 $sm: '(max-width: 767px)';
 $md: '(max-width: 980px)';
 $lg: '(max-width: 1180px)';
-$laptop: '(max-width: 1360px)';
-$laptop-md: '(max-width: 1440px)';
-$desktop-md: '(max-width: 1680px)';
+//$laptop: '(max-width: 1360px)';
+//$laptop-md: '(max-width: 1440px)';
+//$desktop-md: '(max-width: 1680px)';
 
 

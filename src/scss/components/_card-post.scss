@@ -1,0 +1,116 @@
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -22px;
+  padding-bottom: 65px;
+
+  &__item {
+    width: 30.33%;
+    flex-grow: 1;
+    padding: 44px 45px;
+  }
+}
+
+
+.card-post {
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 0 25px rgba(196, 201, 211, .4);
+
+  &__author {
+    position: relative;
+    color: $black-blue;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    .info-author {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__thumb {
+    position: relative;
+    min-height: 203px;
+    padding: 25px 20px;
+    display: flex;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: content-box;
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: linear-gradient(180deg, rgba(245, 247, 247, 0) 0%, #F5F7F7 100%);
+    }
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin-right: 18px;
+    border-radius: 50%;
+  }
+
+  &__content {
+    padding: 20px;
+
+  }
+
+  &__title {
+    color: $black-blue;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  &__date {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #888E9A;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    color: #999CA0;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    position: relative;
+    font-family: $secondary-font;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0088EC;
+    padding-left: 32px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-image: url(../assets/img/svg/book-open.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
