@@ -1,0 +1,21 @@
+.card-author {
+  &__body {
+    column-count: 2;
+  }
+}
+
+
+.information {
+
+  &__label {
+    font-size: 14px;
+    line-height: 24px;
+    color: #999CA0;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 24px;
+    color: $black-blue;
+  }
+}

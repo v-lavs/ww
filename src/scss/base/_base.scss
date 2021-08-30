@@ -2,9 +2,11 @@ body {
   font: 400 18px $main-font;
 
 }
-.body_bg{
+
+.body_bg {
   position: relative;
-  &:before{
+
+  &:before {
     position: absolute;
     content: '';
     background-image: url(../assets/img/bg-soty.png);
@@ -17,6 +19,7 @@ body {
     z-index: 0;
   }
 }
+
 .frosted {
   background: rgba(255, 255, 255, 0.6);
 }
@@ -57,14 +60,15 @@ body {
   color: $white;
 }
 
-.color_green{
+.color_green {
   color: $green-100;
 }
 
-.page{
+.page {
   padding-top: 208px;
 }
-.blog{
+
+.blog {
   padding-top: 134px;
 }
 
@@ -115,8 +119,39 @@ body {
   border-radius: 23px;
 }
 
+
+.block-buy{
+  position: fixed;
+  right: 24px;
+  top: 343px;
+  width: 82px;
+  z-index: 300;
+  .hexagon {
+    position: relative;
+    width: 82px;
+    height: 98px;
+    background-image: url(../assets/img/svg/buy.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+   }
+  .buy{
+    width: 82px;
+    height: 23px;
+    font-size: 16px;
+    line-height: 1;
+    color: $blue-100;
+    text-align: center;
+    background-image: url(../assets/img/svg/substrare.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 .dynamic-content {
-  p{
+  p {
     font-size: 16px;
     margin-bottom: 26px;
   }
