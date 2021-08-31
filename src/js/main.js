@@ -42,7 +42,9 @@ $(document).ready(function () {
     });
 
     let reasonSlider;
+    let typesSlider;
     const reasonSelector = $('.reason-slider').get(0);
+    const  typesSelector =$('.types-slider').get(0);
 
     function handleResponsive() {
         // DESTROY SLIDER INSTANCES
@@ -57,6 +59,18 @@ $(document).ready(function () {
             }
         } else {
             destroySwiper(reasonSlider);
+        }
+        if ($(window).outerWidth() <= 580) {
+            if (!typesSlider && typesSelector) {
+                typesSlider = new Swiper(".types-slider", {
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+            }
+        } else {
+            destroySwiper(typesSlider);
         }
     }
 

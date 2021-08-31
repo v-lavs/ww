@@ -21,77 +21,82 @@
         position: relative;
 
     }
+
+    .wrapper {
+        overflow: hidden;
+    }
 </style>
 <div class="wrapper">
+
     <header class="header">
 
-            <div class="container bg_frosted">
-                <div class="container-inner">
-                    <a href="index.html" class="header__logo">
-                        <img class="header__logo-img" src="assets/img/svg/logo-site.svg" alt="">
-                    </a>
-                    <nav class="header__nav">
-                        <div class="header__nav-inner">
-                            <button class="btn-close round" aria-label="Закрити"></button>
+        <div class="container bg_frosted">
+            <div class="container-inner">
+                <a href="index.html" class="header__logo">
+                    <img class="header__logo-img" src="assets/img/svg/logo-site.svg" alt="">
+                </a>
+                <nav class="header__nav">
+                    <div class="header__nav-inner">
+                        <button class="btn-close round" aria-label="Закрити"></button>
 
-                            <ul class="menu">
-                                <li class="menu__item">
-                                    <a href="./index.html" class="menu__link">Головна</a>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a href="./index.html" class="menu__link">Головна</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./cystitis.html" class="menu__link">Цистит</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./sand-kidney.html" class="menu__link">Пісок у нирках</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./urolithiasis.html" class="menu__link">Сечокам’яна хвороба</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./pyelonephritis.html" class="menu__link">Пієлонефрит</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./about.html" class="menu__link">Про препарат</a>
+                            </li>
+                        </ul>
+                        <div class="header__nav-bar">
+                            <div class="switch-lang">
+                                <a href="#" class="switch-lang__link active-lang">Укр</a>
+                                <a href="#" class="switch-lang__link">Рус</a>
+                            </div>
+
+                            <ul class="social-list">
+                                <li class="social-list__item">
+                                    <a href="#" class="social-list__link">
+                                        <span class="hide">facebook</span>
+                                        <img class="icon" src="assets/img/svg/facebook.svg" alt="facebook">
+                                    </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a href="./cystitis.html" class="menu__link">Цистит</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="./sand-kidney.html" class="menu__link">Пісок у нирках</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="./urolithiasis.html" class="menu__link">Сечокам’яна хвороба</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="./pyelonephritis.html" class="menu__link">Пієлонефрит</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="./about.html" class="menu__link">Про препарат</a>
+                                <li class="social-list__item">
+                                    <a href="#" class="social-list__link">
+                                        <span class="hide">youtube</span>
+                                        <img class="icon" src="assets/img/svg/youtube.svg" alt="youtube">
+                                    </a>
                                 </li>
                             </ul>
-                            <div class="header__nav-bar">
-                                <div class="switch-lang">
-                                    <a href="#" class="switch-lang__link active-lang">Укр</a>
-                                    <a href="#" class="switch-lang__link">Рус</a>
-                                </div>
-
-                                <ul class="social-list">
-                                    <li class="social-list__item">
-                                        <a href="#" class="social-list__link">
-                                            <span class="hide">youtube</span>
-                                            <img class="icon" src="assets/img/svg/youtube.svg" alt="youtube">
-                                        </a>
-                                    </li>
-                                    <li class="social-list__item">
-                                        <a href="#" class="social-list__link">
-                                            <span class="hide">facebook</span>
-                                            <img class="icon" src="assets/img/svg/facebook.svg" alt="facebook">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-                    </nav>
-
-                    <div class="switch-lang">
-                        <a href="#" class="switch-lang__link">Укр</a>
                     </div>
-                    <a href="#" class="header__logo-site">
-                        <img src="assets/img/svg/logo-arterium.svg" alt="логотип arterium">
-                    </a>
-                    <button type="button" class="btn-burger" aria-label="бургер-меню">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </button>
+                </nav>
 
+                <div class="switch-lang">
+                    <a href="#" class="switch-lang__link">Укр</a>
                 </div>
+                <a href="#" class="header__logo-site">
+                    <img src="assets/img/svg/logo-arterium.svg" alt="логотип arterium">
+                </a>
+                <button type="button" class="btn-burger" aria-label="бургер-меню">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+
             </div>
+        </div>
 
     </header>
     <div class="backdrop"></div>
@@ -101,6 +106,111 @@
     -----------------------------------------------------------------------------------------------
     <br><br><br><br>
     --------------------------------------------------------------------------------------------
+
+    types of cystitis block
+    <div class="container">
+        <div class="swiper-container types-slider">
+            <div class="swiper-wrapper types-cystitis">
+                <div class="swiper-slide card-types">
+                    <h3 class="card-types__title">Гострий <br>
+                        цистит</h3>
+                    <div class="card-types__content">
+                        <p>
+                            Короткі сечовидні шляхи і їх близьке розташування до кишкового виходу;
+                        </p>
+                        <p>
+                            Кишкові бактерії, що потрапляють в січовий міхур через сечівник;
+                        </p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide card-types">
+                    <h3 class="card-types__title">Хронічний
+                        цистит</h3>
+                    <div class="card-types__content">
+                        <p>
+                            Розвивається частіше, ніж три рази на рік або два рази на півріччя;
+                        </p>
+                        <p>
+                            Кишкові бактерії, що потрапляють в січовий міхур через сечівник;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    ---------------------------------------------------------------------------------------
+
+    <section class="section-reason">
+        <div class="container">
+            <div class="section-reason__heading">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <h2 class="section-reason__title">
+                    <span class="text_uppercase ">ПРИЧИНИ</span><br>
+                    які провокують
+                    виникнення
+                    сечокам’яної
+                    хвороби
+                </h2>
+            </div>
+
+            <div class="swiper-container reason-slider">
+                <div class="reason-list swiper-wrapper">
+                    <div class="swiper-slide part part_left">
+                        <div class="reason-list__item reason-list__item_1">
+                            <div class="reason-list__icon"><img src="assets/img/1.png" alt=""></div>
+                            <p>Вживання води з великою кількістю мінералів</p>
+                        </div>
+
+
+                        <div class="reason-list__item reason-list__item_2">
+                            <div class="reason-list__icon"><img src="assets/img/2.png" alt=""></div>
+                            <p>Харчування насичене високобілковими продуктами</p>
+                        </div>
+
+                        <div class="reason-list__item reason-list__item_3">
+                            <div class="reason-list__icon"><img src="assets/img/3.png" alt=""></div>
+                            <p>Дефіцити окремих вітамінів групи В і вітамін А</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide part part_right">
+                        <div class="reason-list__item reason-list__item_4">
+                            <div class="reason-list__icon"><img src="assets/img/4.png" alt=""></div>
+                            <p>Надмірне вживання алкоголю</p>
+                        </div>
+                        <div class="reason-list__item reason-list__item_5">
+                            <div class="reason-list__icon"><img src="assets/img/5.png" alt=""></div>
+                            <p>Прийом деяких ліків не за інструкцією</p>
+                        </div>
+                        <div class="reason-list__item reason-list__item_6">
+                            <div class="reason-list__icon"><img src="assets/img/6.png" alt=""></div>
+                            <p>Звужений просвіт сечовивідних шляхів</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+
     <div class="container">
         <div class="popup">
             <div class="popup__content">
@@ -653,102 +763,6 @@
     <br><br><br><br>
     -----------------------------------------------------------------------------------------------
 
-    <section class="section-reason">
-        <div class="container">
-            <div class="section-reason__heading">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <h2 class="section-reason__title">
-                    <span class="text_uppercase ">ПРИЧИНИ</span><br>
-                    які провокують
-                    виникнення
-                    сечокам’яної
-                    хвороби
-                </h2>
-            </div>
-
-            <div class="swiper-container reason-slider">
-                <div class="reason-list swiper-wrapper">
-                    <div class="swiper-slide part part_left">
-                        <div class="reason-list__item reason-list__item_1">
-                            <div class="reason-list__icon"><img src="assets/img/1.png" alt=""></div>
-                            <p>Вживання води з великою кількістю мінералів</p>
-                        </div>
-
-
-                        <div class="reason-list__item reason-list__item_2">
-                            <div class="reason-list__icon"><img src="assets/img/2.png" alt=""></div>
-                            <p>Харчування насичене високобілковими продуктами</p>
-                        </div>
-
-                        <div class="reason-list__item reason-list__item_3">
-                            <div class="reason-list__icon"><img src="assets/img/3.png" alt=""></div>
-                            <p>Дефіцити окремих вітамінів групи В і вітамін А</p>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide part part_right">
-                        <div class="reason-list__item reason-list__item_4">
-                            <div class="reason-list__icon"><img src="assets/img/4.png" alt=""></div>
-                            <p>Надмірне вживання алкоголю</p>
-                        </div>
-                        <div class="reason-list__item reason-list__item_5">
-                            <div class="reason-list__icon"><img src="assets/img/5.png" alt=""></div>
-                            <p>Прийом деяких ліків не за інструкцією</p>
-                        </div>
-                        <div class="reason-list__item reason-list__item_6">
-                            <div class="reason-list__icon"><img src="assets/img/6.png" alt=""></div>
-                            <p>Звужений просвіт сечовивідних шляхів</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
-    -----------------------------------------------------------------------------------------------
-    <br><br><br><br>
-    --------------------------------------------------------------------------------------------
-
-    types of cystitis block
-
-    <div class="container">
-        <div class="types-cystitis">
-            <div class="card-types">
-                <h3 class="card-types__title">Гострий <br>
-                    цистит</h3>
-                <div class="card-types__content">
-                    <p>
-                        Короткі сечовидні шляхи і їх близьке розташування до кишкового виходу;
-                    </p>
-                    <p>
-                        Кишкові бактерії, що потрапляють в січовий міхур через сечівник;
-                    </p>
-                </div>
-            </div>
-
-            <div class="card-types">
-                <h3 class="card-types__title">Хронічний
-                    цистит</h3>
-                <div class="card-types__content">
-                    <p>
-                        Розвивається частіше, ніж три рази на рік або два рази на півріччя;
-                    </p>
-                    <p>
-                        Кишкові бактерії, що потрапляють в січовий міхур через сечівник;
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    -----------------------------------------------------------------------------------------------
-    <br><br><br><br>
-    --------------------------------------------------------------------------------------------
     page__heading
 
     <div class="page__heading frosted">

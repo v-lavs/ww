@@ -75,15 +75,15 @@
     background-color: transparent;
     display: none;
     padding: 5px;
-    width: 31px;
+    width: 34px;
     height: 27px;
 
     .line {
       display: block;
-      width: 21px;
+      width: 24px;
       height: 1px;
       margin-bottom: 7px;
-      background-color: #707070;
+      background-color: $black-blue;
 
       &:last-child {
         margin-bottom: 0;
@@ -101,13 +101,16 @@
     transform: translateY(-50%);
 
   }
-  .round:before{
+
+  .round:before {
     width: 68px;
     height: 68px;
   }
-  .round:after{
+
+  .round:after {
     transform: translate(-50%, -50%) rotate(0deg);
   }
+
   &__nav-bar {
     display: none;
   }
@@ -131,17 +134,23 @@
     &__nav {
       text-align: center;
     }
-    .menu{
+    .menu {
       font-size: 15px;
     }
   }
   @include respond-to($lg) {
-    .menu{
+    .menu {
       font-size: 14px;
     }
   }
   @include respond-to($md) {
-
+    &__logo {
+      padding-right: 0;
+      max-width: 113px;
+      &:after{
+        display: none;
+      }
+    }
     .btn-close,
     .btn-burger,
     &__nav-bar {
@@ -151,10 +160,11 @@
       position: fixed;
       right: 0;
       top: 0;
+      bottom: 0;
       transition: transform .5s;
       transform: translateX(100%);
       z-index: 999;
-      padding-left: 34px;
+      padding-left: 96px;
       background-color: transparent;
 
       &.open {
@@ -164,9 +174,11 @@
       .menu {
         flex-direction: column;
         font-size: 18px;
+
         &__item {
           margin-bottom: 10px;
           padding-left: 0;
+          padding-right: 0;
           margin-left: 0;
 
           &:before {
@@ -179,26 +191,41 @@
         }
       }
 
-      .social-list{
+      .social-list {
         display: flex;
-        &__item{
+
+        &__item {
           width: 24px;
           height: 24px;
           margin-right: 22px;
-          &:last-child{
+
+          &:last-child {
             margin-right: 0;
           }
         }
+
         &__link {
           display: block;
         }
       }
-      .switch-lang{
+
+      .switch-lang {
         font-size: 18px;
-        margin-right: 18px;
-        &:last-child{
-          margin-right: 0;
+        margin-bottom: 50px;
+        margin-left: 0;
+
+        &__link {
+          margin-right: 18px;
+
+          &:last-child {
+            margin-right: 0;
+          }
         }
+
+        .active-lang {
+          font-weight: 700;
+        }
+
       }
     }
 
@@ -211,6 +238,17 @@
       border-radius: 20px 0 0 20px;
       background-color: #fff;
       text-align: left;
+      height: 100%;
+    }
+    &__logo-site {
+      display: none;
+    }
+    .bg_frosted {
+      padding: 20px 26px;
+    }
+    .switch-lang {
+      margin-right: 22px;
+      margin-left: auto;
     }
   }
 }
