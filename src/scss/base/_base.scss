@@ -1,6 +1,6 @@
 body {
   font: 400 18px $main-font;
-
+  height: 100%;
 }
 
 .body_bg {
@@ -33,6 +33,13 @@ body {
 
 
 .wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
 }
 
 .hide {
@@ -120,12 +127,13 @@ body {
 }
 
 
-.block-buy{
+.block-buy {
   position: fixed;
   right: 24px;
   top: 343px;
   width: 82px;
   z-index: 300;
+
   .hexagon {
     position: relative;
     width: 82px;
@@ -135,8 +143,9 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     overflow: hidden;
-   }
-  .buy{
+  }
+
+  .buy {
     width: 82px;
     height: 23px;
     font-size: 16px;

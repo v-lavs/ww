@@ -1,0 +1,154 @@
+.page-effectiveness {
+  padding-top: 134px;
+  background: url(../assets/img/bg-rounds2.png),
+  linear-gradient(0deg, rgba(251, 254, 255, 0) 0%, #25A3E5 159%),
+  linear-gradient(97deg, #FBFEFF 40%, #E9F4F8 128%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .link-back {
+    margin-bottom: 14px;
+    color: $blue;
+    svg{
+      display: inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+      path {
+        stroke:$blue;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 64px;
+    color: $blue;
+  }
+
+  .col-4 {
+    background-image:url(../assets/img/round-point.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    width: 36%;
+    min-height: 752px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .col-8 {
+    width: 54%;
+
+    flex-grow: 1;
+  }
+  @include respond-to($lg){
+    &__heading {
+      font-size: 44px;
+    }
+  }
+  @include respond-to($sm){
+    &__heading {
+      text-align: center;
+    }
+    .d_flex{
+      flex-direction: column;
+    }
+    .col-8,
+   .col-4{
+      width: 100%;
+    }
+    .col-4{
+      min-height: 0;
+      padding-top: 50px;
+      margin-bottom: 70px;
+      background: none;
+    }
+  }
+  @include respond-to($xs){
+    .link-back{
+      margin-bottom: 25px;
+    }
+    &__heading {
+      font-size: 36px;
+      margin-bottom: 46px;
+    }
+    .col-4{
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.effects-list {
+
+  &__item {
+    max-width: 514px;
+    display: flex;
+    font-size: 22px;
+    &:nth-child(2){
+      margin-bottom: 150px;
+      margin-top: 150px;
+      margin-left: 63px;
+    }
+  }
+
+  &__content {
+    padding-left: 80px;
+  }
+
+  &__title {
+    color: $blue;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 124px;
+    height: 116px;
+    flex-shrink: 0;
+  }
+  @include respond-to($lg){
+    &__content {
+      padding-left: 40px;
+    }
+  }
+  @include respond-to($sm){
+    &__item {
+      margin-bottom: 100px;
+      &:nth-child(2){
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 100px;
+      }
+    }
+  }
+  @include respond-to($xs){
+    &__item {
+      max-width: 300px;
+      width: 80%;
+      margin: 0 auto 30px;
+      flex-direction: column;
+      text-align: center;
+      font-size: 16px;
+      &:nth-child(2){
+        margin: 0 auto 30px;
+      }
+    }
+    &__icon{
+      width: 125px;
+      height: 136px;
+      margin: 0 auto 25px;
+    }
+    &__content{
+      padding: 0;
+    }
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
