@@ -938,6 +938,14 @@ body {
   margin-bottom: 23px;
 }
 
+.types-cystitis .card-types__content p:last-child {
+  margin-bottom: 0;
+}
+
+.types-slider .swiper-pagination {
+  display: block;
+}
+
 .card-author {
   display: flex;
   padding: 38px 10px;
@@ -2698,6 +2706,61 @@ body {
   .pagination__next,
   .pagination__prev {
     display: none;
+  }
+
+  .types-cystitis {
+    background: none;
+    margin: 0;
+    padding: 0 15px;
+    width: auto;
+  }
+
+  .types-cystitis .card-types {
+    position: relative;
+    margin: 0;
+    min-height: 0;
+    height: auto;
+  }
+
+  .types-cystitis .card-types:before {
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    content: '';
+    background-image: url(../assets/img/outline-card-mob.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+
+  .types-cystitis .card-types:last-child {
+    top: 0;
+  }
+
+  .types-cystitis .card-types__content {
+    font-size: 16px;
+  }
+
+  .types-cystitis .card-types__title {
+    font-size: 20px;
+    margin-bottom: 28px;
+    min-height: 0;
+  }
+
+  .types-cystitis .card-types__title br {
+    display: none;
+  }
+
+  .types-slider {
+    position: relative;
+    padding-bottom: 86px;
+  }
+
+  .types-slider .swiper-pagination {
+    display: block;
   }
 
   .prevention__list {

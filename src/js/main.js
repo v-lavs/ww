@@ -57,12 +57,12 @@ $(document).ready(function () {
                     },
                 });
             }
-        } else {
-            destroySwiper(reasonSlider);
         }
-        if ($(window).outerWidth() <= 580) {
+        if ($(window).outerWidth() <= 766) {
             if (!typesSlider && typesSelector) {
                 typesSlider = new Swiper(".types-slider", {
+                    slidesPerView: "auto",
+                    spaceBetween: 60,
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true,
@@ -70,6 +70,7 @@ $(document).ready(function () {
                 });
             }
         } else {
+            destroySwiper(reasonSlider);
             destroySwiper(typesSlider);
         }
     }
