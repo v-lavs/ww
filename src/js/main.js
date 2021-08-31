@@ -7,10 +7,16 @@
 
 // CUSTOM SCRIPTS
 
-$(document).ready(function () {
+function destroySwiper(sliderInstance) {
+    if (sliderInstance instanceof Swiper && sliderInstance.initialized) {
+        sliderInstance.destroy(true, true);
+        console.log('destroy')
+    }
+}
 
+$(document).ready(function () {
     //MOBILE MENU
-    var nav = $('.header__nav');
+    const nav = $('.header__nav');
 
     $('.btn-burger').click(function (e) {
         e.preventDefault();
@@ -25,29 +31,6 @@ $(document).ready(function () {
     });
 
 
-    //HEADER SCROLL
-
-    // function onHeaderScrol() {
-    //     scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    //     if (scrolled > 40) {
-    //         jQuery(".header").addClass('header_active');
-    //     } else {
-    //         jQuery(".header").removeClass('header_active');
-    //     }
-    // }
-    //
-    // $(document).on('scroll', function () {
-    //     onHeaderScrol()
-    // });
-
-// SMOOTH SCROLL TO ANCHOR
-//     var myHash = location.hash;
-//     location.hash = '';
-//     let offsetSize = $("header").innerHeight();
-//     if (myHash[1] !== undefined) {
-//         $('html, body').animate({scrollTop: $(myHash).offset().top - offsetSize}, 1500);
-//     }
-
     //SLIDER
     var aboutUrolesan = new Swiper(".about-urolesan", {
         slidesPerView: "auto",
@@ -58,4 +41,32 @@ $(document).ready(function () {
         },
     });
 
+    let reasonSlider;
+    const reasonSelector = $('.reason-slider').get(0);
+
+    function handleResponsive() {
+        // DESTROY SLIDER INSTANCES
+        if ($(window).outerWidth() <= 940) {
+            if (!reasonSlider && reasonSelector) {
+                reasonSlider = reasonSlider = new Swiper(".reason-slider", {
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+            }
+        } else {
+            destroySwiper(reasonSlider);
+        }
+    }
+
+    var resizeId;
+
+    handleResponsive();
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(handleResponsive, 500);
+    });
+
 });
+

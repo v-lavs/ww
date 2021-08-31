@@ -1,0 +1,144 @@
+.prevention {
+  background-color: #25A3E5;
+  color: #ffffff;
+  padding: 53px 0 70px;
+
+  &__heading{
+    max-width: 780px;
+    width: 100%;
+    text-align: center;
+    margin:0 auto 92px;
+    padding: 0 15px;
+    .small{
+      font-size: .85em;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    font-size: 18px;
+    line-height: 1;
+    color: $black-blue;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 797px;
+    width: 100%;
+    padding: 25px 28px 63px;
+    margin: 0 auto;
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 0;
+      background-image: url(../assets/img/bg-rounds1.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+    width: 33%;
+    height: auto;
+    text-align: center;
+    padding: 30px 56px;
+
+    &:nth-child(1) {
+      padding-left: 8.5%;
+    }
+
+    &:nth-child(3) {
+      padding-right: 8.5%;
+    }
+  }
+
+  &__icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 42px 42px;
+    background-size: 42px 42px;
+    width: 100%;
+    height: 42px;
+    margin-bottom: 17px;
+  }
+
+  @include respond-to($md) {
+    &__list {
+      font-size: 14px;
+    }
+    &__item {
+      padding: 35px 56px 25px;
+
+      &:nth-child(1) {
+        padding-left: 3.5%;
+      }
+
+      &:nth-child(3) {
+        padding-right: 3.5%;
+      }
+
+      &:nth-child(4) {
+        padding-left: 40px;
+        padding-right: 63px;
+      }
+
+      &:nth-child(5) {
+        padding-right: 40px;
+        padding-left: 63px;
+      }
+    }
+  }
+  @include respond-to($sm) {
+    &__list {
+      justify-content: space-around;
+      border: 1px solid red;
+      max-width: 323px;
+      width: 100%;
+      padding: 22px 25px 0;
+      &:before {
+        background-image: url(../assets/img/bg-rounds-mob1.png);
+      }
+    }
+    &__item {
+      width: 50%;
+      min-height: 150px;
+      margin-bottom: 30px;
+      &:nth-child(n){
+        padding: 24px 22px 0;
+      }
+      &:nth-child(1),
+      &:nth-child(3){
+        top: 90px;
+      }
+      &:nth-child(5){
+        left: 63px;
+      }
+    }
+    &__icon{
+      margin-bottom: 10px;
+    }
+  }
+  @include respond-to($xs){
+    &__item{
+      padding-top: 30px;
+    }
+    &__icon{
+      height: 34px;
+      background-size: 34px;
+    }
+  }
+  @media all and (max-width: 360px) {
+    .container{
+      padding: 0;
+    }
+  }
+}
+

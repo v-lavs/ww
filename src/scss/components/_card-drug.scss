@@ -62,3 +62,43 @@
     }
   }
 }
+
+.popover{
+  background: #FFFFFF;
+  max-width: 350px;
+  min-height: 340px;
+  border-radius: 15px;
+  font-size: 18px;
+  color: $black-blue;
+  padding: 27px 23px;
+  .heading_h1{
+    font-weight: 400;
+    color: $green-100;
+    line-height: 1;
+    margin-bottom: 18px;
+    .small{
+      font-size: 18px;
+      line-height:1;
+      color: #aaaaaa;
+    }
+  }
+  &__info{
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .prescription{
+    display: flex;
+    margin-bottom: 5px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &__icon{
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+  }
+}
