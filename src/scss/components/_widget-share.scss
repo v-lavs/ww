@@ -1,9 +1,9 @@
 .info-sticky {
   position: sticky;
   height: 0;
-  transform: translate(-150px, 157px);
+  transform: translate(-150px, 0);
   left: -100%;
-  top: -100%;
+  top: 410px;
   width: 32px;
   padding: 4px;
   background-color: #E5E5E5;
@@ -17,30 +17,7 @@
     width: 78px;
   }
 
-  .post-date {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    line-height: .5;
-    padding: 15px 5px;
-    width: 76px;
-    height: 78px;
-    background: $black-blue;
-    font-weight: 700;
-    color: #ffffff;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 109px;
 
-    .day {
-      font-size: 36px;
-    }
-
-    .mounts {
-      font-size: 14px;
-    }
-  }
 
   .widget-share {
     width: 32px;
@@ -105,5 +82,30 @@
   }
   @media all and (max-width: 360px) {
     top: 240px;
+  }
+}
+
+.post-date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  line-height: .5;
+  padding: 15px 5px;
+  width: 76px;
+  height: 78px;
+  background: $black-blue;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 109px;
+
+  .day {
+    font-size: 36px;
+  }
+
+  .mounts {
+    font-size: 14px;
   }
 }

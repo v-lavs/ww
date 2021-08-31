@@ -1,10 +1,326 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!--зaкрыть индексацию -->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+    <title>Профіль автора</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/main.css">
+</head>
+
+<body>
+<div class="wrapper">
+
+    <div class="backdrop"></div>
+    <main class="main  blog author-profile">
+        <div class="container">
+            <a href="blog.html" class="link-back"><img src="assets/img/svg/arrow-left.svg" alt="" class="icon-back">Всі
+                статті</a>
+            <div class="card-author">
+                <div class="part part_left">
+                    <img src="assets/img/author-img-full.jpg" alt="">
+                </div>
+                <div class="part part_right">
+                    <div class="card-author__header">
+                        <div>
+                            <h2 class="heading_h4">Дмитро Дмитрович Іванов</h2>
+                            <div class="date-of-birth">19.04.1967</div>
+                        </div>
+                        <div class="contact-info">
+                            <a href="#" class="contact-info__item">
+                            <span class="contact-info__icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+      fill="#25A3E5"/>
+</svg>
+                            </span>
+                            </a>
+                            <a href="#" class="contact-info__item">
+                            <span class="contact-info__icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd"
+      d="M6 4C6 5.10457 5.10457 6 4 6C2.89543 6 2 5.10457 2 4C2 2.89543 2.89543 2 4 2C5.10457 2 6 2.89543 6 4ZM16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8ZM6 21V9H2V21H6Z"
+      fill="#0088EC"/>
+</svg>
+                            </span>
+                            </a>
+                            <a href="#" class="contact-info__item">
+                            <span class="contact-info__icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd"
+      d="M4.17871 4.26518C6.17263 2.24911 8.94044 1 12 1C16.2747 1 19.9799 3.43832 21.8006 7H12C9.96134 7 8.20766 8.22009 7.42931 9.96992L4.37257 4.5114C4.31978 4.41713 4.25399 4.33473 4.17871 4.26518ZM2.852 5.8894C1.6822 7.6372 1 9.73893 1 12C1 17.0641 4.42205 21.3289 9.07985 22.6082C9.0983 22.565 9.12 22.5226 9.14506 22.4813L12.4845 16.9768C12.325 16.9922 12.1634 17 12 17C10.0461 17 8.35404 15.8793 7.53145 14.2456L2.852 5.8894ZM11.1876 22.9705C11.4558 22.99 11.7268 23 12 23C18.0751 23 23 18.0751 23 12C23 10.9587 22.8553 9.95116 22.5849 8.99644C22.5569 8.9988 22.5286 9 22.5 9H16.0004C16.6281 9.83566 17 10.8744 17 12C17 13.0292 16.689 13.9858 16.1559 14.781L11.1876 22.9705ZM14.6051 13.4813C14.615 13.4649 14.6254 13.4488 14.6362 13.4331C14.8682 13.0073 15 12.5191 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 12.4732 9.10955 12.9208 9.30468 13.3188L9.41252 13.5114C9.42303 13.5302 9.43287 13.5491 9.44204 13.5683C9.96977 14.4272 10.918 15 12 15C13.0269 15 13.9333 14.484 14.4741 13.6972L14.6051 13.4813Z"
+      fill="#24243F"/>
+</svg>
+                            </span>
+                            </a>
+                            <a href="#" class="contact-info__item">
+                            <span class="contact-info__icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd"
+      d="M1.36483 4.56869C1.87444 3.63548 2.86541 3 4 3H20C21.1346 3 22.1256 3.63548 22.6352 4.5687C22.5667 4.59561 22.5001 4.63055 22.4367 4.67377L12 11.7897L1.56334 4.67377C1.49994 4.63055 1.43335 4.5956 1.36483 4.56869ZM1 6.71032V18C1 19.6523 2.34772 21 4 21H20C21.6523 21 23 19.6523 23 18V6.71032L12.5633 13.8262C12.2235 14.0579 11.7765 14.0579 11.4367 13.8262L1 6.71032Z"
+      fill="#24243F"/>
+</svg>
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-author__body">
+                        <div class="general-info">
+                            <div class="information">
+                                <div class="information__label">Вчений ступінь</div>
+                                <div class="information__text">
+                                    <p>
+                                        Доктор медичних наук, професор
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="information">
+                                <div class="information__label">Посада</div>
+                                <div class="information__text">
+                                    <p>
+                                        завідувач кафедри нефрології і нирковозамісної терапії
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="information">
+                                <div class="information__label">Місце роботи</div>
+                                <div class="information__text">
+                                    <p>
+                                        Національна медична академія післядипломної освіти ім. П.Л. Шупика, м. Київ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="short-description">
+                            <div class="information">
+                                <div class="information__label">Коротка інформація</div>
+                                <div class="information__text">
+                                    <p>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse
+                                        pariatur
+                                        duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor
+                                        cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+
+                                    <p>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse
+                                        pariatur
+                                        duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor
+                                        cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+
+                                    <p> Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="authors-blog">
+                <div class="blog__header">
+                    <h3 class="heading_h5">Статті автора</h3>
+                    <div class="page-count"><span class="dark-text">Показано 1 – 20</span> of 63</div>
+                </div>
+                <ul class="authors-blog__list">
+                    <li class="authors-blog__item">
+                        <div class="post-date">
+                            <div class="day">03</div>
+                            <div class="mounts">СЕРПНЯ</div>
+                        </div>
+                        <a href="single-article.html" class="authors-blog__link">
+                            <article class="card-post_large">
+                                <h3 class="card-post__title heading_h3">
+                                    Досвід застосування лікарського засобу Уронефрон®
+                                    при інфекції сечовивідних шляхів у чоловіків
+                                    у практиці сімейного лікаря
+                                </h3>
+                                <div class="card-post__text">
+                                    Методи лікування інфекцій сечовивідних шляхів (ІСШ) базуються на міжнародних
+                                    рекомендаціях, зокрема на настановах Європейської асоціації урологів (2018). Терапія
+                                    ІСШ
+                                    має гендерний підхід, що пов’язано з різною анатомією сечовивідних шляхів.
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="authors-blog__item">
+                        <div class="post-date">
+                            <div class="day">03</div>
+                            <div class="mounts">СЕРПНЯ</div>
+                        </div>
+                        <a href="single-article.html" class="authors-blog__link">
+                            <article class="card-post_large">
+                                <h3 class="card-post__title heading_h3">
+                                    Досвід застосування лікарського засобу Уронефрон®
+                                    при інфекції сечовивідних шляхів у чоловіків
+                                    у практиці сімейного лікаря
+                                </h3>
+                                <div class="card-post__text">
+                                    Методи лікування інфекцій сечовивідних шляхів (ІСШ) базуються на міжнародних
+                                    рекомендаціях, зокрема на настановах Європейської асоціації урологів (2018). Терапія
+                                    ІСШ
+                                    має гендерний підхід, що пов’язано з різною анатомією сечовивідних шляхів.
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="authors-blog__item">
+                        <div class="post-date">
+                            <div class="day">03</div>
+                            <div class="mounts">СЕРПНЯ</div>
+                        </div>
+                        <a href="single-article.html" class="authors-blog__link">
+                            <article class="card-post_large">
+                                <h3 class="card-post__title heading_h3">
+                                    Досвід застосування лікарського засобу Уронефрон®
+                                    при інфекції сечовивідних шляхів у чоловіків
+                                    у практиці сімейного лікаря
+                                </h3>
+                                <div class="card-post__text">
+                                    Методи лікування інфекцій сечовивідних шляхів (ІСШ) базуються на міжнародних
+                                    рекомендаціях, зокрема на настановах Європейської асоціації урологів (2018). Терапія
+                                    ІСШ
+                                    має гендерний підхід, що пов’язано з різною анатомією сечовивідних шляхів.
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="authors-blog__item">
+                        <div class="post-date">
+                            <div class="day">03</div>
+                            <div class="mounts">СЕРПНЯ</div>
+                        </div>
+                        <a href="single-article.html" class="authors-blog__link">
+                            <article class="card-post_large">
+                                <h3 class="card-post__title heading_h3">
+                                    Досвід застосування лікарського засобу Уронефрон®
+                                    при інфекції сечовивідних шляхів у чоловіків
+                                    у практиці сімейного лікаря
+                                </h3>
+                                <div class="card-post__text">
+                                    Методи лікування інфекцій сечовивідних шляхів (ІСШ) базуються на міжнародних
+                                    рекомендаціях, зокрема на настановах Європейської асоціації урологів (2018). Терапія
+                                    ІСШ
+                                    має гендерний підхід, що пов’язано з різною анатомією сечовивідних шляхів.
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="authors-blog__item">
+                        <div class="post-date">
+                            <div class="day">03</div>
+                            <div class="mounts">СЕРПНЯ</div>
+                        </div>
+                        <a href="single-article.html" class="authors-blog__link">
+                            <article class="card-post_large">
+                                <h3 class="card-post__title heading_h3">
+                                    Досвід застосування лікарського засобу Уронефрон®
+                                    при інфекції сечовивідних шляхів у чоловіків
+                                    у практиці сімейного лікаря
+                                </h3>
+                                <div class="card-post__text">
+                                    Методи лікування інфекцій сечовивідних шляхів (ІСШ) базуються на міжнародних
+                                    рекомендаціях, зокрема на настановах Європейської асоціації урологів (2018). Терапія
+                                    ІСШ
+                                    має гендерний підхід, що пов’язано з різною анатомією сечовивідних шляхів.
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="authors-blog__item">
+                        <div class="post-date">
+                            <div class="day">03</div>
+                            <div class="mounts">СЕРПНЯ</div>
+                        </div>
+                        <a href="single-article.html" class="authors-blog__link">
+                            <article class="card-post_large">
+                                <h3 class="card-post__title heading_h3">
+                                    Досвід застосування лікарського засобу Уронефрон®
+                                    при інфекції сечовивідних шляхів у чоловіків
+                                    у практиці сімейного лікаря
+                                </h3>
+                                <div class="card-post__text">
+                                    Методи лікування інфекцій сечовивідних шляхів (ІСШ) базуються на міжнародних
+                                    рекомендаціях, зокрема на настановах Європейської асоціації урологів (2018). Терапія
+                                    ІСШ
+                                    має гендерний підхід, що пов’язано з різною анатомією сечовивідних шляхів.
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="authors-blog__item">
+                        <div class="post-date">
+                            <div class="day">03</div>
+                            <div class="mounts">СЕРПНЯ</div>
+                        </div>
+                        <a href="single-article.html" class="authors-blog__link">
+                            <article class="card-post_large">
+                                <h3 class="card-post__title heading_h3">
+                                    Досвід застосування лікарського засобу Уронефрон®
+                                    при інфекції сечовивідних шляхів у чоловіків
+                                    у практиці сімейного лікаря
+                                </h3>
+                                <div class="card-post__text">
+                                    Методи лікування інфекцій сечовивідних шляхів (ІСШ) базуються на міжнародних
+                                    рекомендаціях, зокрема на настановах Європейської асоціації урологів (2018). Терапія
+                                    ІСШ
+                                    має гендерний підхід, що пов’язано з різною анатомією сечовивідних шляхів.
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="authors-blog__item">
+                        <div class="post-date">
+                            <div class="day">03</div>
+                            <div class="mounts">СЕРПНЯ</div>
+                        </div>
+                        <a href="single-article.html" class="authors-blog__link">
+                            <article class="card-post_large">
+                                <h3 class="card-post__title heading_h3">
+                                    Досвід застосування лікарського засобу Уронефрон®
+                                    при інфекції сечовивідних шляхів у чоловіків
+                                    у практиці сімейного лікаря
+                                </h3>
+                                <div class="card-post__text">
+                                    Методи лікування інфекцій сечовивідних шляхів (ІСШ) базуються на міжнародних
+                                    рекомендаціях, зокрема на настановах Європейської асоціації урологів (2018). Терапія
+                                    ІСШ
+                                    має гендерний підхід, що пов’язано з різною анатомією сечовивідних шляхів.
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="pagination">
+                    <a href="#" class="pagination__prev">Попередня</a>
+                    <a href="#" class="pagination__btn">1</a>
+                    <a href="#" class="pagination__btn pagination__placeholder">...</a>
+                    <a href="#" class="pagination__btn">10</a>
+                    <a href="#" class="pagination__btn">11</a>
+                    <a href="#" class="pagination__btn pagination__btn_active">12</a>
+                    <a href="#" class="pagination__btn">13</a>
+                    <a href="#" class="pagination__btn">14</a>
+                    <a href="#" class="pagination__btn">15</a>
+                    <a href="#" class="pagination__btn">16</a>
+                    <a href="#" class="pagination__btn pagination__placeholder">...</a>
+                    <a href="#" class="pagination__btn">26</a>
+                    <a href="#" class="pagination__next">Наступна</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="dist/main.js"></script>
 </body>
 </html>
