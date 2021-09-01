@@ -6,8 +6,9 @@
   padding-top: 160px;
   min-height: 1004px;
   padding-bottom: 70px;
+
   &:before,
-  &:after{
+  &:after {
     position: absolute;
     content: '';
     display: block;
@@ -15,11 +16,13 @@
     right: 0;
     bottom: 0;
   }
-  &:before{
+
+  &:before {
     background: linear-gradient(0deg, rgba(37, 163, 229, 0) 0%, #25A3E6 100%);
     top: 0;
   }
-  &:after{
+
+  &:after {
     background-image: linear-gradient(180deg, rgba(228, 242, 255, 0) 5%, #F7FBFF 62%);
     height: 105px;
   }
@@ -39,6 +42,7 @@
   display: flex;
   align-items: flex-start;
   margin: 0 -6px;
+
   &__item {
     border-radius: 15px;
     border: 2px solid $white;
@@ -49,36 +53,42 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &:first-child .pulse{
+
+    &:first-child .pulse {
       right: 50%;
       bottom: 50%;
     }
-    &:nth-child(2) .pulse{
+
+    &:nth-child(2) .pulse {
       left: 55%;
       bottom: 40%;
     }
-    &:nth-child(3) .pulse{
+
+    &:nth-child(3) .pulse {
       left: 35%;
       bottom: 45%;
     }
-    &:nth-child(4) .pulse{
+
+    &:nth-child(4) .pulse {
       left: 70%;
       top: 35%;
     }
 
     &:hover,
-    &:focus{
+    &:focus {
       min-height: 478px;
       justify-content: flex-start;
-      .diagnoses-list__thumb{
+
+      .diagnoses-list__thumb {
         height: 255px;
         visibility: visible;
         margin-bottom: 40px;
         transform: scale(1);
         opacity: 1;
-        transition: .35s, opacity 1s, transform .8s ;
+        transition: .35s, opacity 1s, transform .8s;
       }
-      .wrap-btn{
+
+      .wrap-btn {
         opacity: 1;
       }
     }
@@ -94,7 +104,7 @@
     align-items: center;
     overflow: hidden;
     transform: scale(.35);
-    transition: .35s, opacity 1s, transform 1s ;
+    transition: .35s, opacity 1s, transform 1s;
     opacity: 0;
 
     &:before {
@@ -107,12 +117,12 @@
       background-image: url(../assets/img/bg-card-diagnose3.png);
       background-position: center bottom;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
       z-index: 1;
     }
   }
 
-  &__img{
+  &__img {
     animation: rotation 2s infinite linear;
   }
 
@@ -125,7 +135,7 @@
     text-shadow: 0 0 25px rgba(188, 229, 251, 0.75);
   }
 
-  .wrap-btn{
+  .wrap-btn {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -140,9 +150,24 @@
       backdrop-filter: blur(10px);
     }
   }
+
+  @include respond-to($xl) {
+    &__item {
+      padding: 25px 16px;
+      min-height: 112px;
+
+      &:hover,
+      &:focus {
+        min-height: 440px;
+      }
+    }
+    &__title {
+      font-size: 33px;
+    }
+  }
 }
 
-.pulse{
+.pulse {
   position: absolute;
   width: 31px;
   height: 31px;
@@ -152,7 +177,7 @@
   transform: scale(.1);
   animation: pulse 1.65s infinite;
 
-  &:before{
+  &:before {
     position: absolute;
     content: '';
     width: 17px;
@@ -162,7 +187,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 5px solid rgba(255, 228,225, .2);
+    border: 5px solid rgba(255, 228, 225, .2);
   }
 }
 

@@ -1675,7 +1675,7 @@ body {
   background-image: url(../assets/img/bg-card-diagnose3.png);
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   z-index: 1;
 }
 
@@ -2790,8 +2790,27 @@ body {
 }
 
 @media only screen and (max-width: 1480px) {
+  .btn {
+    min-width: 225px;
+    padding: 18px 20px 19px;
+  }
+
   .container {
     max-width: 1280px;
+  }
+
+  .diagnoses-list__item {
+    padding: 25px 16px;
+    min-height: 112px;
+  }
+
+  .diagnoses-list__item:hover,
+  .diagnoses-list__item:focus {
+    min-height: 440px;
+  }
+
+  .diagnoses-list__title {
+    font-size: 33px;
   }
 }
 
