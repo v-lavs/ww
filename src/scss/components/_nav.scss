@@ -22,8 +22,9 @@
 }
 
 @include respond-to($md) {
-  .menu__item {
-    padding-left: 16px;
-    padding-right: 16px;
+
+    .menu__item {
+      padding-left: 16px;
+      padding-right: 16px;
   }
 }

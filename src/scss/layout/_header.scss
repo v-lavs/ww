@@ -150,6 +150,7 @@
     }
     .menu {
       font-size: 14px;
+      align-items: center;
     }
   }
   @include respond-to($md) {
