@@ -55,4 +55,9 @@
       }
     }
   }
+  @include respond-to($xs){
+    .link-back{
+      margin-bottom: 25px;
+    }
+  }
 }

@@ -22,4 +22,7 @@
   @include respond-to($xs){
     max-width: 420px;
      }
+  @include respond-to($xxs){
+    width: 100%;
+  }
 }

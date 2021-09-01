@@ -164,6 +164,7 @@ body {
     font-size: 18px;
     margin-bottom: 30px;
   }
+
   h1 {
     font-size: 36px;
   }
@@ -179,11 +180,13 @@ body {
   h4 {
     font-size: 22px;
   }
+
   h5 {
     font-size: 18px;
     margin-bottom: 26px;
   }
-  h6{
+
+  h6 {
     font-size: 14px;
   }
 
@@ -208,6 +211,12 @@ body {
         top: 10px;
         transform: translateY(-50%);
       }
+    }
+  }
+
+  @include respond-to($xs) {
+    ul {
+      margin-bottom: 25px;
     }
   }
 }
