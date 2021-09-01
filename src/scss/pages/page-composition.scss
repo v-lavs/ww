@@ -142,6 +142,11 @@
       }
     }
   }
+  @include respond-to($lg){
+    &__item{
+      height: 190px;
+    }
+  }
 }
 
 .tabs {

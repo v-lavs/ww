@@ -2867,6 +2867,10 @@ body {
   .effects-list__content {
     padding-left: 40px;
   }
+
+  .composition__item {
+    height: 190px;
+  }
 }
 
 @media only screen and (max-width: 940px) {
