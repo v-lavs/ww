@@ -1,41 +1,80 @@
 .footer {
   background-color: #ffffff;
-  &_top{
+
+  &_top {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 1px solid rgba(134,200,234, .2);
+    border-bottom: 1px solid rgba(134, 200, 234, .2);
     padding: 40px 0 16px;
-    .footer_text{
+
+    .footer_text {
       max-width: 285px;
+
+      .text-small {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 8px;
+      }
     }
-    .footer-logo{
-      display: block;
-      max-width: 133px;
+
+    .name-corporation {
+      font-weight: 700;
+      color: $blue;
+      font-size: 16px;
     }
-    .social-bar{
+
+    .link-site {
+      display: inline-block;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    .footer-logo {
+      display: inline-flex;
+      max-width: 134px;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 13px;
+
+      span {
+        display: inline-block;
+        margin-bottom: 4px;
+      }
+    }
+
+    .social-bar {
       display: flex;
       justify-content: center;
       position: absolute;
       bottom: 10px;
-      left: 50%;transform: translateX(-50%);
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 1;
-      &__item{
+
+      &__item {
         width: 24px;
         height: 24px;
         display: block;
         margin-left: 22px;
-        &:first-child{
+
+        &:first-child {
           margin-left: 0;
         }
-        svg{
+
+        svg {
           max-width: 100%;
         }
       }
     }
   }
-  &_bottom{
+
+  &_bottom {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20vh;
@@ -56,11 +95,46 @@
     height: 16vh;
     z-index: 500;
     padding: 18px 34px 19px;
-    img{
+
+    img {
       display: block;
       width: 100%;
-      height:15vh;
+      height: 15vh;
       max-width: 100%;
+    }
+  }
+
+  @include respond-to($md) {
+    .social-bar {
+      position: relative;
+      padding-top: 20px;
+      transform: none;
+      width: 100%;
+      left: auto;
+      right: auto;
+      bottom: 0;
+    }
+  }
+  @include respond-to($xs) {
+    &_top {
+      justify-content: center;
+      text-align: center;
+    }
+    .footer-logo {
+      padding-top: 25px;
+
+      span {
+        display: none;
+      }
+    }
+    &_bottom {
+      flex-wrap: wrap;
+      padding-top: 14px;
+      text-align: center;
+    }
+    .design,
+    .copyright {
+      width: 100%;
     }
   }
 }

@@ -37,7 +37,6 @@
       backdrop-filter: blur(12px);
       z-index: 2;
     }
-
   }
 
   &__nav {
@@ -139,6 +138,16 @@
     }
   }
   @include respond-to($lg) {
+    .header__logo {
+      max-width: 109px;
+    }
+
+    .header__logo-site {
+      max-width: 75px;
+      img {
+        vertical-align: middle;
+      }
+    }
     .menu {
       font-size: 14px;
     }

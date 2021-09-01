@@ -48,7 +48,7 @@ $(document).ready(function () {
 
     function handleResponsive() {
         // DESTROY SLIDER INSTANCES
-        if ($(window).outerWidth() <= 940) {
+        if ($(window).outerWidth() <= 991) {
             if (!reasonSlider && reasonSelector) {
                 reasonSlider = reasonSlider = new Swiper(".reason-slider", {
                     pagination: {
