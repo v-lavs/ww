@@ -265,17 +265,43 @@ body {
 }
 
 .dynamic-content p {
-  font-size: 16px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.dynamic-content h1 {
+  font-size: 36px;
+}
+
+.dynamic-content h2 {
+  font-size: 32px;
+}
+
+.dynamic-content h3 {
+  font-size: 24px;
+}
+
+.dynamic-content h4 {
+  font-size: 22px;
+}
+
+.dynamic-content h5 {
+  font-size: 18px;
   margin-bottom: 26px;
+}
+
+.dynamic-content h6 {
+  font-size: 14px;
 }
 
 .dynamic-content ul {
   padding-left: 14px;
+  margin-bottom: 38px;
 }
 
 .dynamic-content ul li {
   position: relative;
-  padding-left: 20px;
+  padding-left: 14px;
   line-height: 1.13;
   margin-bottom: 5px;
 }
@@ -283,12 +309,12 @@ body {
 .dynamic-content ul li:before {
   position: absolute;
   content: '';
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background-color: #24243F;
   left: 0;
-  top: 5%;
+  top: 10px;
   transform: translateY(-50%);
 }
 
@@ -2421,27 +2447,10 @@ body {
 }
 
 .page-effectiveness {
-  padding-top: 134px;
   background: url(../assets/img/bg-rounds2.png), linear-gradient(0deg, rgba(251, 254, 255, 0) 0%, #25A3E5 159%), linear-gradient(97deg, #FBFEFF 40%, #E9F4F8 128%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.page-effectiveness .link-back {
-  margin-bottom: 14px;
-  color: #0062B3;
-}
-
-.page-effectiveness .link-back svg {
-  display: inline-block;
-  vertical-align: middle;
-  width: 24px;
-  height: 24px;
-}
-
-.page-effectiveness .link-back svg path {
-  stroke: #0062B3;
 }
 
 .page-effectiveness__heading {
@@ -2483,9 +2492,23 @@ body {
 }
 
 .effects-list__title {
+  position: relative;
   color: #0062B3;
   line-height: 1;
-  margin-bottom: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.effects-list__title:before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 67px;
+  height: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #0062B3, rgba(0, 0, 0, 0)) 0 1 100%;
 }
 
 .effects-list__icon {
@@ -2495,6 +2518,204 @@ body {
   width: 124px;
   height: 116px;
   flex-shrink: 0;
+}
+
+.page-composition {
+  position: relative;
+  background-image: url(../assets/img/bg-composition.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  padding-bottom: 100px;
+}
+
+.page-composition .d_flex {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.page-composition:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: linear-gradient(0deg, rgba(251, 254, 255, 0) 0%, #25A3E5 150%);
+  z-index: -1;
+}
+
+.page-composition .col-4 {
+  width: 45%;
+  padding-left: 67px;
+}
+
+.page-composition .col-8 {
+  width: 56%;
+  padding-left: 8%;
+}
+
+.composition {
+  flex-wrap: wrap;
+}
+
+.composition__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 258px;
+  text-align: center;
+  width: 50%;
+  height: 258px;
+  background: linear-gradient(180deg, #F0F83C -11%, #2FA02D 119%);
+  box-shadow: 0 0 25px rgba(188, 229, 251, 0.75);
+  color: #ffffff;
+  padding: 110px 15px 26px;
+}
+
+.composition__item:before {
+  position: absolute;
+  content: '';
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.composition__item-title {
+  font-size: 28px;
+  line-height: 1;
+  display: block;
+}
+
+.composition__item-title .small {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  width: 83%;
+  margin: 0 auto;
+}
+
+.composition__item:first-child {
+  padding-left: 110px;
+  padding-top: 26px;
+  padding-right: 23px;
+  border-radius: 50px 0 50px 50px;
+  justify-content: center;
+}
+
+.composition__item:first-child:before {
+  background-image: url(../assets/img/wild-carrot.png);
+  width: 484px;
+  height: 320px;
+  top: -100px;
+  right: -28px;
+}
+
+.composition__item:first-child .composition__item-title {
+  font-size: 36px;
+}
+
+.composition__item:nth-child(2) {
+  border-radius: 50px 50px 0 50px;
+  transform: scale(0.67);
+  margin-left: -12px;
+  margin-top: -60px;
+}
+
+.composition__item:nth-child(2):before {
+  background-image: url(../assets/img/mint.png);
+  transform: scale(1.67);
+  width: 188px;
+  height: 121px;
+  top: 0;
+  left: 0;
+}
+
+.composition__item:nth-child(3) {
+  border-radius: 0 50px 50px 50px;
+  transform: scale(0.8);
+  margin-left: -70px;
+}
+
+.composition__item:nth-child(3):before {
+  background-image: url(../assets/img/spruce.png);
+  transform: scale(1.3);
+  width: 258px;
+  height: 161px;
+  top: 0;
+  left: -57px;
+}
+
+.composition__item:nth-child(4) {
+  border-radius: 50px 0 50px 50px;
+  margin-top: -70px;
+  margin-left: -10px;
+}
+
+.composition__item:nth-child(4):before {
+  background-image: url(../assets/img/hop.png);
+  width: 281px;
+  height: 200px;
+  top: -36px;
+  left: 0;
+}
+
+.tabs {
+  width: 100%;
+}
+
+.tabs__nav {
+  display: flex;
+}
+
+.tabs__nav-link {
+  display: block;
+  min-width: 141px;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-align: center;
+  color: #808080;
+  transition: .35s;
+  padding: 10px;
+}
+
+.tabs__nav-link.active {
+  background: #F3F8FB;
+  border-color: #25A3E5;
+  color: #0062B3;
+  font-weight: 700;
+}
+
+.tabs__content {
+  position: relative;
+  overflow: hidden;
+  padding-top: 68px;
+  line-height: 1.17;
+}
+
+.tabs__content h5 {
+  margin-bottom: 26px;
+  color: #0062B3;
+}
+
+.tabs__content .tab-content {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.tabs__content .tab-content.active {
+  position: relative;
+  opacity: 1;
+  transition: opacity .5s ease-in;
+  z-index: 2;
 }
 
 .page {
@@ -2538,6 +2759,34 @@ body {
   height: 90px;
   background-color: #0088EC;
   z-index: 1;
+}
+
+.page-product {
+  padding-top: 134px;
+}
+
+.page-product .link-back {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 14px;
+  color: #0062B3;
+}
+
+.page-product .link-back svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+
+.page-product .link-back svg path {
+  stroke: #0062B3;
+}
+
+@media only screen and (max-width: 1480px) {
+  .container {
+    max-width: 1280px;
+  }
 }
 
 @media all and (max-width: 1340px) {
@@ -3006,7 +3255,12 @@ body {
   }
 
   .effects-list__title {
+    line-height: 1;
     font-size: 20px;
+  }
+
+  .effects-list__title:before {
+    display: none;
   }
 }
 

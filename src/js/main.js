@@ -83,5 +83,16 @@ $(document).ready(function () {
         resizeId = setTimeout(handleResponsive, 500);
     });
 
+    //TABS
+    const tabLink = $('.tabs__nav-link');
+    const tabContentItem = $('.tab-content');
+    tabLink.click(function (e) {
+        e.preventDefault();
+        tabLink.removeClass('active');
+        tabContentItem.removeClass('active');
+        $(e.target).addClass('active');
+        $($(e.currentTarget).attr('href')).addClass('active');
+    });
+
 });
 

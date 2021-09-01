@@ -1,5 +1,4 @@
 .page-effectiveness {
-  padding-top: 134px;
   background: url(../assets/img/bg-rounds2.png),
   linear-gradient(0deg, rgba(251, 254, 255, 0) 0%, #25A3E5 159%),
   linear-gradient(97deg, #FBFEFF 40%, #E9F4F8 128%);
@@ -7,19 +6,7 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  .link-back {
-    margin-bottom: 14px;
-    color: $blue;
-    svg{
-      display: inline-block;
-      vertical-align: middle;
-      width: 24px;
-      height: 24px;
-      path {
-        stroke:$blue;
-      }
-    }
-  }
+
 
   &__heading {
     font-size: 64px;
@@ -99,9 +86,27 @@
   }
 
   &__title {
+    position: relative;
     color: $blue;
     line-height: 1;
-    margin-bottom: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+   &:before{
+     position: absolute;
+     content: '';
+     bottom: 0;
+     left: 0;
+     width: 67px;
+     height: 1px;
+     border-width: 1px;
+     border-style: solid;
+     border-image:
+             linear-gradient(
+                             to right,
+                             $blue,
+                             rgba(0, 0, 0, 0)
+             ) 0 1 100%;
+   }
   }
 
   &__icon {
@@ -148,7 +153,11 @@
       padding: 0;
     }
     &__title {
+      line-height: 1;
       font-size: 20px;
+      &:before{
+        display: none;
+      }
     }
   }
 }

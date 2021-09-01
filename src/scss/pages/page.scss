@@ -16,7 +16,6 @@
         backdrop-filter: blur(5px);
       }
     }
-
   }
   &__title{
     position: relative;
@@ -35,6 +34,25 @@
       height: 90px;
       background-color: $blue-100;
       z-index: 1;
+    }
+  }
+}
+
+.page-product{
+  padding-top: 134px;
+  .link-back {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 14px;
+    color: $blue;
+    svg{
+      display: inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+      path {
+        stroke:$blue;
+      }
     }
   }
 }
