@@ -1,6 +1,7 @@
 .selection-drug {
   padding-top: 77px;
   padding-bottom: 142px;
+  overflow: hidden;
 
   .bg-section {
     min-height: 906px;
@@ -8,14 +9,59 @@
     background-position: center;
     background-size: cover;
     padding-top: 188px;
+
   }
 
-  .section__heading:after {
-    border-image: linear-gradient(to right, rgba(59, 178, 57, 0), #3BB239, rgba(59, 178, 57, 0)) 0 0 100% 0;
+  .section__heading {
+    margin-bottom: 46px;
+
+    &:after {
+      border-image: linear-gradient(to right, rgba(59, 178, 57, 0), #3BB239, rgba(59, 178, 57, 0)) 0 0 100% 0;
+    }
   }
 
   .section__text {
     text-align: center;
     color: #909090;
+  }
+
+  .drugs-list {
+    max-width: 1122px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 110px;
+
+    &__item {
+      width: 33.33%;
+    }
+
+    .popover {
+      display: none;
+    }
+  }
+
+  @include respond-to($md) {
+    .drugs-list {
+      margin-bottom: 24px;
+    }
+    .drugs-list__item {
+      width: 50%;
+      margin-bottom: 50px;
+    }
+  }
+  @include respond-to($xs) {
+    padding-bottom: 49px;
+
+    .drugs-list__item {
+      width: 100%;
+    }
+    .text_sm {
+      font-size: 14px;
+    }
+  }
+  @include respond-to($xxs) {
+    .drugs-list__item {
+      margin-bottom: 30px;
+    }
   }
 }

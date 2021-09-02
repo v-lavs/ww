@@ -213,19 +213,25 @@ body {
 
 .section__heading .wrap-content {
   display: inline-block;
+  text-align: right;
 }
 
-.section__heading .icon-logo {
-  max-width: 512px;
-  display: block;
-  margin: -10px auto 0;
+.section__heading .big {
+  display: inline-block;
+  font-size: 124px;
+  line-height: .6;
+}
+
+.section__heading .big sup {
+  vertical-align: baseline;
 }
 
 .section__title {
   font-weight: 700;
   font-size: 38px;
   text-align: right;
-  padding-right: 30px;
+  padding-right: 40px;
+  line-height: .6;
 }
 
 .card-mob {
@@ -829,8 +835,9 @@ body {
 }
 
 .card-drug {
-  max-width: 330px;
-  padding: 0 15px;
+  max-width: 374px;
+  width: 100%;
+  padding: 0 37px;
 }
 
 .card-drug__header {
@@ -838,10 +845,14 @@ body {
   margin-bottom: 18px;
 }
 
-.card-drug__header svg {
+.card-drug__header .big {
   display: inline-block;
-  width: 155px;
-  height: auto;
+  font-size: 38px;
+  line-height: .6;
+}
+
+.card-drug__header .big sup {
+  vertical-align: baseline;
 }
 
 .card-drug__img-wrap {
@@ -850,8 +861,7 @@ body {
   background: rgba(255, 255, 255, 0.15);
   padding-top: 100%;
   width: 300px;
-  height: 300px;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
 }
 
 .card-drug__img-wrap img {
@@ -861,9 +871,13 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 90%;
-  height: 90%;
+  max-width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.card-drug__footer {
+  text-align: center;
 }
 
 .card-drug .wrap-btn {
@@ -2392,6 +2406,7 @@ body {
 .selection-drug {
   padding-top: 77px;
   padding-bottom: 142px;
+  overflow: hidden;
 }
 
 .selection-drug .bg-section {
@@ -2402,6 +2417,10 @@ body {
   padding-top: 188px;
 }
 
+.selection-drug .section__heading {
+  margin-bottom: 46px;
+}
+
 .selection-drug .section__heading:after {
   border-image: linear-gradient(to right, rgba(59, 178, 57, 0), #3BB239, rgba(59, 178, 57, 0)) 0 0 100% 0;
 }
@@ -2409,6 +2428,21 @@ body {
 .selection-drug .section__text {
   text-align: center;
   color: #909090;
+}
+
+.selection-drug .drugs-list {
+  max-width: 1122px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 110px;
+}
+
+.selection-drug .drugs-list__item {
+  width: 33.33%;
+}
+
+.selection-drug .drugs-list .popover {
+  display: none;
 }
 
 .blog {
@@ -2911,6 +2945,14 @@ body {
 }
 
 @media only screen and (max-width: 1180px) {
+  .card-drug {
+    padding: 0 15px;
+  }
+
+  .card-drug__img-wrap {
+    padding-top: 95%;
+  }
+
   .container {
     max-width: 980px;
   }
@@ -3207,6 +3249,15 @@ body {
     display: none;
   }
 
+  .selection-drug .drugs-list {
+    margin-bottom: 24px;
+  }
+
+  .selection-drug .drugs-list__item {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+
   .page-composition {
     background-position: center;
   }
@@ -3240,6 +3291,19 @@ body {
   .pagination__next,
   .pagination__prev {
     display: none;
+  }
+
+  .card-drug__img-wrap {
+    width: 200px;
+    padding-top: 80%;
+  }
+
+  .card-drug__header .heading_h4 {
+    font-size: 18px;
+  }
+
+  .card-drug__header .big {
+    font-size: 30px;
   }
 
   .types-cystitis {
@@ -3372,6 +3436,16 @@ body {
     margin-bottom: 25px;
   }
 
+  .round {
+    width: 54px;
+    height: 54px;
+  }
+
+  .round:before {
+    width: 68px;
+    height: 68px;
+  }
+
   .info-sticky {
     position: fixed;
     transform: none;
@@ -3395,6 +3469,10 @@ body {
   .info-sticky .print {
     padding-top: 0;
     padding-left: 23px;
+  }
+
+  .card-drug .wrap-btn {
+    right: -27px;
   }
 
   .prevention__item {
@@ -3432,6 +3510,18 @@ body {
   .footer .design,
   .footer .copyright {
     width: 100%;
+  }
+
+  .selection-drug {
+    padding-bottom: 49px;
+  }
+
+  .selection-drug .drugs-list__item {
+    width: 100%;
+  }
+
+  .selection-drug .text_sm {
+    font-size: 14px;
   }
 
   .page-effectiveness .link-back {
@@ -3519,8 +3609,36 @@ body {
 }
 
 @media only screen and (max-width: 420px) {
+  .btn {
+    min-width: 208px;
+    font-size: 14px;
+    padding: 15px 20px 16px;
+  }
+
+  .card-drug__img-wrap {
+    width: 143px;
+    padding-top: 50%;
+    margin-bottom: 20px;
+  }
+
+  .card-drug__header {
+    margin-bottom: 9px;
+  }
+
+  .card-drug__header .heading_h4 {
+    font-size: 14px;
+  }
+
+  .card-drug__header .big {
+    font-size: 24px;
+  }
+
   .container {
     width: 100%;
+  }
+
+  .selection-drug .drugs-list__item {
+    margin-bottom: 30px;
   }
 }
 

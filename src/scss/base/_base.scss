@@ -102,12 +102,17 @@ body {
 
     .wrap-content {
       display: inline-block;
+      text-align: right;
     }
 
-    .icon-logo {
-      max-width: 512px;
-      display: block;
-      margin: -10px auto 0;
+    .big {
+      display: inline-block;
+      font-size: 124px;
+      line-height: .6;
+
+      sup {
+        vertical-align: baseline;
+      }
     }
   }
 
@@ -115,8 +120,8 @@ body {
     font-weight: 700;
     font-size: 38px;
     text-align: right;
-    padding-right: 30px;
-
+    padding-right: 40px;
+    line-height: .6;
   }
 }
 

@@ -66,6 +66,12 @@
     min-width: 225px;
     padding: 18px 20px 19px;
   }
+  @include
+  respond-to($xxs){
+    min-width: 208px;
+    font-size: 14px;
+    padding: 15px 20px 16px;
+  }
 }
 
 .round {
@@ -106,6 +112,15 @@
     background-size: contain;
     z-index: 2;
     transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  @include respond-to($xs){
+      width: 54px;
+      height: 54px;
+    &:before {
+      width: 68px;
+      height: 68px;
+    }
   }
 }
 
