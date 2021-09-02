@@ -1,4 +1,5 @@
 .prevention {
+  position: relative;
   background-image: url(../assets/img/prevention.jpg);
   background-repeat: no-repeat;
   background-position: 0;
@@ -6,13 +7,14 @@
   color: #ffffff;
   padding: 53px 0 70px;
 
-  &__heading{
+  &__heading {
     max-width: 780px;
     width: 100%;
     text-align: center;
-    margin:0 auto 92px;
+    margin: 0 auto 92px;
     padding: 0 15px;
-    .small{
+
+    .small {
       font-size: .85em;
     }
   }
@@ -30,6 +32,7 @@
     width: 100%;
     padding: 25px 28px 63px;
     margin: 0 auto;
+
     &:before {
       position: absolute;
       content: '';
@@ -73,6 +76,11 @@
     margin-bottom: 17px;
   }
 
+  .wrap-btn{
+    text-align: center;
+    padding-top: 30px;
+  }
+
   @include respond-to($md) {
     &__list {
       font-size: 14px;
@@ -102,10 +110,10 @@
   @include respond-to($sm) {
     &__list {
       justify-content: space-around;
-      border: 1px solid red;
       max-width: 323px;
       width: 100%;
       padding: 22px 25px 0;
+
       &:before {
         background-image: url(../assets/img/bg-rounds-mob1.png);
       }
@@ -114,32 +122,38 @@
       width: 50%;
       min-height: 150px;
       margin-bottom: 30px;
-      &:nth-child(n){
+
+      &:nth-child(n) {
         padding: 24px 22px 0;
       }
+
       &:nth-child(1),
-      &:nth-child(3){
+      &:nth-child(3) {
         top: 90px;
       }
-      &:nth-child(5){
+
+      &:nth-child(5) {
         left: 63px;
       }
     }
-    &__icon{
+    &__icon {
       margin-bottom: 10px;
     }
   }
-  @include respond-to($xs){
-    &__item{
+  @include respond-to($xs) {
+    &__heading{
+      margin-bottom: 70px;
+    }
+    &__item {
       padding-top: 30px;
     }
-    &__icon{
+    &__icon {
       height: 34px;
       background-size: 34px;
     }
   }
   @media all and (max-width: 360px) {
-    .container{
+    .container {
       padding: 0;
     }
   }

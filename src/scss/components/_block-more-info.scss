@@ -8,9 +8,7 @@
   line-height: 1.2;
   color: #000000;
   font-weight: 700;
-  &.hide{
-    display: none;
-  }
+
   p{
     margin-bottom: 23px;
   }
@@ -44,6 +42,6 @@
 }
 
 .hide-info{
-  display: none;
+  //display: none;
 }
 

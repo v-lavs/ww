@@ -116,6 +116,7 @@ body {
 
 .body_bg {
   position: relative;
+  z-index: 0;
 }
 
 .body_bg:before {
@@ -123,8 +124,8 @@ body {
   content: '';
   background: linear-gradient(to top, #fbf7fd 0%, rgba(251, 247, 253, 0) 40%), url(../assets/img/bg-soty.png);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: center 0;
+  background-size: 100%;
   left: 0;
   right: 0;
   min-height: 1005px;
@@ -691,10 +692,6 @@ body {
   font-weight: 700;
 }
 
-.block-more-info.hide {
-  display: none;
-}
-
 .block-more-info p {
   margin-bottom: 23px;
 }
@@ -728,10 +725,6 @@ body {
 
 .block-more-info_white ul li:before {
   background-color: #ffffff;
-}
-
-.hide-info {
-  display: none;
 }
 
 .post-list {
@@ -1195,6 +1188,7 @@ body {
 }
 
 .prevention {
+  position: relative;
   background-image: url(../assets/img/prevention.jpg);
   background-repeat: no-repeat;
   background-position: 0;
@@ -1269,6 +1263,11 @@ body {
   width: 100%;
   height: 42px;
   margin-bottom: 17px;
+}
+
+.prevention .wrap-btn {
+  text-align: center;
+  padding-top: 30px;
 }
 
 .popup {
@@ -2188,10 +2187,10 @@ body {
 
 .consequences:before {
   background-image: url(../assets/img/bg112-top.png);
-  width: 270px;
-  height: 164px;
-  right: 138px;
-  top: -150px;
+  width: 14%;
+  height: 20%;
+  right: 8%;
+  top: -15%;
 }
 
 .consequences:after {
@@ -2210,6 +2209,7 @@ body {
 
 .consequences .wrap-btn {
   text-align: center;
+  display: none;
 }
 
 .consequences-list {
@@ -3090,6 +3090,16 @@ body {
     padding-left: 15px;
   }
 
+  .consequences {
+    background-position: 0 0;
+    background-size: cover;
+  }
+
+  .consequences-list__item {
+    width: 27%;
+    padding: 30px 10px;
+  }
+
   .members-list__item {
     padding-top: 68%;
   }
@@ -3140,6 +3150,10 @@ body {
 }
 
 @media only screen and (max-width: 991px) {
+  .heading_xxl {
+    font-size: 43px;
+  }
+
   .menu__item {
     padding-left: 16px;
     padding-right: 16px;
@@ -3331,6 +3345,16 @@ body {
     display: none;
   }
 
+  .consequences-list__item {
+    width: 43%;
+    margin-bottom: 18px;
+  }
+
+  .consequences-list__item:nth-child(n):before,
+  .consequences-list__item:nth-child(n):after {
+    display: none;
+  }
+
   .section-members {
     padding-bottom: 100px;
   }
@@ -3485,7 +3509,6 @@ body {
 
   .prevention__list {
     justify-content: space-around;
-    border: 1px solid red;
     max-width: 323px;
     width: 100%;
     padding: 22px 25px 0;
@@ -3591,6 +3614,10 @@ body {
     margin-bottom: 25px;
   }
 
+  .heading_h1 {
+    font-size: 24px;
+  }
+
   .info-sticky {
     position: fixed;
     transform: none;
@@ -3618,6 +3645,10 @@ body {
 
   .card-drug .wrap-btn {
     right: -27px;
+  }
+
+  .prevention__heading {
+    margin-bottom: 70px;
   }
 
   .prevention__item {
@@ -3664,6 +3695,36 @@ body {
   .symptoms-list__item:before,
   .symptoms-list__item:after {
     display: none;
+  }
+
+  .consequences {
+    padding-top: 64px;
+    padding-bottom: 37px;
+    background-position: center 0;
+  }
+
+  .consequences:before,
+  .consequences:after {
+    display: none;
+  }
+
+  .consequences .section__heading {
+    margin-bottom: 34px;
+    padding-bottom: 40px;
+  }
+
+  .consequences-list {
+    margin-bottom: 37px;
+  }
+
+  .consequences-list__item {
+    width: 100%;
+    min-height: 126px;
+    padding: 30px 35px;
+  }
+
+  .consequences-list__item:last-of-type {
+    margin-bottom: 0;
   }
 
   .section-members__bg {
@@ -3776,6 +3837,14 @@ body {
 }
 
 @media only screen and (max-width: 420px) {
+  .heading_xxl {
+    font-size: 24px;
+  }
+
+  .heading_h1 {
+    font-size: 20px;
+  }
+
   .card-drug__img-wrap {
     width: 143px;
     padding-top: 50%;
@@ -3796,6 +3865,10 @@ body {
 
   .container {
     width: 100%;
+  }
+
+  .consequences .consequences-title {
+    font-size: 20px;
   }
 
   .members-list__item {

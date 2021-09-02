@@ -4,6 +4,7 @@
   &_xxl {
     font-size: 56px;
   }
+
   &_xl {
     font-size: 42px;
   }
@@ -23,36 +24,68 @@
   &_h4 {
     font-size: 22px;
   }
+
   &_h5 {
     font-size: 18px;
   }
-  &_h6{
+
+  &_h6 {
     font-size: 14px;
   }
 }
 
 //---------
 .text {
-  &_xl{
+  &_xl {
     font-size: 48px;
   }
-  &_lg{
+
+  &_lg {
     font-size: 36px;
   }
-  &_md{
-    font-size:22px ;
-  }
-  &-sm{
-    font-size:16px ;
+
+  &_md {
+    font-size: 22px;
   }
 
-  &-xs{
+  &-sm {
+    font-size: 16px;
+  }
+
+  &-xs {
     font-size: 14px;
   }
 }
-@include respond-to($xs){
-
+@include respond-to($md) {
+  .heading {
+    &_xxl {
+      font-size: 43px;
+    }
+  }
 }
+@include respond-to($xs) {
+  .heading {
+      &_h1 {
+        font-size: 24px;
+      }
+  }
+}
+
+@include respond-to($xxs) {
+  .heading {
+     &_xxl {
+       font-size: 24px;
+     }
+
+     &_h1 {
+       font-size: 20px;
+     }
+   }
+}
+
+
+
+
 
 
 
