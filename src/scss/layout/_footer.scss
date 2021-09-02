@@ -84,9 +84,10 @@
   }
 
   .disclaimer {
+    display: none;
+
     background-size: cover;
     overflow: hidden;
-
     position: fixed;
     bottom: 0;
     left: 0;

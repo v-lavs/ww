@@ -1545,6 +1545,7 @@ body {
 }
 
 .footer .disclaimer {
+  display: none;
   background-size: cover;
   overflow: hidden;
   position: fixed;
