@@ -224,14 +224,15 @@ body {
 
 .section__heading .big sup {
   vertical-align: baseline;
+  margin-left: -.35em;
 }
 
 .section__title {
   font-weight: 700;
   font-size: 38px;
   text-align: right;
-  padding-right: 40px;
-  line-height: .6;
+  padding-right: 1.15em;
+  line-height: .8;
 }
 
 .card-mob {
@@ -853,6 +854,7 @@ body {
 
 .card-drug__header .big sup {
   vertical-align: baseline;
+  margin-left: -0.35em;
 }
 
 .card-drug__img-wrap {
