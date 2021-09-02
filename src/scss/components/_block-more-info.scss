@@ -4,9 +4,9 @@
   max-width: 1043px;
   padding-top: 55px;
   padding-bottom: 73px;
-  border-top: 1px solid ;
+  border-top: 1px solid rgba(0, 136, 236, 0.1);;
   line-height: 1.2;
-  color: #ffffff;
+  color: #000000;
   font-weight: 700;
   &.hide{
     display: none;
@@ -28,10 +28,22 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background-color: #ffffff;
+        background-color:#000000;
         left: 0;
         top: 14px;
       }
     }
   }
+  &_white{
+    color: #ffffff;
+    border-color: #ffffff;
+    ul li:before{
+      background-color: #ffffff;
+    }
+  }
 }
+
+.hide-info{
+  display: none;
+}
+

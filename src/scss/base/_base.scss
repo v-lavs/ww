@@ -9,7 +9,9 @@ body {
   &:before {
     position: absolute;
     content: '';
-    background-image: url(../assets/img/bg-soty.png);
+    background:
+    linear-gradient(to top, #fbf7fd 0%, rgba(251, 247, 253, 0) 40%),
+    url(../assets/img/bg-soty.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

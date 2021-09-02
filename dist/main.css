@@ -121,7 +121,7 @@ body {
 .body_bg:before {
   position: absolute;
   content: '';
-  background-image: url(../assets/img/bg-soty.png);
+  background: linear-gradient(to top, #fbf7fd 0%, rgba(251, 247, 253, 0) 40%), url(../assets/img/bg-soty.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -685,9 +685,9 @@ body {
   max-width: 1043px;
   padding-top: 55px;
   padding-bottom: 73px;
-  border-top: 1px solid;
+  border-top: 1px solid rgba(0, 136, 236, 0.1);
   line-height: 1.2;
-  color: #ffffff;
+  color: #000000;
   font-weight: 700;
 }
 
@@ -716,9 +716,22 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #000000;
   left: 0;
   top: 14px;
+}
+
+.block-more-info_white {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.block-more-info_white ul li:before {
+  background-color: #ffffff;
+}
+
+.hide-info {
+  display: none;
 }
 
 .post-list {
@@ -1182,7 +1195,10 @@ body {
 }
 
 .prevention {
-  background-color: #25A3E5;
+  background-image: url(../assets/img/prevention.jpg);
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: cover;
   color: #ffffff;
   padding: 53px 0 70px;
 }
@@ -2090,18 +2106,7 @@ body {
 }
 
 .symptoms {
-  position: relative;
-}
-
-.symptoms:before {
-  position: absolute;
-  content: '';
-  top: 10px;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background-image: linear-gradient(to top, #fbf7fd 0%, rgba(251, 247, 253, 0));
-  transform: translateY(-100%);
+  padding-bottom: 42px;
 }
 
 .symptoms-list {
@@ -2110,6 +2115,7 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .symptoms-list__item {
@@ -2160,8 +2166,40 @@ body {
 }
 
 .consequences {
+  position: relative;
+  background-color: #3DB5F4;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
   padding-top: 140px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
+  margin-bottom: 114px;
+}
+
+.consequences:before,
+.consequences:after {
+  position: absolute;
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 1;
+}
+
+.consequences:before {
+  background-image: url(../assets/img/bg112-top.png);
+  width: 270px;
+  height: 164px;
+  right: 138px;
+  top: -150px;
+}
+
+.consequences:after {
+  background-image: url(../assets/img/bg112-bottom.png);
+  width: 257px;
+  height: 161px;
+  bottom: -82px;
+  left: 236px;
 }
 
 .consequences .section__heading {
@@ -2180,7 +2218,7 @@ body {
   justify-content: center;
   max-width: 1043px;
   width: 100%;
-  margin: 0 auto 72px;
+  margin: 0 auto 50px;
   text-align: center;
   line-height: 1.2;
 }
@@ -2906,6 +2944,10 @@ body {
   stroke: #0062B3;
 }
 
+.page-pyelonephritis .symptoms {
+  padding-bottom: 150px;
+}
+
 @media only screen and (max-width: 1480px) {
   .btn {
     min-width: 225px;
@@ -3032,6 +3074,20 @@ body {
   .section-reason .reason-list__item_3,
   .section-reason .reason-list__item_1 {
     margin-left: 5.25%;
+  }
+
+  .symptoms-list__item {
+    padding: 35px 17px 26px 17px;
+  }
+
+  .symptoms-list__bg-icon {
+    height: 70px;
+    width: 70px;
+  }
+
+  .symptoms-list__text {
+    font-size: 16px;
+    padding-left: 15px;
   }
 
   .members-list__item {
@@ -3466,6 +3522,23 @@ body {
     max-width: 580px;
   }
 
+  .symptoms-list__bg-icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 7px;
+  }
+
+  .symptoms-list__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 17px;
+  }
+
+  .symptoms-list__text {
+    padding-left: 0;
+  }
+
   .page-effectiveness__heading {
     text-align: center;
   }
@@ -3582,6 +3655,15 @@ body {
   .footer .design,
   .footer .copyright {
     width: 100%;
+  }
+
+  .symptoms-list__item {
+    width: 50%;
+  }
+
+  .symptoms-list__item:before,
+  .symptoms-list__item:after {
+    display: none;
   }
 
   .section-members__bg {

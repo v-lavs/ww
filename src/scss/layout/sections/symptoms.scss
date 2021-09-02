@@ -1,15 +1,5 @@
 .symptoms {
-  position: relative;
-  &:before{
-    position: absolute;
-    content: '';
-    top: 10px;
-    left: 0;
-    right: 0;
-    height: 120px;
-    background-image: linear-gradient(to top, rgba(251,247,253,1)0%,rgba(251,247,253,0));
-    transform: translateY(-100%);
-  }
+  padding-bottom: 42px;
 }
 
 .symptoms-list {
@@ -18,7 +8,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
   &__item {
     position: relative;
     display: flex;
@@ -64,5 +54,45 @@
 
   &__text {
     padding-left: 25px;
+  }
+  @include respond-to($lg){
+    &__item{
+      padding: 35px 17px 26px 17px;
+    }
+    &__bg-icon{
+      height: 70px;
+      width: 70px;
+    }
+    &__text{
+      font-size: 16px;
+      padding-left: 15px;
+    }
+  }
+  @include respond-to($sm){
+
+    &__bg-icon{
+      width: 54px;
+      height: 54px;
+      margin-bottom: 7px;
+    }
+    &__item{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px 17px;
+    }
+    &__text{
+      padding-left: 0;
+    }
+  }
+  @include respond-to($xs){
+
+    &__item{
+      width: 50%;
+      &:before,
+      &:after{
+        display: none;
+      }
+    }
   }
 }

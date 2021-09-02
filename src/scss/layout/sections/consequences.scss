@@ -1,6 +1,37 @@
 .consequences {
+  position: relative;
+  background-color: #3DB5F4;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
   padding-top: 140px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
+  margin-bottom: 114px;
+  &:before,
+  &:after{
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+  }
+  &:before{
+    background-image: url(../assets/img/bg112-top.png);
+    width: 270px;
+    height: 164px;
+    right: 138px;
+    top: -150px;
+
+  }
+
+  &:after{
+    background-image: url(../assets/img/bg112-bottom.png);
+    width: 257px;
+    height: 161px;
+    bottom: -82px;
+    left: 236px;
+  }
   .section__heading {
     margin: 0 auto 80px;
     max-width: 895px;
@@ -9,7 +40,7 @@
   .wrap-btn{
     text-align: center;
   }
-}
+ }
 
 .consequences-list{
   display: flex;
@@ -17,7 +48,7 @@
   justify-content: center;
   max-width: 1043px;
   width: 100%;
-  margin: 0 auto 72px;;
+  margin: 0 auto 50px;
   text-align: center;
   line-height: 1.2;
 
