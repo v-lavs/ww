@@ -8,8 +8,10 @@
     margin-bottom: 10px;
   }
   .section__sub-title{
+    width: 85%;
+    max-width: 652px;
     font-size: 22px;
-    margin-bottom: 28px;
+    margin: 0 auto 28px;
   }
   &__bg{
     position: absolute;
@@ -30,6 +32,27 @@
     width: 100%;
     text-align: center;
   }
+  @include respond-to($md){
+    padding-bottom: 100px;
+    .section__title{
+      font-size: 56px;
+    }
+    .section__sub-title{
+      font-size: 18px;
+    }
+  }
+  @include respond-to($xs){
+   &__bg{
+     padding-bottom: 35px;
+   }
+    .section__title{
+      font-size: 32px;
+    }
+    .section__sub-title{
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+  }
 }
 
 .members-list{
@@ -49,5 +72,20 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  @include respond-to($xl){
+    &__item{
+      padding-top: 57%;
+    }
+    }
+  @include respond-to($lg){
+    &__item{
+      padding-top: 68%;
+    }
+  }
+  @include respond-to($xxs){
+    &__item{
+      padding-top: 85%;
+    }
   }
 }

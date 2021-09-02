@@ -202,7 +202,8 @@ body {
   position: absolute;
   content: '';
   display: block;
-  width: 271px;
+  max-width: 271px;
+  width: 19%;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
@@ -2359,8 +2360,10 @@ body {
 }
 
 .section-members .section__sub-title {
+  width: 85%;
+  max-width: 652px;
   font-size: 22px;
-  margin-bottom: 28px;
+  margin: 0 auto 28px;
 }
 
 .section-members__bg {
@@ -2911,6 +2914,10 @@ body {
   .container {
     max-width: 1280px;
   }
+
+  .members-list__item {
+    padding-top: 57%;
+  }
 }
 
 @media all and (max-width: 1340px) {
@@ -2947,6 +2954,18 @@ body {
 }
 
 @media only screen and (max-width: 1180px) {
+  .section__heading {
+    padding-bottom: 40px;
+  }
+
+  .section__heading .big {
+    font-size: 97px;
+  }
+
+  .section__title {
+    font-size: 31px;
+  }
+
   .card-drug {
     padding: 0 15px;
   }
@@ -3012,6 +3031,10 @@ body {
   .section-reason .reason-list__item_3,
   .section-reason .reason-list__item_1 {
     margin-left: 5.25%;
+  }
+
+  .members-list__item {
+    padding-top: 68%;
   }
 
   .page-effectiveness__heading {
@@ -3251,6 +3274,18 @@ body {
     display: none;
   }
 
+  .section-members {
+    padding-bottom: 100px;
+  }
+
+  .section-members .section__title {
+    font-size: 56px;
+  }
+
+  .section-members .section__sub-title {
+    font-size: 18px;
+  }
+
   .selection-drug .drugs-list {
     margin-bottom: 24px;
   }
@@ -3290,6 +3325,34 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+  .section__heading {
+    padding-bottom: 25px;
+  }
+
+  .section__heading .big {
+    font-size: 80px;
+  }
+
+  .section__title {
+    font-size: 25px;
+  }
+
+  .btn {
+    min-width: 208px;
+    font-size: 14px;
+    padding: 15px 20px 16px;
+  }
+
+  .round {
+    width: 54px;
+    height: 54px;
+  }
+
+  .round:before {
+    width: 68px;
+    height: 68px;
+  }
+
   .pagination__next,
   .pagination__prev {
     display: none;
@@ -3434,18 +3497,24 @@ body {
 }
 
 @media only screen and (max-width: 580px) {
+  .section__heading {
+    padding-bottom: 19px;
+  }
+
+  .section__heading:after {
+    width: 36%;
+  }
+
+  .section__heading .big {
+    font-size: 67px;
+  }
+
+  .section__title {
+    font-size: 18px;
+  }
+
   .dynamic-content ul {
     margin-bottom: 25px;
-  }
-
-  .round {
-    width: 54px;
-    height: 54px;
-  }
-
-  .round:before {
-    width: 68px;
-    height: 68px;
   }
 
   .info-sticky {
@@ -3512,6 +3581,19 @@ body {
   .footer .design,
   .footer .copyright {
     width: 100%;
+  }
+
+  .section-members__bg {
+    padding-bottom: 35px;
+  }
+
+  .section-members .section__title {
+    font-size: 32px;
+  }
+
+  .section-members .section__sub-title {
+    font-size: 14px;
+    margin-bottom: 28px;
   }
 
   .selection-drug {
@@ -3611,12 +3693,6 @@ body {
 }
 
 @media only screen and (max-width: 420px) {
-  .btn {
-    min-width: 208px;
-    font-size: 14px;
-    padding: 15px 20px 16px;
-  }
-
   .card-drug__img-wrap {
     width: 143px;
     padding-top: 50%;
@@ -3637,6 +3713,10 @@ body {
 
   .container {
     width: 100%;
+  }
+
+  .members-list__item {
+    padding-top: 85%;
   }
 
   .selection-drug .drugs-list__item {

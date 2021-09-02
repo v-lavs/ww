@@ -67,7 +67,7 @@
     padding: 18px 20px 19px;
   }
   @include
-  respond-to($xxs){
+  respond-to($sm){
     min-width: 208px;
     font-size: 14px;
     padding: 15px 20px 16px;
@@ -114,7 +114,7 @@
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
-  @include respond-to($xs){
+  @include respond-to($sm){
       width: 54px;
       height: 54px;
     &:before {

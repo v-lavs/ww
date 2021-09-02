@@ -90,7 +90,8 @@ body {
       position: absolute;
       content: '';
       display: block;
-      width: 271px;
+      max-width: 271px;
+      width: 19%;
       left: 50%;
       bottom: 0;
       transform: translateX(-50%);
@@ -125,7 +126,42 @@ body {
     line-height: .8;
   }
 }
-
+@include respond-to($lg){
+  .section__heading {
+    padding-bottom: 40px;
+    .big {
+      font-size: 97px;
+    }
+  }
+  .section__title {
+    font-size: 31px;
+  }
+}
+@include respond-to($sm){
+  .section__heading {
+    padding-bottom: 25px;
+    .big {
+      font-size: 80px;
+    }
+  }
+  .section__title {
+    font-size: 25px;
+  }
+}
+@include respond-to($xs){
+  .section__heading {
+    padding-bottom: 19px;
+   &:after{
+      width: 36%;
+  }
+    .big {
+      font-size: 67px;
+    }
+  }
+  .section__title {
+    font-size: 18px;
+  }
+}
 .card-mob {
   background: linear-gradient(222.87deg, #FFFFFF 21.75%, #F5F5F5 93.36%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
