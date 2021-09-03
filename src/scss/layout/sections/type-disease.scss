@@ -1,3 +1,7 @@
+.disease{
+  padding-bottom: 108px;
+}
+
 .types-disease {
   &__inner {
     max-width: 1024px;
@@ -19,9 +23,35 @@
     width: 100%;
     font-weight: 400;
     color: $green-100;
-    .strong{
+
+    .strong {
       font-size: 1.2em;
       font-weight: 700;
+    }
+  }
+
+  @include respond-to($lg) {
+    &__inner {
+      width: 80%;
+    }
+    &__header {
+      padding-bottom: 60px;
+    }
+  }
+  @include respond-to($md) {
+    &__heading {
+      max-width: 480px;
+      width: 100%;
+    }
+  }
+  @include respond-to($xs) {
+    &__header {
+      width: 100%;
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+      margin-bottom: 30px;
+      font-size: 20px;
     }
   }
 }
@@ -91,5 +121,68 @@
     padding-top: 25px;
     padding-bottom: 15px;
     color: #0088EC;
-     }
+  }
+
+  @include respond-to($lg) {
+    margin-top: -50px;
+    &__title {
+      padding-top: 15px;
+      font-size: 22px;
+    }
+    &__icon {
+      padding-bottom: 60px;
+
+      &:before {
+        height: 60px;
+      }
+    }
+    .disease-bg {
+      width: 100px;
+      height: 100px;
+      border-width: 12px;
+      background-size: 50px 45px, contain;
+    }
+  }
+  @include respond-to($sm) {
+    &__item {
+      width: 50%;
+      max-width: 230px;
+      margin-bottom: 25px;
+    }
+    flex-wrap: wrap;
+    justify-content: center;
+    &__icon {
+      padding-bottom: 25px;
+
+      &:before {
+        height: 35px;
+        bottom: -10px;
+      }
+    }
+    &__title {
+      font-size: 20px;
+      padding-bottom: 5px;
+    }
+  }
+  @include respond-to($xs) {
+    margin-top: 0;
+
+    &__icon {
+      padding-bottom: 0;
+      &:before {
+        display: none;
+      }
+    }
+    &__title {
+      font-size: 18px;
+    }
+
+  }
+  @include respond-to($xxs) {
+    &__item{
+      width: 100%;
+      margin: 0 auto 25px;
+      max-width: 174px;
+    }
+  }
 }

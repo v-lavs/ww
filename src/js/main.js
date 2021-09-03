@@ -50,7 +50,9 @@ $(document).ready(function () {
         // DESTROY SLIDER INSTANCES
         if ($(window).outerWidth() <= 991) {
             if (!reasonSlider && reasonSelector) {
-                reasonSlider = reasonSlider = new Swiper(".reason-slider", {
+                reasonSlider = new Swiper(".reason-slider", {
+                    spaceBetween: 60,
+                    slidesPerView: 1,
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true,

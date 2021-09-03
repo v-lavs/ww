@@ -1,12 +1,15 @@
-.section-banner{
+.section-banner {
   position: relative;
   padding-top: 120px;
   min-height: 800px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: center;
+
   &:before,
-  &:after{
+  &:after {
     position: absolute;
     content: '';
     display: block;
@@ -14,25 +17,85 @@
     right: 0;
     z-index: 1;
   }
-  &:before{
+
+  &:before {
     top: 0;
     height: 30%;
     background: linear-gradient(180deg, #9BE2EF -97.22%, #9BE2EF -97.2%, rgba(155, 226, 239, 0) 86.51%);
   }
-  &:after{
+
+  &:after {
     bottom: 0;
     height: 22%;
     background: linear-gradient(180deg, rgba(37, 163, 229, 0) 0%, #25A3E5 100%);
   }
 
-  &__slogan{
+  &__slogan {
     width: 100%;
     max-width: 670px;
     font-size: 64px;
     font-weight: 700;
     color: $blue;
-    line-height: .95;
+    line-height: 1;
     margin-bottom: 60px;
     text-shadow: 0 4px 15px rgba(134, 200, 234, 0.25);
+
+    .text-big {
+      font-size: 1.4em;
+      line-height: .5;
+    }
+
+    .text-huge {
+      font-size: 1.8em;
+      line-height: .5;
+    }
+  }
+
+  .wrap-img {
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+
+    .hand {
+      width: 28%;
+    }
+
+    .tablet {
+      width: 72%;
+    }
+  }
+
+  @include respond-to($xl) {
+    &__slogan {
+      font-size: 54px;
+    }
+  }
+  @include respond-to($lg) {
+    min-height: 632px;
+    &__slogan {
+      font-size: 46px;
+    }
+  }
+  @include respond-to($md) {
+    min-height: 560px;
+    &__slogan {
+      font-size: 40px;
+      max-width: 428px;
+    }
+  }
+  @include respond-to($sm) {
+    padding-top: 95px;
+    .wrap-img {
+      display: none;
+    }
+  }
+  @include respond-to($xxs) {
+    &__slogan {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
   }
 }

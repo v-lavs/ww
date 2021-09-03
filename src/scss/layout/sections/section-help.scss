@@ -36,6 +36,9 @@
     margin-bottom: 80px;
 
   }
+  @include respond-to($md){
+    padding-top: 80px;
+  }
 }
 
 .diagnoses-list {

@@ -684,6 +684,7 @@ body {
 .block-more-info {
   margin: 0 auto;
   max-width: 1043px;
+  width: 100%;
   padding-top: 55px;
   padding-bottom: 73px;
   border-top: 1px solid rgba(0, 136, 236, 0.1);
@@ -1587,6 +1588,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: center;
 }
 
 .section-banner:before,
@@ -1617,9 +1620,36 @@ body {
   font-size: 64px;
   font-weight: 700;
   color: #0062B3;
-  line-height: .95;
+  line-height: 1;
   margin-bottom: 60px;
   text-shadow: 0 4px 15px rgba(134, 200, 234, 0.25);
+}
+
+.section-banner__slogan .text-big {
+  font-size: 1.4em;
+  line-height: .5;
+}
+
+.section-banner__slogan .text-huge {
+  font-size: 1.8em;
+  line-height: .5;
+}
+
+.section-banner .wrap-img {
+  width: 60%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.section-banner .wrap-img .hand {
+  width: 28%;
+}
+
+.section-banner .wrap-img .tablet {
+  width: 72%;
 }
 
 .section-help {
@@ -2104,8 +2134,12 @@ body {
   margin-left: 15.2%;
 }
 
+.reason-list .swiper-pagination-bullets .swiper-pagination-bullet {
+  display: none;
+}
+
 .symptoms {
-  padding-bottom: 42px;
+  padding-bottom: 150px;
 }
 
 .symptoms-list {
@@ -2278,6 +2312,10 @@ body {
   left: -12px;
   border-radius: 100% 0 0 100% / 50% 0 0 50%;
   display: block;
+}
+
+.disease {
+  padding-bottom: 108px;
 }
 
 .types-disease__inner {
@@ -2958,6 +2996,10 @@ body {
     max-width: 1280px;
   }
 
+  .section-banner__slogan {
+    font-size: 54px;
+  }
+
   .members-list__item {
     padding-top: 57%;
   }
@@ -3042,6 +3084,14 @@ body {
     align-items: center;
   }
 
+  .section-banner {
+    min-height: 632px;
+  }
+
+  .section-banner__slogan {
+    font-size: 46px;
+  }
+
   .section-reason__heading {
     width: 290px;
     height: 290px;
@@ -3080,6 +3130,10 @@ body {
     margin-left: 5.25%;
   }
 
+  .section-reason .swiper-pagination-bullets .swiper-pagination-bullet {
+    display: block;
+  }
+
   .symptoms-list__item {
     padding: 35px 17px 26px 17px;
   }
@@ -3102,6 +3156,38 @@ body {
   .consequences-list__item {
     width: 27%;
     padding: 30px 10px;
+  }
+
+  .types-disease__inner {
+    width: 80%;
+  }
+
+  .types-disease__header {
+    padding-bottom: 60px;
+  }
+
+  .disease-list {
+    margin-top: -50px;
+  }
+
+  .disease-list__title {
+    padding-top: 15px;
+    font-size: 22px;
+  }
+
+  .disease-list__icon {
+    padding-bottom: 60px;
+  }
+
+  .disease-list__icon:before {
+    height: 60px;
+  }
+
+  .disease-list .disease-bg {
+    width: 100px;
+    height: 100px;
+    border-width: 12px;
+    background-size: 50px 45px, contain;
   }
 
   .members-list__item {
@@ -3329,6 +3415,19 @@ body {
     bottom: 0;
   }
 
+  .section-banner {
+    min-height: 560px;
+  }
+
+  .section-banner__slogan {
+    font-size: 40px;
+    max-width: 428px;
+  }
+
+  .section-help {
+    padding-top: 80px;
+  }
+
   .section-reason .reason-slider {
     position: relative;
     max-width: 400px;
@@ -3371,6 +3470,11 @@ body {
   .consequences-list__item:nth-child(n):before,
   .consequences-list__item:nth-child(n):after {
     display: none;
+  }
+
+  .types-disease__heading {
+    max-width: 480px;
+    width: 100%;
   }
 
   .section-members {
@@ -3571,6 +3675,14 @@ body {
     max-width: 580px;
   }
 
+  .section-banner {
+    padding-top: 95px;
+  }
+
+  .section-banner .wrap-img {
+    display: none;
+  }
+
   .symptoms-list__bg-icon {
     width: 54px;
     height: 54px;
@@ -3591,6 +3703,31 @@ body {
   .consequences {
     padding-top: 80px;
     padding-bottom: 60px;
+  }
+
+  .disease-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .disease-list__item {
+    width: 50%;
+    max-width: 230px;
+    margin-bottom: 25px;
+  }
+
+  .disease-list__icon {
+    padding-bottom: 25px;
+  }
+
+  .disease-list__icon:before {
+    height: 35px;
+    bottom: -10px;
+  }
+
+  .disease-list__title {
+    font-size: 20px;
+    padding-bottom: 5px;
   }
 
   .page-effectiveness__heading {
@@ -3673,12 +3810,33 @@ body {
     font-size: 18px;
   }
 
+  .block-buy {
+    width: 65px;
+    height: 86px;
+    right: 0;
+    bottom: 28px;
+    top: auto;
+  }
+
+  .block-buy .buy {
+    display: none;
+  }
+
+  .block-buy .hexagon {
+    width: 65px;
+    height: 86px;
+  }
+
   .dynamic-content ul {
     margin-bottom: 25px;
   }
 
   .heading_h1 {
     font-size: 24px;
+  }
+
+  .text_md {
+    font-size: 16px;
   }
 
   .info-sticky {
@@ -3788,6 +3946,31 @@ body {
 
   .consequences-list__item:last-of-type {
     margin-bottom: 0;
+  }
+
+  .types-disease__header {
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+
+  .disease-list {
+    margin-top: 0;
+  }
+
+  .disease-list__icon {
+    padding-bottom: 0;
+  }
+
+  .disease-list__icon:before {
+    display: none;
+  }
+
+  .disease-list__title {
+    font-size: 18px;
   }
 
   .section-members__bg {
@@ -3938,8 +4121,19 @@ body {
     width: 100%;
   }
 
+  .section-banner__slogan {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
   .consequences .consequences-title {
     font-size: 20px;
+  }
+
+  .disease-list__item {
+    width: 100%;
+    margin: 0 auto 25px;
+    max-width: 174px;
   }
 
   .members-list__item {
@@ -3962,9 +4156,5 @@ body {
 @media all and (max-width: 360px) {
   .info-sticky {
     top: 240px;
-  }
-
-  .prevention .container {
-    padding: 0;
   }
 }

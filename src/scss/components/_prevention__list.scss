@@ -76,7 +76,7 @@
     margin-bottom: 17px;
   }
 
-  .wrap-btn{
+  .wrap-btn {
     text-align: center;
     padding-top: 30px;
   }
@@ -139,12 +139,12 @@
     &__icon {
       margin-bottom: 10px;
     }
-    &__heading{
+    &__heading {
       margin-bottom: 30px;
     }
   }
   @include respond-to($xs) {
-    &__heading{
+    &__heading {
       margin-bottom: 70px;
     }
     &__item {
@@ -153,11 +153,6 @@
     &__icon {
       height: 34px;
       background-size: 34px;
-    }
-  }
-  @media all and (max-width: 360px) {
-    .container {
-      padding: 0;
     }
   }
 }

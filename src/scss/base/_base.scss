@@ -6,11 +6,11 @@ body {
 .body_bg {
   position: relative;
   z-index: 0;
+
   &:before {
     position: absolute;
     content: '';
-    background:
-    linear-gradient(to top, #fbf7fd 0%, rgba(251, 247, 253, 0) 40%),
+    background: linear-gradient(to top, #fbf7fd 0%, rgba(251, 247, 253, 0) 40%),
     url(../assets/img/bg-soty.png);
     background-repeat: no-repeat;
     background-position: center 0;
@@ -128,9 +128,11 @@ body {
     line-height: .8;
   }
 }
-@include respond-to($lg){
+
+@include respond-to($lg) {
   .section__heading {
     padding-bottom: 40px;
+
     .big {
       font-size: 97px;
     }
@@ -139,9 +141,11 @@ body {
     font-size: 31px;
   }
 }
-@include respond-to($sm){
+
+@include respond-to($sm) {
   .section__heading {
     padding-bottom: 25px;
+
     .big {
       font-size: 80px;
     }
@@ -150,12 +154,15 @@ body {
     font-size: 25px;
   }
 }
-@include respond-to($xs){
+
+@include respond-to($xs) {
   .section__heading {
     padding-bottom: 19px;
-   &:after{
+
+    &:after {
       width: 36%;
-  }
+    }
+
     .big {
       font-size: 67px;
     }
@@ -164,6 +171,7 @@ body {
     font-size: 18px;
   }
 }
+
 .card-mob {
   background: linear-gradient(222.87deg, #FFFFFF 21.75%, #F5F5F5 93.36%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -200,6 +208,21 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  @include respond-to($xs) {
+    width: 65px;
+    height: 86px;
+    right: 0;
+    bottom: 28px;
+    top: auto;
+    .buy {
+      display: none;
+    }
+    .hexagon {
+      width: 65px;
+      height: 86px;
+    }
   }
 }
 

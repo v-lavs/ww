@@ -228,6 +228,9 @@
   &__item_1 {
     margin-left: 15.2%;
   }
+  .swiper-pagination-bullets .swiper-pagination-bullet{
+    display: none;
+  }
 }
 
 
@@ -266,6 +269,9 @@
 
     .reason-list__item_4, .reason-list__item_6, .reason-list__item_3, .reason-list__item_1 {
       margin-left: 5.25%;
+    }
+    .swiper-pagination-bullets .swiper-pagination-bullet{
+      display: block;
     }
   }
 }
