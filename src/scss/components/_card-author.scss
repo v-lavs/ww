@@ -179,6 +179,56 @@
     }
   }
 
+  @include respond-to($lg) {
+    &__link {
+      padding-left: 98px;
+      &:before{
+        left: 57px;
+      }
+    }
+  }
+  @include respond-to($md){
+    .post-date{
+      padding: 5px 5px;
+      width: 60px;
+      height: 60px;
+    }
+    &__item .card-post_large{
+      padding: 10px;
+    }
+    &__link{
+      padding-left: 54px;
+      &:before {
+        left: 26px;
+      }
+    }
+  }
+  @include respond-to($sm){
+    .post-date{
+      width: 100%;
+      background-color: transparent;
+      flex-direction: row;
+      justify-content: flex-start;
+      text-transform: lowercase;
+      color: #24243F;
+      .day,
+      .mounts{
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 3px;
+      }
+    }
+    &__link{
+      padding-left: 10px;
+      &:before{
+        display: none;
+      }
+    }
+    &__item{
+      flex-direction: column;
+
+    }
+  }
 }
 
 

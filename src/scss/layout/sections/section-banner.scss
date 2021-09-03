@@ -60,11 +60,14 @@
     align-items: flex-end;
 
     .hand {
-      width: 28%;
+      position: absolute;
+      bottom: -12%;
+      right: 0;
+      width: 30%;
     }
 
     .tablet {
-      width: 72%;
+      width: 83%;
     }
   }
 

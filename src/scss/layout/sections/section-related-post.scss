@@ -1,20 +1,47 @@
-.section-related-post{
-  .section__header{
+.section-related-post {
+  .section__header {
     border-bottom: 1px solid #C8C8C8;
     padding-bottom: 20px;
     margin-bottom: 14px;
   }
 
 }
-.related-post{
+
+.related-post {
   padding-bottom: 0;
-  .card-post{
-    &__date{
+
+  .card-post {
+    &__date {
       font-size: 13px;
       font-family: $secondary-font;
     }
-    &__thumb{
+
+    &__thumb {
       min-height: 193px;
+    }
+  }
+
+  @include respond-to($screen-md) {
+    .post-list__item {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .card-post__thumb {
+      min-height: 150px;
+    }
+  }
+  @include respond-to($md) {
+      justify-content: space-around;
+    .post-list__item {
+      width: 50%;
+      max-width: 308px;
+      padding-bottom: 15px;
+    }
+  }
+  @include respond-to($sm) {
+    .post-list__item {
+      width: 100%;
+      max-width: 417px;
     }
   }
 }

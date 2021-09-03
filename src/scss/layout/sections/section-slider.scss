@@ -1,5 +1,118 @@
-.section-slider{
+.section-slider {
+  position: relative;
   min-height: 852px;
-  background-image:  linear-gradient(177.86deg, #F8FBFF 35.61%, #EEEEEE 98.2%);
+  background-image: linear-gradient(177.86deg, #F8FBFF 35.61%, #EEEEEE 98.2%);
 
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url(../assets/img/curcle1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 589px;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .wrapper-gif {
+    width: 68%;
+    margin-left: auto;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+
+    img {
+      mix-blend-mode: screen;
+    }
+  }
+
+  .wrapper-slider {
+    position: relative;
+    min-height: 810px;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .about-urolesan {
+
+  }
+
+  .slide-about {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding-left: 150px;
+
+    &__content {
+      width: 50%;
+      padding-top: 108px;
+      padding-bottom: 77px;
+    }
+
+    &__heading {
+      font-size: 68px;
+      line-height: 1.16;
+      color: #0088EC;
+      margin-bottom: 25px;
+    }
+
+    .counter-slide {
+      position: absolute;
+      font-size: 97px;
+      left: 0;
+      top: 100px;
+      -webkit-text-stroke: 1.5px #0088EC;
+      color: white;
+      font-weight: 700;
+    }
+
+    &__img {
+      position: relative;
+      width: 50%;
+      z-index: -1;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @media all and (max-width: 1480px) {
+    .slide-about__heading {
+      font-size: 50px;
+    }
+  }
+  @include respond-to($xl) {
+    .counter-slide {
+      font-size: 82px;
+    }
+    .slide-about__img {
+
+    }
+    .slide-about {
+      padding-left: 130px;
+    }
+  }
+  @include respond-to($lg) {
+    .wrapper-slider{
+      min-height: 615px;
+    }
+    .slide-about__img {
+      width: 40%;
+    }
+    .slide-about__heading{
+      font-size: 38px;
+    }
+  }
 }

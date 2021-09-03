@@ -33,8 +33,33 @@ $(document).ready(function () {
 
     //SLIDER
     var aboutUrolesan = new Swiper(".about-urolesan", {
-        slidesPerView: "auto",
-        spaceBetween: 30,
+        slidesPerView: 1.48,
+        spaceBetween: 8,
+        slidesOffsetBefore:60,
+        slidesOffsetAfter:130,
+        breakpoints: {
+            640: {
+
+            },
+            991: {
+                slidesPerView: 1.5,
+                spaceBetween: 60,
+                slidesOffsetBefore:130,
+                slidesOffsetAfter:130,
+            },
+            1180: {
+                slidesPerView: 1.5,
+                spaceBetween: 60,
+                slidesOffsetBefore:130,
+                slidesOffsetAfter:230,
+            },
+            1340: {
+                slidesPerView: 1.48,
+                spaceBetween: 120,
+                slidesOffsetBefore:230,
+                slidesOffsetAfter:230,
+            },
+        },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -50,9 +75,7 @@ $(document).ready(function () {
         // DESTROY SLIDER INSTANCES
         if ($(window).outerWidth() <= 991) {
             if (!reasonSlider && reasonSelector) {
-                reasonSlider = new Swiper(".reason-slider", {
-                    spaceBetween: 60,
-                    slidesPerView: 1,
+                reasonSlider = reasonSlider = new Swiper(".reason-slider", {
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true,

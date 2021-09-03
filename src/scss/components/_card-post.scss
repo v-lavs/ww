@@ -1,13 +1,80 @@
 .post-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -45px;
+  margin: 0 -20px;
+  justify-content: flex-start;
   padding-bottom: 65px;
 
   &__item {
-    width: 30.33%;
-    flex-grow: 1;
-    padding: 44px 45px;
+    display: flex;
+    justify-content: center;
+    width: 33.33%;
+    padding: 44px 20px;
+  }
+
+  @include respond-to($lg) {
+    margin-left: -15px;
+    margin-right: -15px;
+    &__item {
+      padding: 15px;
+    }
+  }
+  @include respond-to($md) {
+    &__item {
+      width: 50%;
+    }
+  }
+
+  @include respond-to($sm) {
+    .card-post__author {
+      display: block;
+
+      .heading {
+        font-size: 16px;
+      }
+    }
+
+    .card-post__title {
+      font-size: 16px;
+    }
+    .card-post__thumb {
+      min-height: 140px;
+    }
+    .card-post__text {
+      font-size: 14px;
+    }
+
+    .card-post__link {
+      font-size: 14px;
+    }
+  }
+
+  @include respond-to($xs) {
+    .post-list {
+      justify-content: center;
+    }
+    .post-list__item {
+      width: 100%;
+    }
+    .card-post__thumb {
+      min-height: 193px;
+    }
+    .card-post__title {
+      font-size: 18px;
+    }
+    .card-post__link {
+      font-size: 16px;
+      padding-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+    .card-post__text {
+      display: none;
+    }
+    .card-post__content {
+      padding: 16px 12px;
+    }
   }
 }
 
@@ -17,6 +84,8 @@
   overflow: hidden;
   background-color: #ffffff;
   box-shadow: 0 0 25px rgba(196, 201, 211, .4);
+  max-width: 385px;
+  width: 100%;
 
   &__author {
     position: relative;
@@ -41,6 +110,7 @@
     background-position: center;
     background-size: cover;
     box-sizing: content-box;
+
     &:before {
       position: absolute;
       content: '';

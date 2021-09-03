@@ -144,7 +144,7 @@
       bottom: 0;
       top: 0;
       background-image: url(../assets/img/bg-card-diagnose3.png);
-      background-position: center bottom;
+      background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
       z-index: 1;
@@ -246,5 +246,24 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+
+@include respond-to($screen-md) {
+  .diagnoses-list {
+    &__item {
+      padding-top: 40px;
+      padding-bottom: 50px;
+      &:hover {
+        .text {
+          bottom: 55px;
+        }
+      }
+    }
+    &__title {
+      font-size: 32px;
+      line-height: 1;
+    }
   }
 }

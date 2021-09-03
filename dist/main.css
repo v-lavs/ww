@@ -731,14 +731,16 @@ body {
 .post-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -45px;
+  margin: 0 -20px;
+  justify-content: flex-start;
   padding-bottom: 65px;
 }
 
 .post-list__item {
-  width: 30.33%;
-  flex-grow: 1;
-  padding: 44px 45px;
+  display: flex;
+  justify-content: center;
+  width: 33.33%;
+  padding: 44px 20px;
 }
 
 .card-post {
@@ -746,6 +748,8 @@ body {
   overflow: hidden;
   background-color: #ffffff;
   box-shadow: 0 0 25px rgba(196, 201, 211, 0.4);
+  max-width: 385px;
+  width: 100%;
 }
 
 .card-post__author {
@@ -1645,11 +1649,14 @@ body {
 }
 
 .section-banner .wrap-img .hand {
-  width: 28%;
+  position: absolute;
+  bottom: -12%;
+  right: 0;
+  width: 30%;
 }
 
 .section-banner .wrap-img .tablet {
-  width: 72%;
+  width: 83%;
 }
 
 .section-help {
@@ -1794,7 +1801,7 @@ body {
   bottom: 0;
   top: 0;
   background-image: url(../assets/img/bg-card-diagnose3.png);
-  background-position: center bottom;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
@@ -1903,8 +1910,88 @@ body {
 }
 
 .section-slider {
+  position: relative;
   min-height: 852px;
   background-image: linear-gradient(177.86deg, #F8FBFF 35.61%, #EEEEEE 98.2%);
+}
+
+.section-slider:before {
+  position: absolute;
+  content: '';
+  background-image: url(../assets/img/curcle1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 589px;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.section-slider .wrapper-gif {
+  width: 68%;
+  margin-left: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.section-slider .wrapper-gif img {
+  mix-blend-mode: screen;
+}
+
+.section-slider .wrapper-slider {
+  position: relative;
+  min-height: 810px;
+  display: flex;
+  align-items: center;
+}
+
+.section-slider .slide-about {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding-left: 150px;
+}
+
+.section-slider .slide-about__content {
+  width: 50%;
+  padding-top: 108px;
+  padding-bottom: 77px;
+}
+
+.section-slider .slide-about__heading {
+  font-size: 68px;
+  line-height: 1.16;
+  color: #0088EC;
+  margin-bottom: 25px;
+}
+
+.section-slider .slide-about .counter-slide {
+  position: absolute;
+  font-size: 97px;
+  left: 0;
+  top: 100px;
+  -webkit-text-stroke: 1.5px #0088EC;
+  color: white;
+  font-weight: 700;
+}
+
+.section-slider .slide-about__img {
+  position: relative;
+  width: 50%;
+  z-index: -1;
+}
+
+.section-slider .slide-about__img img {
+  vertical-align: middle;
 }
 
 .section-reason {
@@ -2486,7 +2573,6 @@ body {
 }
 
 .selection-drug {
-  padding-top: 77px;
   padding-bottom: 142px;
   overflow: hidden;
 }
@@ -3000,8 +3086,47 @@ body {
     font-size: 54px;
   }
 
+  .section-slider .counter-slide {
+    font-size: 82px;
+  }
+
+  .section-slider .slide-about {
+    padding-left: 130px;
+  }
+
   .members-list__item {
     padding-top: 57%;
+  }
+}
+
+@media all and (max-width: 1480px) {
+  .section-slider .slide-about__heading {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .diagnoses-list__item {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .diagnoses-list__item:hover .text {
+    bottom: 55px;
+  }
+
+  .diagnoses-list__title {
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .related-post .post-list__item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .related-post .card-post__thumb {
+    min-height: 150px;
   }
 }
 
@@ -3055,12 +3180,29 @@ body {
     font-size: 25px;
   }
 
+  .post-list {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .post-list__item {
+    padding: 15px;
+  }
+
   .card-drug {
     padding: 0 15px;
   }
 
   .card-drug__img-wrap {
     padding-top: 95%;
+  }
+
+  .authors-blog__link {
+    padding-left: 98px;
+  }
+
+  .authors-blog__link:before {
+    left: 57px;
   }
 
   .container {
@@ -3090,6 +3232,18 @@ body {
 
   .section-banner__slogan {
     font-size: 46px;
+  }
+
+  .section-slider .wrapper-slider {
+    min-height: 615px;
+  }
+
+  .section-slider .slide-about__img {
+    width: 40%;
+  }
+
+  .section-slider .slide-about__heading {
+    font-size: 38px;
   }
 
   .section-reason__heading {
@@ -3260,6 +3414,28 @@ body {
   .menu__item {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .post-list__item {
+    width: 50%;
+  }
+
+  .authors-blog .post-date {
+    padding: 5px 5px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .authors-blog__item .card-post_large {
+    padding: 10px;
+  }
+
+  .authors-blog__link {
+    padding-left: 54px;
+  }
+
+  .authors-blog__link:before {
+    left: 26px;
   }
 
   .prevention__list {
@@ -3477,6 +3653,16 @@ body {
     width: 100%;
   }
 
+  .related-post {
+    justify-content: space-around;
+  }
+
+  .related-post .post-list__item {
+    width: 50%;
+    max-width: 308px;
+    padding-bottom: 15px;
+  }
+
   .section-members {
     padding-bottom: 100px;
   }
@@ -3565,6 +3751,30 @@ body {
     display: none;
   }
 
+  .post-list .card-post__author {
+    display: block;
+  }
+
+  .post-list .card-post__author .heading {
+    font-size: 16px;
+  }
+
+  .post-list .card-post__title {
+    font-size: 16px;
+  }
+
+  .post-list .card-post__thumb {
+    min-height: 140px;
+  }
+
+  .post-list .card-post__text {
+    font-size: 14px;
+  }
+
+  .post-list .card-post__link {
+    font-size: 14px;
+  }
+
   .card-drug__img-wrap {
     width: 200px;
     padding-top: 80%;
@@ -3631,6 +3841,34 @@ body {
 
   .types-slider .swiper-pagination {
     display: block;
+  }
+
+  .authors-blog .post-date {
+    width: 100%;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-transform: lowercase;
+    color: #24243F;
+  }
+
+  .authors-blog .post-date .day,
+  .authors-blog .post-date .mounts {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 3px;
+  }
+
+  .authors-blog__link {
+    padding-left: 10px;
+  }
+
+  .authors-blog__link:before {
+    display: none;
+  }
+
+  .authors-blog__item {
+    flex-direction: column;
   }
 
   .prevention__list {
@@ -3728,6 +3966,11 @@ body {
   .disease-list__title {
     font-size: 20px;
     padding-bottom: 5px;
+  }
+
+  .related-post .post-list__item {
+    width: 100%;
+    max-width: 417px;
   }
 
   .page-effectiveness__heading {
@@ -3859,9 +4102,37 @@ body {
     margin-right: 0;
   }
 
-  .info-sticky .print {
-    padding-top: 0;
-    padding-left: 23px;
+  .post-list .post-list {
+    justify-content: center;
+  }
+
+  .post-list .post-list__item {
+    width: 100%;
+  }
+
+  .post-list .card-post__thumb {
+    min-height: 193px;
+  }
+
+  .post-list .card-post__title {
+    font-size: 18px;
+  }
+
+  .post-list .card-post__link {
+    font-size: 16px;
+    padding-left: 0;
+  }
+
+  .post-list .card-post__link:before {
+    display: none;
+  }
+
+  .post-list .card-post__text {
+    display: none;
+  }
+
+  .post-list .card-post__content {
+    padding: 16px 12px;
   }
 
   .card-drug .wrap-btn {
