@@ -604,6 +604,11 @@ body {
   color: #0088EC;
 }
 
+.pagination .pagination__placeholder {
+  display: flex;
+  min-width: 18px;
+}
+
 .info-sticky {
   position: sticky;
   height: 0;
@@ -3746,9 +3751,43 @@ body {
     height: 68px;
   }
 
-  .pagination__next,
   .pagination__prev {
+    margin-right: 16px;
+  }
+
+  .pagination__next {
+    margin-left: 16px;
+  }
+
+  .pagination__prev + .pagination__btn {
+    display: flex;
+  }
+
+  .pagination__btn {
     display: none;
+    height: 30px;
+    min-height: 30px;
+    margin: 0 4px;
+  }
+
+  .pagination__btn_active {
+    display: flex;
+  }
+
+  .pagination__btn:first-child {
+    display: flex;
+  }
+
+  .pagination__btn:nth-last-child(2) {
+    display: flex;
+  }
+
+  .pagination__btn + .pagination__btn + .pagination__placeholder {
+    display: none !important;
+  }
+
+  .post-list {
+    padding-bottom: 50px;
   }
 
   .post-list .card-post__author {
@@ -3791,7 +3830,7 @@ body {
   .types-cystitis {
     background: none;
     margin: 0;
-    padding: 0 15px;
+    padding: 30px 15px 0;
     width: auto;
   }
 
@@ -3835,6 +3874,7 @@ body {
   }
 
   .types-slider {
+    padding-top: 30px;
     position: relative;
     padding-bottom: 86px;
   }
@@ -3971,6 +4011,10 @@ body {
   .related-post .post-list__item {
     width: 100%;
     max-width: 417px;
+  }
+
+  .page-count {
+    font-size: 18px;
   }
 
   .page-effectiveness__heading {
@@ -4110,6 +4154,10 @@ body {
     width: 100%;
   }
 
+  .post-list .card-post__date {
+    font-size: 13px;
+  }
+
   .post-list .card-post__thumb {
     min-height: 193px;
   }
@@ -4135,8 +4183,57 @@ body {
     padding: 16px 12px;
   }
 
+  .post-list .card-post__thumb {
+    padding: 16px 12px;
+  }
+
+  .post-list .card-post__author {
+    display: flex;
+  }
+
+  .post-list .card-post__author .heading {
+    font-size: 18px;
+  }
+
   .card-drug .wrap-btn {
     right: -27px;
+  }
+
+  .card-author {
+    flex-direction: column;
+    padding: 50px 18px 34px;
+  }
+
+  .card-author .part_left,
+  .card-author .part_right {
+    width: 100%;
+  }
+
+  .card-author .part_left {
+    max-width: 160px;
+    margin: 0 auto;
+  }
+
+  .card-author .part_right {
+    padding-left: 0;
+  }
+
+  .card-author__body {
+    flex-direction: column;
+  }
+
+  .card-author .general-info,
+  .card-author .short-description {
+    width: 100%;
+    padding: 0;
+  }
+
+  .card-author .contact-info {
+    display: none;
+  }
+
+  .card-author .heading_h4 {
+    font-size: 22px;
   }
 
   .prevention__heading {
@@ -4345,14 +4442,6 @@ body {
   }
 }
 
-@media all and (max-width: 480px) {
-  .pagination__btn {
-    min-width: 18px;
-    height: 18px;
-    border-radius: 5px;
-  }
-}
-
 @media only screen and (max-width: 420px) {
   .heading_xxl {
     font-size: 24px;
@@ -4427,5 +4516,11 @@ body {
 @media all and (max-width: 360px) {
   .info-sticky {
     top: 240px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .page-count {
+    font-size: 14px;
   }
 }

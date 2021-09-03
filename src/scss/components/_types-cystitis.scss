@@ -49,9 +49,10 @@
   }
 
   @include respond-to($sm) {
+
     background: none;
     margin: 0;
-    padding: 0 15px;
+    padding: 30px 15px 0;
     width: auto;
     .card-types {
       position: relative;
@@ -98,6 +99,7 @@
     display: block;
   }
   @include respond-to($sm) {
+    padding-top: 30px;
       position: relative;
       padding-bottom: 86px;
     .swiper-pagination {

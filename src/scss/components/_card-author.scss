@@ -100,6 +100,35 @@
       }
     }
   }
+  @include respond-to($xs){
+    flex-direction: column;
+    padding: 50px 18px 34px;
+    .part_left,
+    .part_right{
+      width: 100%;
+    }
+    .part_left{
+      max-width: 160px;
+      margin: 0 auto;
+    }
+    .part_right{
+      padding-left: 0;
+    }
+    &__body{
+      flex-direction: column;
+    }
+    .general-info,
+    .short-description{
+      width: 100%;
+      padding: 0;
+    }
+    .contact-info{
+      display: none;
+    }
+    .heading_h4{
+      font-size: 22px;
+    }
+  }
 }
 
 .authors-blog {

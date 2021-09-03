@@ -26,6 +26,8 @@
   }
 
   @include respond-to($sm) {
+    padding-bottom: 50px;
+
     .card-post__author {
       display: block;
 
@@ -77,6 +79,15 @@
     }
     .card-post__content {
       padding: 16px 12px;
+    }
+    .card-post__thumb {
+      padding: 16px 12px;
+    }
+    .card-post__author {
+      display: flex;
+      .heading {
+        font-size: 18px;
+      }
     }
   }
 }

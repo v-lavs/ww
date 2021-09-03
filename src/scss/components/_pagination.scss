@@ -17,6 +17,7 @@
     border-radius: 8px;
     color: #999CA0;
     margin: 0 6px;
+
     &:hover {
       color: $blue-100;
     }
@@ -44,19 +45,46 @@
   &__prev {
     color: $blue-100;
   }
-  @include respond-to($sm){
-    &__next,
-    &__prev{
+
+  @include respond-to($sm) {
+    &__prev {
+      margin-right: 16px;
+    }
+
+    &__next {
+      margin-left: 16px;
+    }
+
+    &__prev + .pagination__btn {
+      display: flex;
+    }
+
+    &__btn {
       display: none;
+      height: 30px;
+      min-height: 30px;
+      margin: 0 4px;
+
+      &_active {
+        display: flex;
+      }
+
+      &:first-child {
+        display: flex;
+      }
+
+      &:nth-last-child(2) {
+        display: flex;
+      }
+    }
+    &__btn + .pagination__btn + .pagination__placeholder {
+      display: none !important;
     }
   }
-  @media all and (max-width: 480px) {
 
-    &__btn{
-      min-width: 18px;
-      height: 18px;
-      border-radius: 5px;
-    }
+  .pagination__placeholder {
+    display: flex;
+    min-width: 18px;
   }
 }
 
