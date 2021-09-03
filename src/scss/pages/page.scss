@@ -1,6 +1,7 @@
-.page{
+.page {
   background-color: #fbf7fd;
-  &__heading{
+
+  &__heading {
     display: flex;
     align-items: center;
     max-width: 1269px;
@@ -17,14 +18,16 @@
       }
     }
   }
-  &__title{
+
+  &__title {
     position: relative;
     width: 38%;
     padding: 0 32px;
     color: $blue-100;
     line-height: 1;
     flex-shrink: 0;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       top: 50%;
@@ -36,34 +39,83 @@
       z-index: 1;
     }
   }
+
+  @include respond-to($lg) {
+    &__heading {
+      min-height: 150px;
+      padding: 26px 25px 25px 40px;
+    }
+  }
+  @include respond-to($sm) {
+    padding-top: 160px;
+    &__heading {
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding-left: 64px;
+      margin-bottom: 60px;
+    }
+    &__title,
+    &__sub-title {
+      width: 100%;
+    }
+    &__title {
+      min-height: 52px;
+      padding: 0;
+      margin-bottom: 25px;
+
+      &:before {
+        width: 4px;
+        height: 50px;
+        left: -18px;
+      }
+    }
+  }
+  @include respond-to($xxs) {
+    &__heading {
+      padding: 32px 34px;
+    }
+    &__title {
+      min-height: 40px;
+    }
+  }
 }
 
-.page-product{
+.page-product {
   padding-top: 134px;
+
   .link-back {
     position: relative;
     z-index: 2;
     margin-bottom: 14px;
     color: $blue;
-    svg{
+
+    svg {
       display: inline-block;
       vertical-align: middle;
       width: 24px;
       height: 24px;
+
       path {
-        stroke:$blue;
+        stroke: $blue;
       }
     }
   }
-  @include respond-to($xs){
-    .link-back{
+
+  @include respond-to($xs) {
+    .link-back {
       margin-bottom: 25px;
     }
   }
 }
-.page-pyelonephritis{
-  .symptoms{
+
+.page-pyelonephritis {
+  .symptoms {
     padding-bottom: 150px;
   }
 
+  @include respond-to($sm) {
+    .symptoms {
+      padding-bottom: 80px;
+    }
+  }
 }

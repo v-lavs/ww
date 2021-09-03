@@ -56,10 +56,30 @@
     font-size: 14px;
   }
 }
+
+@include respond-to($lg) {
+  .heading_h1{
+    font-size: 25px;
+  }
+
+}
 @include respond-to($md) {
   .heading {
     &_xxl {
       font-size: 43px;
+    }
+  }
+  .heading_h4{
+    font-size: 18px;
+  }
+  .text_md{
+    font-size: 18px;
+  }
+}
+@include respond-to($sm) {
+  .heading {
+    &_xxl {
+      font-size: 39px;
     }
   }
 }
@@ -78,9 +98,15 @@
      }
 
      &_h1 {
-       font-size: 20px;
+       font-size: 18px;
      }
+    &_4{
+      font-size: 16px;
+    }
    }
+  .text_md{
+    font-size: 16px;
+  }
 }
 
 

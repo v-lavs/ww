@@ -139,6 +139,9 @@
     &__icon {
       margin-bottom: 10px;
     }
+    &__heading{
+      margin-bottom: 30px;
+    }
   }
   @include respond-to($xs) {
     &__heading{

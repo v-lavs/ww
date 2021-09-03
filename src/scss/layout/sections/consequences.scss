@@ -49,6 +49,11 @@
     background-position: 0 0;
     background-size: cover;
   }
+
+@include respond-to($sm){
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
   @include respond-to($xs) {
     padding-top: 64px;
     padding-bottom: 37px;

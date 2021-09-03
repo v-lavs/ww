@@ -125,7 +125,7 @@ body {
   background: linear-gradient(to top, #fbf7fd 0%, rgba(251, 247, 253, 0) 40%), url(../assets/img/bg-soty.png);
   background-repeat: no-repeat;
   background-position: center 0;
-  background-size: 100%;
+  background-size: cover;
   left: 0;
   right: 0;
   min-height: 1005px;
@@ -3009,6 +3009,10 @@ body {
     font-size: 31px;
   }
 
+  .heading_h1 {
+    font-size: 25px;
+  }
+
   .card-drug {
     padding: 0 15px;
   }
@@ -3147,11 +3151,24 @@ body {
   .composition__item:nth-child(4):before {
     transform: scale(0.9);
   }
+
+  .page__heading {
+    min-height: 150px;
+    padding: 26px 25px 25px 40px;
+  }
 }
 
 @media only screen and (max-width: 991px) {
   .heading_xxl {
     font-size: 43px;
+  }
+
+  .heading_h4 {
+    font-size: 18px;
+  }
+
+  .text_md {
+    font-size: 18px;
   }
 
   .menu__item {
@@ -3222,6 +3239,7 @@ body {
 
   .header__nav .menu {
     flex-direction: column;
+    align-items: start;
     font-size: 18px;
   }
 
@@ -3418,6 +3436,10 @@ body {
     font-size: 25px;
   }
 
+  .heading_xxl {
+    font-size: 39px;
+  }
+
   .btn {
     min-width: 208px;
     font-size: 14px;
@@ -3541,6 +3563,10 @@ body {
     margin-bottom: 10px;
   }
 
+  .prevention__heading {
+    margin-bottom: 30px;
+  }
+
   .container {
     max-width: 580px;
   }
@@ -3560,6 +3586,11 @@ body {
 
   .symptoms-list__text {
     padding-left: 0;
+  }
+
+  .consequences {
+    padding-top: 80px;
+    padding-bottom: 60px;
   }
 
   .page-effectiveness__heading {
@@ -3590,6 +3621,38 @@ body {
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 100px;
+  }
+
+  .page {
+    padding-top: 160px;
+  }
+
+  .page__heading {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 64px;
+    margin-bottom: 60px;
+  }
+
+  .page__title,
+  .page__sub-title {
+    width: 100%;
+  }
+
+  .page__title {
+    min-height: 52px;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  .page__title:before {
+    width: 4px;
+    height: 50px;
+    left: -18px;
+  }
+
+  .page-pyelonephritis .symptoms {
+    padding-bottom: 80px;
   }
 }
 
@@ -3842,7 +3905,15 @@ body {
   }
 
   .heading_h1 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .heading_4 {
+    font-size: 16px;
+  }
+
+  .text_md {
+    font-size: 16px;
   }
 
   .card-drug__img-wrap {
@@ -3877,6 +3948,14 @@ body {
 
   .selection-drug .drugs-list__item {
     margin-bottom: 30px;
+  }
+
+  .page__heading {
+    padding: 32px 34px;
+  }
+
+  .page__title {
+    min-height: 40px;
   }
 }
 
