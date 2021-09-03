@@ -831,6 +831,7 @@ body {
   font-size: 16px;
   color: #0088EC;
   padding-left: 32px;
+  white-space: nowrap;
 }
 
 .card-post__link:before {
@@ -2507,17 +2508,22 @@ body {
   padding-bottom: 0;
 }
 
+.related-post .card-post {
+  max-width: 308px;
+}
+
 .related-post .card-post__date {
   font-size: 13px;
   font-family: "Work Sans", sans-serif;
 }
 
 .related-post .card-post__thumb {
-  min-height: 193px;
+  min-height: 143px;
 }
 
 .section-members {
   position: relative;
+  overflow: hidden;
 }
 
 .section-members .section__title {
@@ -2558,6 +2564,8 @@ body {
 
 .members-list {
   display: flex;
+  margin-left: -10vw;
+  margin-right: -10vw;
 }
 
 .members-list__item {
@@ -3124,15 +3132,6 @@ body {
     font-size: 32px;
     line-height: 1;
   }
-
-  .related-post .post-list__item {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .related-post .card-post__thumb {
-    min-height: 150px;
-  }
 }
 
 @media all and (max-width: 1340px) {
@@ -3183,6 +3182,18 @@ body {
 
   .heading_h1 {
     font-size: 25px;
+  }
+
+  .info-sticky {
+    -webkit-transform: translateX(-90px);
+    -moz-transform: translateX(-90px);
+    -ms-transform: translateX(-90px);
+    -o-transform: translateX(-90px);
+    transform: translateX(-90px);
+  }
+
+  .info-sticky {
+    display: none;
   }
 
   .post-list {
@@ -3349,8 +3360,8 @@ body {
     background-size: 50px 45px, contain;
   }
 
-  .members-list__item {
-    padding-top: 68%;
+  .single-article .inner-content {
+    padding-right: 0;
   }
 
   .page-effectiveness__heading {
@@ -3658,13 +3669,8 @@ body {
     width: 100%;
   }
 
-  .related-post {
-    justify-content: space-around;
-  }
-
   .related-post .post-list__item {
     width: 50%;
-    max-width: 308px;
     padding-bottom: 15px;
   }
 
@@ -3687,6 +3693,10 @@ body {
   .selection-drug .drugs-list__item {
     width: 50%;
     margin-bottom: 50px;
+  }
+
+  .single-article .inner-content {
+    padding-left: 8%;
   }
 
   .page-composition {
@@ -3787,6 +3797,7 @@ body {
   }
 
   .post-list {
+    justify-content: center;
     padding-bottom: 50px;
   }
 
@@ -4008,13 +4019,12 @@ body {
     padding-bottom: 5px;
   }
 
-  .related-post .post-list__item {
-    width: 100%;
-    max-width: 417px;
-  }
-
   .page-count {
     font-size: 18px;
+  }
+
+  .single-article .inner-content {
+    padding-left: 0;
   }
 
   .page-effectiveness__heading {
@@ -4124,30 +4134,6 @@ body {
 
   .text_md {
     font-size: 16px;
-  }
-
-  .info-sticky {
-    position: fixed;
-    transform: none;
-    display: flex;
-    width: auto;
-    align-items: baseline;
-    height: 35px;
-    top: 215px;
-    left: 12px;
-  }
-
-  .info-sticky .widget-share__item {
-    margin-right: 17px;
-    margin-bottom: 0;
-  }
-
-  .info-sticky .widget-share__item:last-child {
-    margin-right: 0;
-  }
-
-  .post-list .post-list {
-    justify-content: center;
   }
 
   .post-list .post-list__item {
@@ -4351,7 +4337,7 @@ body {
 
   .section-members .section__sub-title {
     font-size: 14px;
-    margin-bottom: 28px;
+    margin-bottom: 25px;
   }
 
   .selection-drug {
@@ -4479,6 +4465,7 @@ body {
 
   .container {
     width: 100%;
+    padding: 0 10px;
   }
 
   .section-banner__slogan {
@@ -4496,10 +4483,6 @@ body {
     max-width: 174px;
   }
 
-  .members-list__item {
-    padding-top: 85%;
-  }
-
   .selection-drug .drugs-list__item {
     margin-bottom: 30px;
   }
@@ -4510,12 +4493,6 @@ body {
 
   .page__title {
     min-height: 40px;
-  }
-}
-
-@media all and (max-width: 360px) {
-  .info-sticky {
-    top: 240px;
   }
 }
 

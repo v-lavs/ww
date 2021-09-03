@@ -2,12 +2,23 @@
   .inner-content {
     width: 100%;
     padding: 0 11.5%;
+    @include respond-to($lg) {
+      padding-right: 0;
+    }
+
+    @include respond-to($md) {
+      padding-left: 8%;
+    }
+    @include respond-to($sm) {
+      padding-left: 0;
+    }
   }
 }
 
 .article {
   padding-top: 95px;
   padding-bottom: 54px;
+
   &__header {
     position: relative;
     padding-bottom: 30px;
@@ -39,7 +50,8 @@
     padding-top: 42%;
     margin-bottom: 76px;
     border-radius: 10px;
-    img{
+
+    img {
       position: absolute;
       bottom: 0;
       right: 0;
@@ -51,14 +63,13 @@
       object-fit: cover;
     }
   }
-  .card-post__author{
+
+  .card-post__author {
     padding-top: 24px;
   }
-  .card-post__avatar{
+
+  .card-post__avatar {
     width: 60px;
     height: 60px;
-  }
-  @include respond-to($screen-md){
-
   }
 }

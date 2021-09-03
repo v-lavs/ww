@@ -17,8 +17,6 @@
     width: 78px;
   }
 
-
-
   .widget-share {
     width: 32px;
 
@@ -56,28 +54,14 @@
   }
 
   @include respond-to($lg) {
-    //transform: translate(-39px, -109px);
+    -webkit-transform: translateX(-90px);
+    -moz-transform: translateX(-90px);
+    -ms-transform: translateX(-90px);
+    -o-transform: translateX(-90px);
+    transform: translateX(-90px);
   }
-  @include respond-to($xs) {
-    position: fixed;
-    transform: none;
-    display: flex;
-    width: auto;
-    align-items: baseline;
-    height: 35px;
-    top: 215px;
-    left: 12px;
-    .widget-share__item {
-      margin-right: 17px;
-      margin-bottom: 0;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-  @media all and (max-width: 360px) {
-    top: 240px;
+  @include respond-to($lg) {
+    display: none;
   }
 }
 

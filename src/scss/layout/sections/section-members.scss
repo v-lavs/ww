@@ -1,19 +1,23 @@
-.section-members{
+.section-members {
   position: relative;
-  .section__title{
+  overflow: hidden;
+
+  .section__title {
     font-size: 64px;
     font-weight: 700;
     padding: 0;
     text-align: center;
     margin-bottom: 10px;
   }
-  .section__sub-title{
+
+  .section__sub-title {
     width: 85%;
     max-width: 652px;
     font-size: 22px;
     margin: 0 auto 28px;
   }
-  &__bg{
+
+  &__bg {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -27,43 +31,48 @@
     background: linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #0088EC 78.81%);
     z-index: 1;
   }
-  &__content{
+
+  &__content {
     max-width: 650px;
     width: 100%;
     text-align: center;
   }
-  @include respond-to($md){
+
+  @include respond-to($md) {
     padding-bottom: 100px;
-    .section__title{
+    .section__title {
       font-size: 56px;
     }
-    .section__sub-title{
+    .section__sub-title {
       font-size: 18px;
     }
   }
-  @include respond-to($xs){
-   &__bg{
-     padding-bottom: 35px;
-   }
-    .section__title{
+  @include respond-to($xs) {
+    &__bg {
+      padding-bottom: 35px;
+    }
+    .section__title {
       font-size: 32px;
     }
-    .section__sub-title{
+    .section__sub-title {
       font-size: 14px;
-      margin-bottom: 28px;
+      margin-bottom: 25px;
     }
   }
 }
 
-.members-list{
+.members-list {
   display: flex;
+  margin-left: -10vw;
+  margin-right: -10vw;
 
-  &__item{
+  &__item {
     position: relative;
     width: 33.33%;
     padding-top: 48%;
   }
-  .member-img{
+
+  .member-img {
     position: absolute;
     left: 0;
     right: 0;
@@ -73,19 +82,14 @@
     height: 100%;
     object-fit: cover;
   }
-  @include respond-to($xl){
-    &__item{
+
+  @include respond-to($xl) {
+    &__item {
       padding-top: 57%;
     }
-    }
-  @include respond-to($lg){
-    &__item{
-      padding-top: 68%;
-    }
   }
-  @include respond-to($xxs){
-    &__item{
-      padding-top: 85%;
+  @include respond-to($xxs) {
+    &__item {
     }
   }
 }
