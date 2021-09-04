@@ -1917,8 +1917,9 @@ body {
 
 .section-slider {
   position: relative;
-  min-height: 852px;
   background-image: linear-gradient(177.86deg, #F8FBFF 35.61%, #EEEEEE 98.2%);
+  padding-top: 140px;
+  padding-bottom: 78px;
 }
 
 .section-slider:before {
@@ -1958,6 +1959,14 @@ body {
   align-items: center;
 }
 
+.section-slider .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+
+.section-slider .about-urolesan {
+  padding-bottom: 100px;
+}
+
 .section-slider .slide-about {
   position: relative;
   display: flex;
@@ -1965,6 +1974,7 @@ body {
   align-items: center;
   height: auto;
   padding-left: 150px;
+  opacity: .5;
 }
 
 .section-slider .slide-about__content {
@@ -3117,6 +3127,10 @@ body {
   .section-slider .slide-about__heading {
     font-size: 50px;
   }
+
+  .section-slider .wrapper-slider {
+    min-height: 744px;
+  }
 }
 
 @media only screen and (max-width: 1350px) {
@@ -3252,7 +3266,15 @@ body {
   }
 
   .section-slider .wrapper-slider {
-    min-height: 615px;
+    min-height: 500px;
+  }
+
+  .section-slider .slide-about {
+    padding-left: 100px;
+  }
+
+  .section-slider .slide-about .counter-slide {
+    font-size: 70px;
   }
 
   .section-slider .slide-about__img {
@@ -3674,6 +3696,29 @@ body {
     padding-top: 80px;
   }
 
+  .section-slider {
+    padding-top: 0;
+  }
+
+  .section-slider:before {
+    display: none;
+  }
+
+  .section-slider .slide-about {
+    padding-left: 0;
+  }
+
+  .section-slider .slide-about .counter-slide {
+    line-height: .8;
+    top: 0;
+    font-size: 56px;
+  }
+
+  .section-slider .slide-about__content {
+    padding-top: 55px;
+    padding-bottom: 20px;
+  }
+
   .section-reason .reason-slider {
     position: relative;
     max-width: 400px;
@@ -3738,6 +3783,10 @@ body {
 
   .section-members .section__sub-title {
     font-size: 18px;
+  }
+
+  .selection-drug .bg-section {
+    padding-top: 0;
   }
 
   .selection-drug .drugs-list {
@@ -4031,6 +4080,25 @@ body {
 
   .section-banner .wrap-img {
     display: none;
+  }
+
+  .section-slider .slide-about__img,
+  .section-slider .wrapper-gif {
+    display: none;
+  }
+
+  .section-slider .wrapper-slider {
+    min-height: 0;
+    height: auto;
+  }
+
+  .section-slider .about-urolesan {
+    padding-bottom: 41px;
+  }
+
+  .section-slider .slide-about__heading {
+    font-size: 36px;
+    margin-bottom: 20px;
   }
 
   .symptoms-list__bg-icon {

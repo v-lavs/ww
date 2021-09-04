@@ -40,6 +40,9 @@
   }
 
   @include respond-to($md) {
+    .bg-section{
+      padding-top: 0;
+    }
     .drugs-list {
       margin-bottom: 24px;
     }

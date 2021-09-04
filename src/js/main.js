@@ -34,12 +34,15 @@ $(document).ready(function () {
     //SLIDER
     var aboutUrolesan = new Swiper(".about-urolesan", {
         slidesPerView: 1.48,
-        spaceBetween: 8,
-        slidesOffsetBefore:60,
-        slidesOffsetAfter:130,
+        spaceBetween: 66,
+        slidesOffsetBefore:43,
+        slidesOffsetAfter:43,
         breakpoints: {
             640: {
-
+                slidesPerView: 1.5,
+                spaceBetween: 66,
+                slidesOffsetBefore:43,
+                slidesOffsetAfter:43,
             },
             991: {
                 slidesPerView: 1.5,
@@ -48,9 +51,9 @@ $(document).ready(function () {
                 slidesOffsetAfter:130,
             },
             1180: {
-                slidesPerView: 1.5,
+                slidesPerView: 1.35,
                 spaceBetween: 60,
-                slidesOffsetBefore:130,
+                slidesOffsetBefore:100,
                 slidesOffsetAfter:230,
             },
             1340: {
