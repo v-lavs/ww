@@ -150,6 +150,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .main {
@@ -735,13 +736,13 @@ body {
   background-color: #ffffff;
 }
 
-.spoiler .show-more {
+.toggle-content .show-more {
   position: relative;
   display: block;
   margin: 0 auto;
 }
 
-.spoiler_light-bg .show-more {
+.toggle-content_light-bg .show-more {
   border-color: #0062B3;
   color: #0062B3;
 }
@@ -1693,10 +1694,19 @@ body {
   bottom: -12%;
   right: 0;
   width: 30%;
+  transition: .8s;
+}
+
+.section-banner .wrap-img .hand.rotate {
+  transform: rotate(-15deg);
 }
 
 .section-banner .wrap-img .tablet {
   width: 83%;
+}
+
+.section-banner .wrap-img .btn {
+  display: block;
 }
 
 .section-help {

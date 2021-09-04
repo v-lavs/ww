@@ -78,16 +78,18 @@ $(document).ready(function () {
         // DESTROY SLIDER INSTANCES
         if ($(window).outerWidth() <= 991) {
             if (!reasonSlider && reasonSelector) {
-                reasonSlider = reasonSlider = new Swiper(".reason-slider", {
+                reasonSlider = new Swiper(".reason-slider", {
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true,
                     },
                 });
-            } else {
-                destroySwiper(reasonSlider);
             }
+        } else {
+            destroySwiper(reasonSlider);
+            reasonSlider = null;
         }
+
         if ($(window).outerWidth() <= 766) {
             if (!typesSlider && typesSelector) {
                 typesSlider = new Swiper(".types-slider", {
@@ -101,10 +103,11 @@ $(document).ready(function () {
             }
         } else {
             destroySwiper(typesSlider);
+            typesSlider = null;
         }
     }
 
-    var resizeId;
+    let resizeId;
 
 
     handleResponsive();
@@ -125,6 +128,7 @@ $(document).ready(function () {
     });
 
     //MODAL
+
     $('.open-modal').on('click', function () {
         $('.backdrop, .popup').fadeIn(500);
     });
@@ -135,17 +139,26 @@ $(document).ready(function () {
 
 //    HIDE TEXT
     $('.show-more').click(function () {
-        if ($('.spoiler').hasClass('one')) {
-            $('.show-more').not($(this)).removeClass('active');
+        const showMore = $(this);
+        const openText = showMore.attr('data-open-text');
+        const defaultText = showMore.attr('data-default-text');
+
+        if ($('.toggle-content').hasClass('one')) {
+            const showMoreOther = $('.show-more').not($(this));
             $('.block-more-info').not($(this).prev()).slideUp(300);
+
+            showMoreOther.html(defaultText);
+            showMoreOther.removeClass('open');
         }
-        $(this).toggleClass("active").prev().slideToggle(300);
-        if ($(this).is(':hidden')) {
-            $('.show-more').html('Більше інформації');
-            $('.show-more').removeClass('open');
+
+        $(this).prev().slideToggle(300);
+
+        if (!$(this).hasClass('open')) {
+            showMore.html(openText);
+            showMore.addClass('open');
         } else {
-            $('.show-more').html('Закрити');
-            $('.show-more').addClass('open');
+            showMore.html(defaultText);
+            showMore.removeClass('open');
         }
     });
 
@@ -155,6 +168,13 @@ $(document).ready(function () {
         $('.section-members__bg').css('background', 'linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #3BB239 78.81%)');
     }, function () {
         $('.section-members__bg').css('background', 'linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #0088EC 78.81%)');
+    });
+
+    //  HOVER BANNER
+    $(' .btn').hover(function () {
+        $('.hand').addClass('rotate')
+    }, function () {
+        $('.hand').removeClass('rotate')
     });
 
 });

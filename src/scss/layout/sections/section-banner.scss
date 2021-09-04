@@ -64,10 +64,17 @@
       bottom: -12%;
       right: 0;
       width: 30%;
+      transition: .8s;
+      &.rotate{
+        transform: rotate(-15deg);
+      }
     }
 
     .tablet {
       width: 83%;
+    }
+    .btn{
+      display: block;
     }
   }
 
