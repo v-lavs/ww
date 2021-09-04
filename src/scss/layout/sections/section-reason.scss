@@ -280,6 +280,11 @@
     }
 
   }
+  @include respond-to($md){
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+      display: flex;
+    }
+  }
   @include respond-to($xxs) {
     &__icon {
       top: auto;
@@ -314,11 +319,6 @@
 
     &__title {
       font-size: 28px;
-    }
-
-
-    .swiper-pagination-bullets .swiper-pagination-bullet {
-      display: block;
     }
   }
 }
@@ -358,6 +358,14 @@
 
     .circle {
       display: none;
+    }
+  }
+}
+
+@include respond-to($xs) {
+  .section-reason {
+    &__title {
+      font-size: 20px;
     }
   }
 }

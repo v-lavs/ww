@@ -43,7 +43,6 @@
 
   .wrap-btn {
     text-align: center;
-    display: none;
   }
   @include respond-to($lg) {
     background-position: 0 0;

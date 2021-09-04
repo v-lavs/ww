@@ -687,6 +687,7 @@ body {
 }
 
 .block-more-info {
+  display: none;
   margin: 0 auto;
   max-width: 1043px;
   width: 100%;
@@ -924,6 +925,7 @@ body {
 .popover {
   background: #FFFFFF;
   max-width: 350px;
+  width: 100%;
   min-height: 340px;
   border-radius: 15px;
   font-size: 18px;
@@ -1282,13 +1284,32 @@ body {
 }
 
 .popup {
+  position: fixed;
+  display: none;
   background: #ffffff;
   border-radius: 20px;
   padding: 54px 90px;
   max-width: 793px;
-  width: 100%;
+  width: 90%;
   height: 549px;
-  overflow-y: auto;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup .modal-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url(../assets/img/svg/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  right: 30px;
+  top: 30px;
+  border: none;
+  background-color: transparent;
 }
 
 .popup__title {
@@ -1300,6 +1321,7 @@ body {
 .popup__content {
   max-width: 576px;
   width: 100%;
+  overflow-y: auto;
 }
 
 .popup__text {
@@ -2346,7 +2368,6 @@ body {
 
 .consequences .wrap-btn {
   text-align: center;
-  display: none;
 }
 
 .consequences-list {
@@ -2564,6 +2585,16 @@ body {
   bottom: 0;
   background: linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #0088EC 78.81%);
   z-index: 1;
+  transition: background .35s;
+}
+
+.section-members .btn:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 78.81%);
+  color: #3BB239;
+}
+
+.section-members .btn:hover ~ .section-members__bg {
+  background: linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #3BB239 78.81%);
 }
 
 .section-members__content {
@@ -2619,6 +2650,10 @@ body {
 .selection-drug .section__text {
   text-align: center;
   color: #909090;
+}
+
+.selection-drug .small {
+  display: block;
 }
 
 .selection-drug .drugs-list {
@@ -3339,10 +3374,6 @@ body {
     font-size: 28px;
   }
 
-  .section-reason .swiper-pagination-bullets .swiper-pagination-bullet {
-    display: block;
-  }
-
   .symptoms-list__item {
     padding: 35px 17px 26px 17px;
   }
@@ -3719,6 +3750,10 @@ body {
     padding-bottom: 20px;
   }
 
+  .reason-list .swiper-pagination-bullets .swiper-pagination-bullet {
+    display: flex;
+  }
+
   .section-reason .reason-slider {
     position: relative;
     max-width: 400px;
@@ -4070,6 +4105,33 @@ body {
     margin-bottom: 30px;
   }
 
+  .popup {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: auto;
+  }
+
+  .popup__content {
+    height: 350px;
+  }
+
+  .popup__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  .popup__footer .btn {
+    margin: 0 0 20px;
+    padding: 20px 20px 21px;
+  }
+
+  .popup__text {
+    font-size: 16px;
+    min-height: 165px;
+  }
+
   .container {
     max-width: 580px;
   }
@@ -4376,6 +4438,10 @@ body {
     width: 100%;
   }
 
+  .section-reason__title {
+    font-size: 20px;
+  }
+
   .symptoms-list__item {
     width: 50%;
   }
@@ -4587,6 +4653,11 @@ body {
 
   .card-drug__header .big {
     font-size: 24px;
+  }
+
+  .popup {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .container {

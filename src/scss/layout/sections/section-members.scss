@@ -30,8 +30,13 @@
     bottom: 0;
     background: linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #0088EC 78.81%);
     z-index: 1;
+    transition: background .35s;
   }
-
+  .btn:hover{
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 78.81%);
+    color: $green-100;
+  }
+  .btn:hover ~ .section-members__bg{  background: linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #3BB239 78.81%);}
   &__content {
     max-width: 650px;
     width: 100%;

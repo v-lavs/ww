@@ -85,11 +85,14 @@ $(document).ready(function () {
                     },
                 });
             }
+            else {
+                destroySwiper(reasonSlider);
+            }
         }
         if ($(window).outerWidth() <= 766) {
             if (!typesSlider && typesSelector) {
                 typesSlider = new Swiper(".types-slider", {
-                    slidesPerView: "auto",
+                    slidesPerView:'auto',
                     spaceBetween: 60,
                     pagination: {
                         el: ".swiper-pagination",
@@ -98,12 +101,13 @@ $(document).ready(function () {
                 });
             }
         } else {
-            destroySwiper(reasonSlider);
             destroySwiper(typesSlider);
         }
     }
 
     var resizeId;
+
+
 
     handleResponsive();
     window.addEventListener('resize', function () {
@@ -122,5 +126,41 @@ $(document).ready(function () {
         $($(e.currentTarget).attr('href')).addClass('active');
     });
 
+    //MODAL
+    $('.open-modal').on('click', function () {
+        $('.backdrop, .popup').fadeIn(500);
+    });
+
+    $('.modal-close, .backdrop').on('click', function () {
+        $('.backdrop, .popup').fadeOut(500);
+    });
+
+//    HIDE TEXT
+
+    $('.show-more').click(function(){
+        $('.block-more-info').slideToggle(300, function(){
+            if ($(this).is(':hidden')) {
+                $('.show-more').html('Більше інформації');
+                $('.show-more').removeClass('open');
+            } else {
+                $('.show-more').html('Закрити');
+                $('.show-more').addClass('open');
+            }
+        });
+        return false;
+    });
+
+    //CHANGE BG
+    $( '.bg-change' ).hover(function(){
+        $( '.section-members__bg' ).css( 'background', 'linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #3BB239 78.81%)' );
+    }, function(){
+        $( '.section-members__bg' ).css( 'background', 'linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #0088EC 78.81%)' );
+    });
+
+    // $('.text-hide .open-up').on('click', function (e) {
+    //     e.preventDefault();
+    //     $(this).siblings().removeClass('hide');
+    //     $(this).hide();
+    // });
 });
 
