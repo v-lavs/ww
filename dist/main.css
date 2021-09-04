@@ -896,9 +896,14 @@ body {
   padding-top: 100%;
   width: 300px;
   margin: 0 auto 24px;
+  transition: box-shadow .35s;
 }
 
-.card-drug__img-wrap img {
+.card-drug__img-wrap:hover {
+  box-shadow: 0px 0px 25px 0px #BCE5FBBF;
+}
+
+.card-drug__img {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -923,8 +928,18 @@ body {
   transform: translateY(-50%);
 }
 
-.card-drug .wrap-btn:hover .round:after {
+.card-drug .trigger-popover {
+  opacity: 1;
+  transition: .35s;
+}
+
+.card-drug .trigger-popover.active:after {
   transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.card-drug .trigger-popover.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .card-drug .btn {
@@ -936,14 +951,23 @@ body {
 }
 
 .popover {
+  position: absolute;
   background: #FFFFFF;
-  max-width: 350px;
-  width: 100%;
   min-height: 340px;
   border-radius: 15px;
   font-size: 18px;
   color: #24243F;
   padding: 27px 23px;
+  width: 340px;
+  opacity: 0;
+  transition: opacity .4s;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.popover.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .popover .heading_h1 {
@@ -2690,10 +2714,6 @@ body {
 
 .selection-drug .drugs-list__item {
   width: 33.33%;
-}
-
-.selection-drug .drugs-list .popover {
-  display: none;
 }
 
 .blog {

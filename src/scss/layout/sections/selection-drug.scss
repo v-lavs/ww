@@ -36,10 +36,6 @@
     &__item {
       width: 33.33%;
     }
-
-    .popover {
-      display: none;
-    }
   }
 
   @include respond-to($md) {

@@ -144,7 +144,37 @@ $(document).ready(function () {
         $('.backdrop, .popup').fadeOut(500);
     });
 
+    // Popover
+
+    $('.trigger-popover').click(function (e) {
+        e.preventDefault();
+        $('.trigger-popover').not(this).toggleClass('hide');
+        $(this).toggleClass('active');
+
+        const popover = $(this).siblings('.popover');
+        popover.toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+            const btnData = $(this).get(0).getBoundingClientRect();
+            const margin = 30;
+            const popoverWidth = popover.outerWidth();
+            const windowW = $(window).width();
+
+            const isRight = windowW - btnData.x - btnData.width - margin;
+            const isLeft = btnData.x - margin;
+
+            if (isRight > popoverWidth) {
+                popover.css({left: btnData.width + margin, top: 0});
+            } else if (isLeft > popoverWidth) {
+                popover.css({left: -(popoverWidth + margin), top: 0});
+            } else {
+                popover.css({ top: btnData.height + margin, left: -(btnData.x -popoverWidth -btnData.width - margin)});
+            }
+        }
+    });
+
 //    HIDE TEXT
+
     $('.show-more').click(function () {
         const showMore = $(this);
         const openText = showMore.attr('data-open-text');
@@ -185,6 +215,5 @@ $(document).ready(function () {
     }, function () {
         $('.hand').removeClass('rotate')
     });
-
 });
 
