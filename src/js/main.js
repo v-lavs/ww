@@ -32,42 +32,45 @@ $(document).ready(function () {
 
 
     //SLIDER
-    var aboutUrolesan = new Swiper(".about-urolesan", {
-        slidesPerView: 1.48,
-        spaceBetween: 66,
-        slidesOffsetBefore: 43,
-        slidesOffsetAfter: 43,
-        breakpoints: {
-            320: {
-                slidesPerView: 1.5,
-                spaceBetween: 66,
-                slidesOffsetBefore: 43,
-                slidesOffsetAfter: 43,
+
+    if ($('.about-urolesan').get(0)) {
+        const aboutUrolesan = new Swiper(".about-urolesan", {
+            slidesPerView: 1.48,
+            spaceBetween: 66,
+            slidesOffsetBefore: 43,
+            slidesOffsetAfter: 43,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 66,
+                    slidesOffsetBefore: 43,
+                    slidesOffsetAfter: 43,
+                },
+                680: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 60,
+                    slidesOffsetBefore: 130,
+                    slidesOffsetAfter: 130,
+                },
+                1180: {
+                    slidesPerView: 1.35,
+                    spaceBetween: 60,
+                    slidesOffsetBefore: 100,
+                    slidesOffsetAfter: 230,
+                },
+                1340: {
+                    slidesPerView: 1.48,
+                    spaceBetween: 120,
+                    slidesOffsetBefore: 230,
+                    slidesOffsetAfter: 230,
+                },
             },
-            680: {
-                slidesPerView: 1.5,
-                spaceBetween: 60,
-                slidesOffsetBefore: 130,
-                slidesOffsetAfter: 130,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-            1180: {
-                slidesPerView: 1.35,
-                spaceBetween: 60,
-                slidesOffsetBefore: 100,
-                slidesOffsetAfter: 230,
-            },
-            1340: {
-                slidesPerView: 1.48,
-                spaceBetween: 120,
-                slidesOffsetBefore: 230,
-                slidesOffsetAfter: 230,
-            },
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
+        });
+    }
 
     let reasonSlider;
     let typesSlider;
@@ -75,7 +78,9 @@ $(document).ready(function () {
     const typesSelector = $('.types-slider').get(0);
 
     function handleResponsive() {
+
         // DESTROY SLIDER INSTANCES
+
         if ($(window).outerWidth() <= 991) {
             if (!reasonSlider && reasonSelector) {
                 reasonSlider = new Swiper(".reason-slider", {
@@ -111,6 +116,7 @@ $(document).ready(function () {
 
 
     handleResponsive();
+
     window.addEventListener('resize', function () {
         clearTimeout(resizeId);
         resizeId = setTimeout(handleResponsive, 500);
@@ -119,6 +125,7 @@ $(document).ready(function () {
     //TABS
     const tabLink = $('.tabs__nav-link');
     const tabContentItem = $('.tab-content');
+
     tabLink.click(function (e) {
         e.preventDefault();
         tabLink.removeClass('active');
@@ -164,6 +171,7 @@ $(document).ready(function () {
 
 
     //CHANGE BG
+
     $('.bg-change').hover(function () {
         $('.section-members__bg').css('background', 'linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #3BB239 78.81%)');
     }, function () {
@@ -171,6 +179,7 @@ $(document).ready(function () {
     });
 
     //  HOVER BANNER
+
     $(' .btn').hover(function () {
         $('.hand').addClass('rotate')
     }, function () {
