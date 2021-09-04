@@ -168,9 +168,14 @@ $(document).ready(function () {
             } else if (isLeft > popoverWidth) {
                 popover.css({left: -(popoverWidth + margin), top: 0});
             } else {
-                popover.css({ top: btnData.height + margin, left: -(btnData.x -popoverWidth -btnData.width - margin)});
+                popover.css({top: btnData.height + margin, left: -(btnData.x - popoverWidth - btnData.width - margin)});
             }
         }
+    });
+
+    $('.diagnoses-list__item').click(function () {
+        $('.diagnoses-list__item').removeClass('active');
+        $(this).addClass('active');
     });
 
 //    HIDE TEXT

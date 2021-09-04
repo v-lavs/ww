@@ -36,7 +36,8 @@
     margin-bottom: 80px;
 
   }
-  @include respond-to($md){
+
+  @include respond-to($md) {
     padding-top: 80px;
   }
 }
@@ -64,7 +65,7 @@
       height: 184px;
       border-radius: 15px;
       border: 2px solid $white;
-      transition:  1s;
+      transition: 1s;
       @extend .frosted;
     }
 
@@ -110,6 +111,7 @@
       &:before {
         height: 100%;
       }
+
       .diagnoses-list__thumb {
         opacity: 1;
       }
@@ -255,15 +257,71 @@
     &__item {
       padding-top: 40px;
       padding-bottom: 50px;
+
       &:hover {
         .text {
           bottom: 55px;
         }
       }
     }
+
     &__title {
       font-size: 32px;
       line-height: 1;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .diagnoses-list {
+    flex-wrap: wrap;
+
+    &__title {
+      font-size: 28px;
+
+      .text {
+        position: relative;
+        transform: none;
+        bottom: auto;
+      }
+    }
+
+    &__thumb {
+      height: 0;
+      margin: 0;
+    }
+
+    &__item {
+      padding: 20px 15px;
+      height: 104px;
+      width: 100%;
+      margin-bottom: 10px;
+
+      &:before {
+        height: 100%;
+      }
+
+      &:hover {
+        .wrap-btn {
+          opacity: 0;
+        }
+
+        .text {
+          transform: none;
+          bottom: auto;
+        }
+      }
+
+      &.active {
+        height: auto;
+        .diagnoses-list__thumb {
+          height: 227px;
+        }
+
+        .wrap-btn {
+          opacity: 1;
+        }
+      }
     }
   }
 }

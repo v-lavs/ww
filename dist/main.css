@@ -4189,6 +4189,57 @@ body {
     display: none;
   }
 
+  .diagnoses-list {
+    flex-wrap: wrap;
+  }
+
+  .diagnoses-list__title {
+    font-size: 28px;
+  }
+
+  .diagnoses-list__title .text {
+    position: relative;
+    transform: none;
+    bottom: auto;
+  }
+
+  .diagnoses-list__thumb {
+    height: 0;
+    margin: 0;
+  }
+
+  .diagnoses-list__item {
+    padding: 20px 15px;
+    height: 104px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .diagnoses-list__item:before {
+    height: 100%;
+  }
+
+  .diagnoses-list__item:hover .wrap-btn {
+    opacity: 0;
+  }
+
+  .diagnoses-list__item:hover .text {
+    transform: none;
+    bottom: auto;
+  }
+
+  .diagnoses-list__item.active {
+    height: auto;
+  }
+
+  .diagnoses-list__item.active .diagnoses-list__thumb {
+    height: 227px;
+  }
+
+  .diagnoses-list__item.active .wrap-btn {
+    opacity: 1;
+  }
+
   .section-slider .slide-about__img,
   .section-slider .wrapper-gif {
     display: none;
