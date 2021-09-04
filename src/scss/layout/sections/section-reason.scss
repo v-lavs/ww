@@ -1,7 +1,7 @@
 .section-reason {
   position: relative;
   background-color: #F5F7F7;
-  padding: 60px 0 60px;
+  padding: 114px 0 60px;
 
   &:before {
     pointer-events: none;
@@ -14,6 +14,10 @@
     z-index: 5;
     background: url("../assets/img/svg/reason-bg.svg") center right no-repeat;
     background-size: 97%;
+  }
+
+  .inner-section {
+    position: relative;
   }
 
   .reason-slider {
@@ -280,7 +284,7 @@
     }
 
   }
-  @include respond-to($md){
+  @include respond-to($md) {
     .swiper-pagination-bullets .swiper-pagination-bullet {
       display: flex;
     }

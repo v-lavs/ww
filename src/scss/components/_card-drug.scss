@@ -29,7 +29,7 @@
     transition: box-shadow .35s;
 
     &:hover {
-      box-shadow: 0px 0px 25px 0px #BCE5FBBF;
+      box-shadow: 0 0 25px 0 #BCE5FB;
     }
   }
 
@@ -139,14 +139,14 @@
   padding: 27px 23px;
   width: 340px;
   opacity: 0;
-  transition: opacity .4s;
+  transition: opacity .5s;
   z-index: 100;
   pointer-events: none;
 
   &.active {
     opacity: 1;
     pointer-events: all;
-  }
+      }
 
   .heading_h1 {
     font-weight: 400;
@@ -155,6 +155,7 @@
     margin-bottom: 18px;
 
     .small {
+      display: block;
       font-size: 18px;
       line-height: 1;
       color: #aaaaaa;

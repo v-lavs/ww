@@ -900,7 +900,7 @@ body {
 }
 
 .card-drug__img-wrap:hover {
-  box-shadow: 0px 0px 25px 0px #BCE5FBBF;
+  box-shadow: 0 0 25px 0 #BCE5FB;
 }
 
 .card-drug__img {
@@ -960,7 +960,7 @@ body {
   padding: 27px 23px;
   width: 340px;
   opacity: 0;
-  transition: opacity .4s;
+  transition: opacity .5s;
   z-index: 100;
   pointer-events: none;
 }
@@ -978,6 +978,7 @@ body {
 }
 
 .popover .heading_h1 .small {
+  display: block;
   font-size: 18px;
   line-height: 1;
   color: #aaaaaa;
@@ -2081,7 +2082,7 @@ body {
 .section-reason {
   position: relative;
   background-color: #F5F7F7;
-  padding: 60px 0 60px;
+  padding: 114px 0 60px;
 }
 
 .section-reason:before {
@@ -2095,6 +2096,10 @@ body {
   z-index: 5;
   background: url("../assets/img/svg/reason-bg.svg") center right no-repeat;
   background-size: 97%;
+}
+
+.section-reason .inner-section {
+  position: relative;
 }
 
 .section-reason .reason-slider {
@@ -2378,7 +2383,6 @@ body {
   background-size: 100%;
   padding-top: 140px;
   padding-bottom: 100px;
-  margin-bottom: 114px;
 }
 
 .consequences:before,
@@ -4191,6 +4195,7 @@ body {
 
   .diagnoses-list {
     flex-wrap: wrap;
+    margin: 0;
   }
 
   .diagnoses-list__title {
@@ -4212,7 +4217,7 @@ body {
     padding: 20px 15px;
     height: 104px;
     width: 100%;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
   }
 
   .diagnoses-list__item:before {
