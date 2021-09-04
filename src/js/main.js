@@ -38,13 +38,13 @@ $(document).ready(function () {
         slidesOffsetBefore:43,
         slidesOffsetAfter:43,
         breakpoints: {
-            640: {
+            320: {
                 slidesPerView: 1.5,
                 spaceBetween: 66,
                 slidesOffsetBefore:43,
                 slidesOffsetAfter:43,
             },
-            991: {
+            680: {
                 slidesPerView: 1.5,
                 spaceBetween: 60,
                 slidesOffsetBefore:130,
