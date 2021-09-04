@@ -736,8 +736,14 @@ body {
 }
 
 .spoiler .show-more {
+  position: relative;
   display: block;
   margin: 0 auto;
+}
+
+.spoiler_light-bg .show-more {
+  border-color: #0062B3;
+  color: #0062B3;
 }
 
 .post-list {
@@ -2270,7 +2276,7 @@ body {
 }
 
 .symptoms {
-  padding-bottom: 150px;
+  padding-bottom: 60px;
 }
 
 .symptoms-list {
@@ -2280,6 +2286,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 90px;
 }
 
 .symptoms-list__item {

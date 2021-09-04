@@ -1,5 +1,5 @@
 .symptoms {
-  padding-bottom: 150px;
+  padding-bottom: 60px;
 }
 
 .symptoms-list {
@@ -9,6 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 90px;
   &__item {
     position: relative;
     display: flex;

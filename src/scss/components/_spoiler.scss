@@ -48,8 +48,15 @@
 
 .spoiler {
   .show-more {
+    position: relative;
     display: block;
     margin: 0 auto;
+  }
+  &_light-bg{
+    .show-more {
+      border-color: $blue;
+      color: $blue;
+    }
   }
 }
 
