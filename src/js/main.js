@@ -35,32 +35,32 @@ $(document).ready(function () {
     var aboutUrolesan = new Swiper(".about-urolesan", {
         slidesPerView: 1.48,
         spaceBetween: 66,
-        slidesOffsetBefore:43,
-        slidesOffsetAfter:43,
+        slidesOffsetBefore: 43,
+        slidesOffsetAfter: 43,
         breakpoints: {
             320: {
                 slidesPerView: 1.5,
                 spaceBetween: 66,
-                slidesOffsetBefore:43,
-                slidesOffsetAfter:43,
+                slidesOffsetBefore: 43,
+                slidesOffsetAfter: 43,
             },
             680: {
                 slidesPerView: 1.5,
                 spaceBetween: 60,
-                slidesOffsetBefore:130,
-                slidesOffsetAfter:130,
+                slidesOffsetBefore: 130,
+                slidesOffsetAfter: 130,
             },
             1180: {
                 slidesPerView: 1.35,
                 spaceBetween: 60,
-                slidesOffsetBefore:100,
-                slidesOffsetAfter:230,
+                slidesOffsetBefore: 100,
+                slidesOffsetAfter: 230,
             },
             1340: {
                 slidesPerView: 1.48,
                 spaceBetween: 120,
-                slidesOffsetBefore:230,
-                slidesOffsetAfter:230,
+                slidesOffsetBefore: 230,
+                slidesOffsetAfter: 230,
             },
         },
         pagination: {
@@ -72,7 +72,7 @@ $(document).ready(function () {
     let reasonSlider;
     let typesSlider;
     const reasonSelector = $('.reason-slider').get(0);
-    const  typesSelector =$('.types-slider').get(0);
+    const typesSelector = $('.types-slider').get(0);
 
     function handleResponsive() {
         // DESTROY SLIDER INSTANCES
@@ -84,15 +84,14 @@ $(document).ready(function () {
                         clickable: true,
                     },
                 });
-            }
-            else {
+            } else {
                 destroySwiper(reasonSlider);
             }
         }
         if ($(window).outerWidth() <= 766) {
             if (!typesSlider && typesSelector) {
                 typesSlider = new Swiper(".types-slider", {
-                    slidesPerView:'auto',
+                    slidesPerView: 'auto',
                     spaceBetween: 60,
                     pagination: {
                         el: ".swiper-pagination",
@@ -106,7 +105,6 @@ $(document).ready(function () {
     }
 
     var resizeId;
-
 
 
     handleResponsive();
@@ -136,31 +134,28 @@ $(document).ready(function () {
     });
 
 //    HIDE TEXT
-
-    $('.show-more').click(function(){
-        $('.block-more-info').slideToggle(300, function(){
-            if ($(this).is(':hidden')) {
-                $('.show-more').html('Більше інформації');
-                $('.show-more').removeClass('open');
-            } else {
-                $('.show-more').html('Закрити');
-                $('.show-more').addClass('open');
-            }
-        });
-        return false;
+    $('.show-more').click(function () {
+        if ($('.spoiler').hasClass('one')) {
+            $('.show-more').not($(this)).removeClass('active');
+            $('.block-more-info').not($(this).prev()).slideUp(300);
+        }
+        $(this).toggleClass("active").prev().slideToggle(300);
+        if ($(this).is(':hidden')) {
+            $('.show-more').html('Більше інформації');
+            $('.show-more').removeClass('open');
+        } else {
+            $('.show-more').html('Закрити');
+            $('.show-more').addClass('open');
+        }
     });
+
 
     //CHANGE BG
-    $( '.bg-change' ).hover(function(){
-        $( '.section-members__bg' ).css( 'background', 'linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #3BB239 78.81%)' );
-    }, function(){
-        $( '.section-members__bg' ).css( 'background', 'linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #0088EC 78.81%)' );
+    $('.bg-change').hover(function () {
+        $('.section-members__bg').css('background', 'linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #3BB239 78.81%)');
+    }, function () {
+        $('.section-members__bg').css('background', 'linear-gradient(180deg, rgba(134, 200, 234, 0) 0%, #0088EC 78.81%)');
     });
 
-    // $('.text-hide .open-up').on('click', function (e) {
-    //     e.preventDefault();
-    //     $(this).siblings().removeClass('hide');
-    //     $(this).hide();
-    // });
 });
 

@@ -112,6 +112,7 @@ a:hover {
 body {
   font: 400 18px "Calibri", sans-serif;
   height: 100%;
+  background-color: #f5f7f7;
 }
 
 .body_bg {
@@ -732,6 +733,11 @@ body {
 
 .block-more-info_white ul li:before {
   background-color: #ffffff;
+}
+
+.spoiler .show-more {
+  display: block;
+  margin: 0 auto;
 }
 
 .post-list {
@@ -2035,7 +2041,7 @@ body {
 .section-reason {
   position: relative;
   background-color: #F5F7F7;
-  padding: 92px 0 88px;
+  padding: 60px 0 60px;
 }
 
 .section-reason:before {
@@ -2440,6 +2446,8 @@ body {
 
 .disease {
   padding-bottom: 108px;
+  padding-top: 60px;
+  background-color: #f5f7f7;
 }
 
 .types-disease__inner {
