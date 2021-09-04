@@ -3263,24 +3263,11 @@ body {
     font-size: 38px;
   }
 
-  .section-reason__heading {
-    width: 290px;
-    height: 290px;
+  .reason-list__item_5 {
+    margin-left: auto;
   }
 
-  .section-reason__title {
-    font-size: 28px;
-  }
-
-  .section-reason .reason-list__item {
-    padding-left: 100px;
-  }
-
-  .section-reason .reason-list__item_5 {
-    margin-left: 12%;
-  }
-
-  .section-reason .reason-list__icon {
+  .reason-list__icon {
     display: flex;
     justify-content: center;
     width: 60px;
@@ -3288,17 +3275,46 @@ body {
     left: 18%;
   }
 
-  .section-reason .reason-list__icon img {
+  .reason-list__icon img {
     max-height: 100%;
     width: auto;
     max-width: 100%;
   }
 
-  .section-reason .reason-list__item_4,
-  .section-reason .reason-list__item_6,
-  .section-reason .reason-list__item_3,
-  .section-reason .reason-list__item_1 {
+  .reason-list__item {
+    padding-left: 100px;
+  }
+
+  .reason-list__item_1:after {
+    left: 150px;
+  }
+
+  .reason-list__item_2:after {
+    right: 133px;
+  }
+
+  .reason-list__item_4:after {
+    right: 135px;
+  }
+
+  .reason-list__item_5:after {
+    margin-left: auto;
+  }
+
+  .reason-list__item_4,
+  .reason-list__item_6,
+  .reason-list__item_3,
+  .reason-list__item_1 {
     margin-left: 5.25%;
+  }
+
+  .section-reason__heading {
+    width: 290px;
+    height: 290px;
+  }
+
+  .section-reason__title {
+    font-size: 28px;
   }
 
   .section-reason .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -4513,6 +4529,28 @@ body {
   .section-banner__slogan {
     font-size: 30px;
     margin-bottom: 30px;
+  }
+
+  .reason-list__icon {
+    top: auto;
+    bottom: -10px;
+  }
+
+  .reason-list__item {
+    background-image: url(../assets/img/svg/line-mob.svg);
+    background-position: top right 24px;
+    background-repeat: no-repeat;
+    background-size: 62% 105%;
+    max-width: 308px;
+    height: 164px;
+  }
+
+  .reason-list__item_5 {
+    margin-left: auto;
+  }
+
+  .reason-list__item_ {
+    margin-right: auto;
   }
 
   .consequences .consequences-title {
