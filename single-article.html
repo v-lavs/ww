@@ -176,7 +176,11 @@
                         </h1>
                     </div>
                     <div class="article__thumb">
-                        <img src="assets/img/thumb-full.jpg" alt="">
+                        <picture>
+                            <source srcset="assets/img/img-article-mob.jpg" media="(max-width: 580px)">
+                            <img src="assets/img/thumb-full.jpg" alt="">
+                        </picture>
+
                     </div>
                     <div class="dynamic-content">
                         <p>
@@ -214,10 +218,10 @@
                         <div class="card-post__avatar">
                             <img src="assets/img/author.png" alt="">
                         </div>
-                        <div class="info-author">
+                        <a href="member-profile.html" class="info-author">
                             <h3 class="heading heading_h5">Дмитро Дмитрович Іванов</h3>
                             <div class="sub-title text-xs">Доктор медичних наук, професор</div>
-                        </div>
+                        </a>
                     </div>
                 </article>
                 <section class="section-related-post">

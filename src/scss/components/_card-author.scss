@@ -100,7 +100,7 @@
       }
     }
   }
-  @include respond-to($xs){
+  @include respond-to($md){
     flex-direction: column;
     padding: 50px 18px 34px;
     .part_left,
@@ -232,6 +232,7 @@
       }
     }
   }
+
   @include respond-to($sm){
     .post-date{
       width: 100%;
@@ -240,6 +241,8 @@
       justify-content: flex-start;
       text-transform: lowercase;
       color: #24243F;
+      height: 30px;
+      margin-bottom: 10px;
       .day,
       .mounts{
         font-size: 18px;
@@ -255,7 +258,12 @@
     }
     &__item{
       flex-direction: column;
-
+      &:hover,
+      &:focus {
+            > .post-date {
+          background: none;
+        }
+      }
     }
   }
 }

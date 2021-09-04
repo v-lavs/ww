@@ -86,5 +86,9 @@
     display: flex;
     min-width: 18px;
   }
+  @include respond-to($xxs) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 

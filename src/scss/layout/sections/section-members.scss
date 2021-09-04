@@ -59,6 +59,7 @@
       margin-bottom: 25px;
     }
   }
+
 }
 
 .members-list {
@@ -88,8 +89,5 @@
       padding-top: 57%;
     }
   }
-  @include respond-to($xxs) {
-    &__item {
-    }
-  }
+
 }
