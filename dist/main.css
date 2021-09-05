@@ -4389,7 +4389,8 @@ body {
   }
 
   .footer .disclaimer {
-    padding-top: 0;
+    padding-top: 10px;
+    height: 17vh;
   }
 
   .section-banner {
@@ -4649,7 +4650,7 @@ body {
     width: 65px;
     height: 86px;
     right: 0;
-    bottom: 28px;
+    bottom: 14vh;
     top: auto;
   }
 

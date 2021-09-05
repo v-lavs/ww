@@ -240,16 +240,15 @@ $(document).ready(function () {
 
 //    ANIMATION
 
-    const sectionWaypoints = $('.anim-page').waypoint({
 
-        handler: function () {
-            setTimeout(
-                $(this.element).addClass('active-anim'),300
-            );
-            // clearInterval();
+    setTimeout(function () {
+        const sectionWaypoints = $('.anim-page').waypoint({
+            handler: function () {
+                $(this.element).addClass('active-anim');
+            },
+            offset: '80%'
+        });
+    }, 500);
 
-        },
-        offset: '80%'
-    });
 });
 
