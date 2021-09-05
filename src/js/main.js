@@ -153,11 +153,12 @@ $(document).ready(function () {
 
     //MODAL
 
-    $('.open-modal').on('click', function () {
+    $('.open-modal').on('click', function (e) {
+        e.preventDefault();
         $('.backdrop, .popup').fadeIn(500);
     });
 
-    $('.modal-close, .backdrop').on('click', function () {
+    $('.close-popup, .backdrop').on('click', function () {
         $('.backdrop, .popup').fadeOut(500);
     });
 
@@ -248,7 +249,7 @@ $(document).ready(function () {
             },
             offset: '80%'
         });
-    }, 500);
+    }, 300);
 
 });
 

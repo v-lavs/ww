@@ -621,7 +621,7 @@ body {
   top: 410px;
   width: 32px;
   padding: 4px;
-  background-color: #E5E5E5;
+  background-color: transparent;
   z-index: 20;
 }
 
