@@ -4,7 +4,7 @@
   background-position: center;
   background-size: cover;
   padding-top: 160px;
-  min-height: 1004px;
+  //min-height: 1004px;
   padding-bottom: 70px;
 
   &:before,
@@ -39,6 +39,7 @@
 
   @include respond-to($md) {
     padding-top: 80px;
+    min-height: 700px;
   }
 }
 
@@ -53,6 +54,7 @@
     flex-shrink: 0;
     margin: 0 6px;
     padding: 50px 32px 88px;
+    z-index: 1;
 
     &:before {
       position: absolute;
@@ -210,7 +212,15 @@
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 5px solid rgba(255, 228, 225, .2);
+    border: 3px solid rgba(255, 228, 225, .2);
+  }
+  @include respond-to($md){
+    width: 21px;
+    height: 21px;
+    &:before {
+      width: 10px;
+      height: 10px;
+    }
   }
 }
 
@@ -272,14 +282,54 @@
   }
 }
 
+@include respond-to($md) {
+  .section-help {
+    background-position: 0;
+  }
+  .diagnoses-list {
+    &__item {
+      padding: 10px 5px;
+
+      .btn {
+        padding: 10px;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__img {
+      width: 80%;
+    }
+
+    &__thumb {
+      height: 180px;
+
+      &:before {
+        height: 180px;
+      }
+    }
+  }
+}
+
 @include respond-to($sm) {
+  .section-help{
+    padding-bottom: 110px;
+  }
   .diagnoses-list {
     flex-wrap: wrap;
     margin: 0 auto;
     width: 75%;
 
+    br {
+      display: none;
+    }
+
     &__title {
       font-size: 28px;
+      margin-top: 6px;
+      margin-bottom: 18px;
 
       .text {
         position: relative;
@@ -316,6 +366,8 @@
 
       .btn {
         pointer-events: none;
+        min-width: 208px;
+        padding: 15px 10px 16px;
       }
 
       &.active {
@@ -333,12 +385,16 @@
         .wrap-btn {
           opacity: 1;
         }
+
+        .diagnoses-list__img {
+          width: 50%;
+        }
       }
     }
   }
 }
 
-@include respond-to($xxs) {
+@include respond-to($xs) {
   .section-help .section__heading {
     margin-bottom: 38px;
   }
@@ -346,8 +402,14 @@
     width: 100%;
     max-width: 271px;
 
-    &__item.active .diagnoses-list__thumb {
-      height: 180px;
+    &__item.active {
+      .diagnoses-list__thumb {
+        height: 180px;
+      }
+
+      .diagnoses-list__img {
+        width: 75%;
+      }
     }
 
     &__img {

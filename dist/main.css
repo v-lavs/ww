@@ -1740,7 +1740,6 @@ body {
   background-position: center;
   background-size: cover;
   padding-top: 160px;
-  min-height: 1004px;
   padding-bottom: 70px;
 }
 
@@ -1785,6 +1784,7 @@ body {
   flex-shrink: 0;
   margin: 0 6px;
   padding: 50px 32px 88px;
+  z-index: 1;
 }
 
 .diagnoses-list__item:before {
@@ -1939,7 +1939,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 5px solid rgba(255, 228, 225, 0.2);
+  border: 3px solid rgba(255, 228, 225, 0.2);
 }
 
 @keyframes pulse {
@@ -2003,7 +2003,7 @@ body {
   right: 0;
   top: 0;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 0;
 }
 
 .section-slider .wrapper-gif {
@@ -3829,6 +3829,45 @@ body {
 
   .section-help {
     padding-top: 80px;
+    min-height: 700px;
+  }
+
+  .pulse {
+    width: 21px;
+    height: 21px;
+  }
+
+  .pulse:before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .section-help {
+    background-position: 0;
+  }
+
+  .diagnoses-list__item {
+    padding: 10px 5px;
+  }
+
+  .diagnoses-list__item .btn {
+    padding: 10px;
+  }
+
+  .diagnoses-list__title {
+    font-size: 20px;
+  }
+
+  .diagnoses-list__img {
+    width: 80%;
+  }
+
+  .diagnoses-list__thumb {
+    height: 180px;
+  }
+
+  .diagnoses-list__thumb:before {
+    height: 180px;
   }
 
   .section-slider {
@@ -4258,14 +4297,24 @@ body {
     display: none;
   }
 
+  .section-help {
+    padding-bottom: 110px;
+  }
+
   .diagnoses-list {
     flex-wrap: wrap;
     margin: 0 auto;
     width: 75%;
   }
 
+  .diagnoses-list br {
+    display: none;
+  }
+
   .diagnoses-list__title {
     font-size: 28px;
+    margin-top: 6px;
+    margin-bottom: 18px;
   }
 
   .diagnoses-list__title .text {
@@ -4301,6 +4350,8 @@ body {
 
   .diagnoses-list__item .btn {
     pointer-events: none;
+    min-width: 208px;
+    padding: 15px 10px 16px;
   }
 
   .diagnoses-list__item.active {
@@ -4318,6 +4369,10 @@ body {
 
   .diagnoses-list__item.active .wrap-btn {
     opacity: 1;
+  }
+
+  .diagnoses-list__item.active .diagnoses-list__img {
+    width: 50%;
   }
 
   .section-slider .slide-about__img,
@@ -4618,6 +4673,32 @@ body {
     width: 100%;
   }
 
+  .section-help .section__heading {
+    margin-bottom: 38px;
+  }
+
+  .diagnoses-list {
+    width: 100%;
+    max-width: 271px;
+  }
+
+  .diagnoses-list__item.active .diagnoses-list__thumb {
+    height: 180px;
+  }
+
+  .diagnoses-list__item.active .diagnoses-list__img {
+    width: 75%;
+  }
+
+  .diagnoses-list__img {
+    width: 75%;
+  }
+
+  .diagnoses-list__title {
+    margin-top: 6px;
+    margin-bottom: 18px;
+  }
+
   .section-reason:before {
     background-image: url(../assets/img/sec-reason-mob.png);
     background-size: contain;
@@ -4870,28 +4951,6 @@ body {
   .section-banner__slogan {
     font-size: 30px;
     margin-bottom: 30px;
-  }
-
-  .section-help .section__heading {
-    margin-bottom: 38px;
-  }
-
-  .diagnoses-list {
-    width: 100%;
-    max-width: 271px;
-  }
-
-  .diagnoses-list__item.active .diagnoses-list__thumb {
-    height: 180px;
-  }
-
-  .diagnoses-list__img {
-    width: 75%;
-  }
-
-  .diagnoses-list__title {
-    margin-top: 6px;
-    margin-bottom: 18px;
   }
 
   .reason-list__icon {
