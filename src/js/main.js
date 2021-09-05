@@ -3,7 +3,7 @@
 * */
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
-
+//= include ../lib/waypoints/index.js
 
 // CUSTOM SCRIPTS
 
@@ -236,6 +236,20 @@ $(document).ready(function () {
         $('.hand').addClass('rotate')
     }, function () {
         $('.hand').removeClass('rotate')
+    });
+
+//    ANIMATION
+
+    const sectionWaypoints = $('.anim-page').waypoint({
+
+        handler: function () {
+            setTimeout(
+                $(this.element).addClass('active-anim'),300
+            );
+            // clearInterval();
+
+        },
+        offset: '80%'
     });
 });
 

@@ -128,49 +128,6 @@ body {
   }
 }
 
-@include respond-to($lg) {
-  .section__heading {
-    padding-bottom: 40px;
-
-    .big {
-      font-size: 97px;
-    }
-  }
-  .section__title {
-    font-size: 31px;
-  }
-}
-
-@include respond-to($sm) {
-  .section__heading {
-    padding-bottom: 25px;
-
-    .big {
-      font-size: 80px;
-    }
-  }
-  .section__title {
-    font-size: 25px;
-  }
-}
-
-@include respond-to($xs) {
-  .section__heading {
-    padding-bottom: 19px;
-
-    &:after {
-      width: 36%;
-    }
-
-    .big {
-      font-size: 67px;
-    }
-  }
-  .section__title {
-    font-size: 18px;
-  }
-}
-
 .card-mob {
   background: linear-gradient(222.87deg, #FFFFFF 21.75%, #F5F5F5 93.36%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -284,6 +241,62 @@ body {
     ul {
       margin-bottom: 25px;
     }
+  }
+}
+
+.anim-page {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all .8s linear ;
+
+}
+
+.active-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@include respond-to($lg) {
+  .section__heading {
+    padding-bottom: 40px;
+
+    .big {
+      font-size: 97px;
+    }
+  }
+  .section__title {
+    font-size: 31px;
+  }
+}
+
+@include respond-to($sm) {
+  .section__heading {
+    padding-bottom: 25px;
+
+    .big {
+      font-size: 80px;
+    }
+  }
+  .section__title {
+    font-size: 25px;
+  }
+}
+
+@include respond-to($xs) {
+  .section__heading {
+    padding-bottom: 19px;
+
+    &:after {
+      width: 36%;
+    }
+
+    .big {
+      font-size: 67px;
+    }
+  }
+  .section__title {
+    font-size: 18px;
   }
 }
 
