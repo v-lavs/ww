@@ -53,10 +53,10 @@ $(document).ready(function () {
                     slidesOffsetAfter: 130,
                 },
                 1180: {
-                    slidesPerView: 1.35,
+                    slidesPerView: 1.25,
                     spaceBetween: 60,
                     slidesOffsetBefore: 100,
-                    slidesOffsetAfter: 230,
+                    slidesOffsetAfter: 100,
                 },
                 1340: {
                     slidesPerView: 1.48,

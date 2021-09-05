@@ -3490,6 +3490,10 @@ body {
     font-size: 46px;
   }
 
+  .section-slider .about-urolesan {
+    padding-bottom: 0;
+  }
+
   .section-slider .wrapper-slider {
     min-height: 500px;
   }
