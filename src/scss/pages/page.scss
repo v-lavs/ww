@@ -46,7 +46,7 @@
     position: relative;
     z-index: 2;
     margin-bottom: 14px;
-    color: $blue;
+    color: $blue-100;
 
     svg {
       display: inline-block;
@@ -55,7 +55,7 @@
       height: 24px;
 
       path {
-        stroke: $blue;
+        stroke: $blue-100;
       }
     }
   }
@@ -124,7 +124,7 @@
     position: relative;
     z-index: 2;
     margin-bottom: 14px;
-    color: $blue;
+    color: $blue-100;
 
     svg {
       display: inline-block;
@@ -133,7 +133,7 @@
       height: 24px;
 
       path {
-        stroke: $blue;
+        stroke: $blue-100;
       }
     }
   }

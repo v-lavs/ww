@@ -1561,7 +1561,7 @@ body {
 
 .footer_top .name-corporation {
   font-weight: 700;
-  color: #0062B3;
+  color: #557EB9;
   font-size: 16px;
 }
 
@@ -2841,7 +2841,7 @@ body {
 
 .page-effectiveness__heading {
   font-size: 64px;
-  color: #0062B3;
+  color: #0088EC;
 }
 
 .page-effectiveness .col-4 {
@@ -2879,7 +2879,7 @@ body {
 
 .effects-list__title {
   position: relative;
-  color: #0062B3;
+  color: #0088EC;
   line-height: 1;
   padding-bottom: 5px;
   margin-bottom: 5px;
@@ -2894,7 +2894,7 @@ body {
   height: 1px;
   border-width: 1px;
   border-style: solid;
-  border-image: linear-gradient(to right, #0062B3, rgba(0, 0, 0, 0)) 0 1 100%;
+  border-image: linear-gradient(to right, #0088EC, rgba(0, 0, 0, 0)) 0 1 100%;
 }
 
 .effects-list__icon {
@@ -3093,7 +3093,7 @@ body {
 .tabs__nav-link.active {
   background: #F3F8FB;
   border-color: #25A3E5;
-  color: #0062B3;
+  color: #0088EC;
   font-weight: 700;
 }
 
@@ -3106,7 +3106,7 @@ body {
 
 .tabs__content h5 {
   margin-bottom: 26px;
-  color: #0062B3;
+  color: #0088EC;
 }
 
 .tabs__content .tab-content {
@@ -3173,7 +3173,7 @@ body {
   position: relative;
   z-index: 2;
   margin-bottom: 14px;
-  color: #0062B3;
+  color: #0088EC;
 }
 
 .page .link-back svg {
@@ -3184,7 +3184,7 @@ body {
 }
 
 .page .link-back svg path {
-  stroke: #0062B3;
+  stroke: #0088EC;
 }
 
 .page-product {
@@ -3195,7 +3195,7 @@ body {
   position: relative;
   z-index: 2;
   margin-bottom: 14px;
-  color: #0062B3;
+  color: #0088EC;
 }
 
 .page-product .link-back svg {
@@ -3206,7 +3206,7 @@ body {
 }
 
 .page-product .link-back svg path {
-  stroke: #0062B3;
+  stroke: #0088EC;
 }
 
 .page-pyelonephritis .types-disease .disease-list__text {

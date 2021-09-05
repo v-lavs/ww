@@ -10,7 +10,7 @@
 
   &__heading {
     font-size: 64px;
-    color: $blue;
+    color: $blue-100;
   }
 
   .col-4 {
@@ -85,7 +85,7 @@
 
   &__title {
     position: relative;
-    color: $blue;
+    color: $blue-100;
     line-height: 1;
     padding-bottom: 5px;
     margin-bottom: 5px;
@@ -101,7 +101,7 @@
      border-image:
              linear-gradient(
                              to right,
-                             $blue,
+                             $blue-100,
                              rgba(0, 0, 0, 0)
              ) 0 1 100%;
    }
