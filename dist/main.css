@@ -123,7 +123,7 @@ body {
 .body_bg:before {
   position: absolute;
   content: '';
-  background: linear-gradient(to top, #fbf7fd 0%, rgba(251, 247, 253, 0) 40%), url(../assets/img/bg-soty.png);
+  background: linear-gradient(to top, #f5f7f7 0%, rgba(251, 247, 253, 0) 40%), url(../assets/img/bg-soty.png);
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
@@ -150,7 +150,6 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .main {
@@ -1660,6 +1659,7 @@ body {
   background-size: cover;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .section-banner:before,
@@ -2502,10 +2502,27 @@ body {
 }
 
 .types-disease__header {
+  position: relative;
   background: #FFFFFF;
   box-shadow: 0 0 45px rgba(188, 229, 251, 0.75);
   padding: 47px 30px 110px;
-  border-radius: 110px;
+  border-radius: 130px;
+  line-height: 1.2;
+}
+
+.types-disease__header:before {
+  position: absolute;
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  width: 10%;
+  height: 58%;
+  background-image: url(../assets/img/hexagon.png);
+  left: -50px;
+  top: -50px;
+  z-index: 0;
 }
 
 .types-disease__heading {
@@ -3111,7 +3128,7 @@ body {
 }
 
 .page {
-  background-color: #fbf7fd;
+  background-color: #f5f6f6;
 }
 
 .page__heading {
@@ -3135,7 +3152,7 @@ body {
 
 .page__title {
   position: relative;
-  width: 38%;
+  width: 33%;
   padding: 0 32px;
   color: #0088EC;
   line-height: 1;
@@ -3176,8 +3193,42 @@ body {
   stroke: #0062B3;
 }
 
+.page-pyelonephritis .types-disease .disease-list__text {
+  padding-top: 26px;
+  color: #0088EC;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
 .page-pyelonephritis .symptoms {
   padding-bottom: 150px;
+}
+
+.cystitis .symptoms {
+  padding-bottom: 0;
+}
+
+.cystitis .section-reason {
+  padding-top: 90px;
+}
+
+.sand-kidney .section-reason {
+  position: relative;
+}
+
+.sand-kidney .section-reason:before {
+  position: absolute;
+  content: '';
+  background: linear-gradient(to top, #f5f6f6, transparent);
+  height: 100px;
+  left: 0;
+  right: 0;
+  top: -100px;
+}
+
+.sand-kidney .section-reason {
+  padding-top: 0;
 }
 
 @media only screen and (max-width: 1480px) {
@@ -3530,6 +3581,10 @@ body {
   .page__heading {
     min-height: 150px;
     padding: 26px 25px 25px 40px;
+  }
+
+  .page-pyelonephritis .types-disease .disease-list__text {
+    font-size: 20px;
   }
 }
 
@@ -3913,6 +3968,10 @@ body {
     margin: 0 auto;
     padding-top: 10px;
   }
+
+  .page-pyelonephritis .types-disease .disease-list__text {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -4264,6 +4323,10 @@ body {
     margin-bottom: 20px;
   }
 
+  .symptoms-list {
+    padding-bottom: 40px;
+  }
+
   .symptoms-list__bg-icon {
     width: 54px;
     height: 54px;
@@ -4539,6 +4602,16 @@ body {
     width: 100%;
   }
 
+  .section-reason:before {
+    background-image: url(../assets/img/sec-reason-mob.png);
+    background-size: contain;
+    background-position: top;
+  }
+
+  .section-reason__heading {
+    padding: 0 40px 40px;
+  }
+
   .section-reason__title {
     font-size: 20px;
   }
@@ -4589,6 +4662,10 @@ body {
     box-shadow: none;
     margin-bottom: 30px;
     font-size: 20px;
+  }
+
+  .types-disease__header:before {
+    display: none;
   }
 
   .disease-list {
@@ -4714,6 +4791,14 @@ body {
   .page-product .link-back {
     margin-bottom: 25px;
   }
+
+  .page-pyelonephritis .types-disease .disease-list__text {
+    font-size: 16px;
+  }
+
+  .cystitis .section-reason {
+    padding-top: 40px;
+  }
 }
 
 @media only screen and (max-width: 420px) {
@@ -4791,6 +4876,19 @@ body {
 
   .reason-list__item_ {
     margin-right: auto;
+  }
+
+  .reason-list__item {
+    max-width: 268px;
+    height: 168px;
+    padding: 20px 20px 20px 87px;
+    min-height: 168px;
+  }
+
+  .reason-list__icon {
+    width: 51px;
+    height: 70px;
+    left: 19%;
   }
 
   .consequences .consequences-title {

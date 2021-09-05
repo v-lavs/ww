@@ -1,5 +1,5 @@
 .page {
-  background-color: #fbf7fd;
+  background-color: #f5f6f6;
 
   &__heading {
     display: flex;
@@ -21,7 +21,7 @@
 
   &__title {
     position: relative;
-    width: 38%;
+    width: 33%;
     padding: 0 32px;
     color: $blue-100;
     line-height: 1;
@@ -109,13 +109,77 @@
 }
 
 .page-pyelonephritis {
+  .types-disease {
+    .disease-list__text {
+      padding-top: 26px;
+      color: $blue-100;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+  }
+
   .symptoms {
     padding-bottom: 150px;
   }
 
+  @include respond-to($lg) {
+    .types-disease {
+      .disease-list__text {
+        font-size: 20px;
+      }
+    }
+  }
+  @include respond-to($md) {
+    .types-disease {
+      .disease-list__text {
+        font-size: 18px;
+      }
+    }
+  }
   @include respond-to($sm) {
     .symptoms {
       padding-bottom: 80px;
     }
+  }
+  @include respond-to($xs) {
+    .types-disease {
+      .disease-list__text {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.cystitis {
+  .symptoms {
+    padding-bottom: 0;
+  }
+
+  .section-reason {
+    padding-top: 90px;
+  }
+  @include respond-to($xs){
+    .section-reason {
+      padding-top: 40px;
+    }
+  }
+}
+
+.sand-kidney {
+  .section-reason{
+    position: relative;
+    &:before{
+      position: absolute;
+      content: '';
+      background: linear-gradient(to top, #f5f6f6, transparent);
+      height: 100px;
+      left: 0;
+      right: 0;
+      top: -100px;
+    }
+  }
+  .section-reason {
+    padding-top: 0;
   }
 }

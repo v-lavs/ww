@@ -70,7 +70,7 @@
     }
   }
   @include respond-to($sm){
-
+    padding-bottom: 40px;
     &__bg-icon{
       width: 54px;
       height: 54px;

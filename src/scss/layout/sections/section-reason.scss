@@ -368,9 +368,33 @@
 
 @include respond-to($xs) {
   .section-reason {
+    &:before {
+      background-image: url(../assets/img/sec-reason-mob.png);
+      background-size: contain;
+      background-position: top;
+    }
+
+    &__heading {
+      padding: 0 40px 40px;
+    }
+
     &__title {
       font-size: 20px;
     }
   }
 }
 
+@include respond-to($xxs) {
+  .reason-list__item {
+    max-width: 268px;
+    height: 168px;
+    padding: 20px 20px 20px 87px;
+    min-height: 168px;
+
+  }
+  .reason-list__icon {
+    width: 51px;
+    height: 70px;
+    left: 19%;
+  }
+}

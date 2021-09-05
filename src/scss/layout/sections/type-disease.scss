@@ -12,10 +12,27 @@
   }
 
   &__header {
+    position: relative;
     background: #FFFFFF;
     box-shadow: 0 0 45px rgba(188, 229, 251, 0.75);
     padding: 47px 30px 110px;
-    border-radius: 110px;
+    border-radius: 130px;
+    line-height: 1.2;
+
+    &:before{
+      position: absolute;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: contain;
+      background-size: contain;
+      width: 10%;
+      height: 58%;
+      background-image: url(../assets/img/hexagon.png);
+      left: -50px;
+      top: -50px;
+      z-index: 0;
+    }
   }
 
   &__heading {
@@ -54,6 +71,9 @@
       box-shadow: none;
       margin-bottom: 30px;
       font-size: 20px;
+      &:before{
+        display: none;
+      }
     }
   }
 }
