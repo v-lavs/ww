@@ -99,11 +99,16 @@
     display: block;
   }
   @include respond-to($sm) {
+    margin-bottom: 50px;
     padding-top: 30px;
       position: relative;
       padding-bottom: 86px;
     .swiper-pagination {
       display: block;
+    }
+    .swiper-slide{
+      width: 85%;
+      padding: 20px;
     }
   }
 }

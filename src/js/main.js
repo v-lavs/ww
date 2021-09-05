@@ -96,11 +96,27 @@ $(document).ready(function () {
             reasonSlider = null;
         }
 
-        if ($(window).outerWidth() <= 766) {
+        if ($(window).outerWidth() <= 767) {
             if (!typesSlider && typesSelector) {
                 typesSlider = new Swiper(".types-slider", {
-                    slidesPerView: 'auto',
+                    slidesPerView: 1.25,
                     spaceBetween: 60,
+                    slidesOffsetBefore: 10,
+                    slidesOffsetAfter: 40,
+                    breakpoints: {
+                        420: {
+                            slidesPerView: 1.5,
+                            spaceBetween: 60,
+                            slidesOffsetBefore: 10,
+                            slidesOffsetAfter: 40,
+                        },
+                        767: {
+                            slidesPerView: 1.75,
+                            spaceBetween: 60,
+                            slidesOffsetBefore: 10,
+                            slidesOffsetAfter: 40,
+                        },
+                    },
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true,

@@ -96,4 +96,12 @@
       }
     }
   }
+  @include respond-to($xxs){
+
+    &__item{
+      padding-bottom: 10px;
+      width: 100%;
+      max-width: 210px;
+    }
+  }
 }

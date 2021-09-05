@@ -275,7 +275,8 @@
 @include respond-to($sm) {
   .diagnoses-list {
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 auto;
+    width: 75%;
 
     &__title {
       font-size: 28px;
@@ -296,7 +297,7 @@
       padding: 20px 15px;
       height: 104px;
       width: 100%;
-      margin:0 0 10px;
+      margin: 0 0 10px;
 
       &:before {
         height: 100%;
@@ -313,16 +314,49 @@
         }
       }
 
+      .btn {
+        pointer-events: none;
+      }
+
       &.active {
         height: auto;
+        margin-bottom: 35px;
+
         .diagnoses-list__thumb {
           height: 227px;
+        }
+
+        .btn {
+          pointer-events: all;
         }
 
         .wrap-btn {
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+@include respond-to($xxs) {
+  .section-help .section__heading {
+    margin-bottom: 38px;
+  }
+  .diagnoses-list {
+    width: 100%;
+    max-width: 271px;
+
+    &__item.active .diagnoses-list__thumb {
+      height: 180px;
+    }
+
+    &__img {
+      width: 75%;
+    }
+
+    &__title {
+      margin-top: 6px;
+      margin-bottom: 18px;
     }
   }
 }

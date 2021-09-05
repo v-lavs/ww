@@ -4131,6 +4131,7 @@ body {
   }
 
   .types-slider {
+    margin-bottom: 50px;
     padding-top: 30px;
     position: relative;
     padding-bottom: 86px;
@@ -4138,6 +4139,11 @@ body {
 
   .types-slider .swiper-pagination {
     display: block;
+  }
+
+  .types-slider .swiper-slide {
+    width: 85%;
+    padding: 20px;
   }
 
   .authors-blog .post-date {
@@ -4254,7 +4260,8 @@ body {
 
   .diagnoses-list {
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 auto;
+    width: 75%;
   }
 
   .diagnoses-list__title {
@@ -4292,12 +4299,21 @@ body {
     bottom: auto;
   }
 
+  .diagnoses-list__item .btn {
+    pointer-events: none;
+  }
+
   .diagnoses-list__item.active {
     height: auto;
+    margin-bottom: 35px;
   }
 
   .diagnoses-list__item.active .diagnoses-list__thumb {
     height: 227px;
+  }
+
+  .diagnoses-list__item.active .btn {
+    pointer-events: all;
   }
 
   .diagnoses-list__item.active .wrap-btn {
@@ -4856,6 +4872,28 @@ body {
     margin-bottom: 30px;
   }
 
+  .section-help .section__heading {
+    margin-bottom: 38px;
+  }
+
+  .diagnoses-list {
+    width: 100%;
+    max-width: 271px;
+  }
+
+  .diagnoses-list__item.active .diagnoses-list__thumb {
+    height: 180px;
+  }
+
+  .diagnoses-list__img {
+    width: 75%;
+  }
+
+  .diagnoses-list__title {
+    margin-top: 6px;
+    margin-bottom: 18px;
+  }
+
   .reason-list__icon {
     top: auto;
     bottom: -10px;
@@ -4889,6 +4927,12 @@ body {
     width: 51px;
     height: 70px;
     left: 19%;
+  }
+
+  .symptoms-list__item {
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 210px;
   }
 
   .consequences .consequences-title {
