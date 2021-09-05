@@ -94,8 +94,15 @@
     <main class="main  page cystitis">
 
         <div class="container">
-            <a href="index.html" class="link-back"><img src="assets/img/svg/arrow-left.svg" alt=""
-                                                        class="icon-back"> На головну</a>
+            <a href="index.html" class="link-back">
+                <svg class="icon-back" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#24243F" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M12 19L5 12L12 5" stroke="#24243F" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+                На головну</a>
             <div class="page__heading frosted">
                 <h1 class="page__title heading_h1">Цистит</h1>
                 <div class="page__sub-title heading_h4">
@@ -349,8 +356,12 @@
             </div>
         </div>
         <div class="disclaimer frosted">
-            <img class="footer__text-img" src="assets/img/svg/disclaimer.svg"
-                 alt="Самолікування може бути шкідливим для вашого здоров'я">
+            <picture>
+                <source srcset="assets/img/svg/disclaimer-mob.svg" media="(max-width: 580px)">
+                <img class="footer__text-img" src="assets/img/svg/disclaimer.svg"
+                     alt="Самолікування може бути шкідливим для вашого здоров'я">
+            </picture>
+
         </div>
     </footer>
 </div>
