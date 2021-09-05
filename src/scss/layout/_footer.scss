@@ -77,15 +77,13 @@
   &_bottom {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20vh;
+    padding-bottom: 18vh;
     padding-top: 18px;
     font-size: 14px;
     color: $blue-100;
   }
 
   .disclaimer {
-    display: none;
-
     background-size: cover;
     overflow: hidden;
     position: fixed;
@@ -114,6 +112,11 @@
       left: auto;
       right: auto;
       bottom: 0;
+    }
+  }
+  @include respond-to($sm) {
+    .disclaimer{
+      padding-top: 0;
     }
   }
   @include respond-to($xs) {

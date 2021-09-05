@@ -129,6 +129,9 @@
       font-size: 22px;
     }
   }
+  @include respond-to($xs){
+    margin-top: 0;
+  }
 }
 
 .authors-blog {

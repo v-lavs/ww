@@ -108,6 +108,7 @@
     }
   }
   @include respond-to($sm) {
+    background-image: url(../assets/img/prevention-mob.jpg);
     &__list {
       justify-content: space-around;
       max-width: 323px;

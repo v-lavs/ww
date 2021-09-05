@@ -1,5 +1,6 @@
 .page {
   background-color: #f5f6f6;
+  padding-top: 208px;
 
   &__heading {
     display: flex;
@@ -40,6 +41,25 @@
     }
   }
 
+  .link-back {
+    display: none;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 14px;
+    color: $blue;
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      width: 24px;
+      height: 24px;
+
+      path {
+        stroke: $blue;
+      }
+    }
+  }
+
   @include respond-to($lg) {
     &__heading {
       min-height: 150px;
@@ -62,11 +82,27 @@
       min-height: 52px;
       padding: 0;
       margin-bottom: 25px;
-
+      display: inline-flex;
+      align-items: center;
       &:before {
         width: 4px;
         height: 50px;
         left: -18px;
+      }
+    }
+  }
+  @include respond-to($xs) {
+    padding-top: 110px;
+
+    .link-back {
+      display: block;
+      margin-bottom: 25px;
+    }
+    &__title{
+      padding-left: 14px;
+      margin-bottom: 14px;
+      &:before{
+        left: 0;
       }
     }
   }
@@ -76,6 +112,7 @@
     }
     &__title {
       min-height: 40px;
+
     }
   }
 }
@@ -102,6 +139,7 @@
   }
 
   @include respond-to($xs) {
+    padding-top: 110px;
     .link-back {
       margin-bottom: 25px;
     }
@@ -159,7 +197,8 @@
   .section-reason {
     padding-top: 90px;
   }
-  @include respond-to($xs){
+
+  @include respond-to($xs) {
     .section-reason {
       padding-top: 40px;
     }
@@ -167,9 +206,11 @@
 }
 
 .sand-kidney {
-  .section-reason{
+  .section-reason {
+    padding-top: 0;
     position: relative;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       background: linear-gradient(to top, #f5f6f6, transparent);
@@ -179,7 +220,13 @@
       top: -100px;
     }
   }
-  .section-reason {
-    padding-top: 0;
+}
+
+.blog {
+  padding-top: 134px;
+  @include respond-to($xs) {
+    .link-back {
+      margin-bottom: 25px;
+    }
   }
 }

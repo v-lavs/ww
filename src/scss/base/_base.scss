@@ -21,6 +21,12 @@ body {
     min-height: 1005px;
     z-index: 0;
   }
+  @include respond-to($sm){
+    &:before{
+      background-position: 0 0;
+      min-height: 560px;
+    }
+  }
 }
 
 .frosted {
@@ -72,14 +78,6 @@ body {
 
 .color_green {
   color: $green-100;
-}
-
-.page {
-  padding-top: 208px;
-}
-
-.blog {
-  padding-top: 134px;
 }
 
 .section {
@@ -185,7 +183,7 @@ body {
   right: 24px;
   top: 343px;
   width: 82px;
-  z-index: 300;
+  z-index: 600;
 
   .hexagon {
     position: relative;

@@ -54,9 +54,7 @@
     }
   }
   @include respond-to($xs){
-    .link-back{
-      margin-bottom: 25px;
-    }
+
     &__heading {
       font-size: 36px;
       margin-bottom: 46px;

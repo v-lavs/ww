@@ -14,6 +14,7 @@
     }
 
   }
+
   @include respond-to($xs) {
     padding-bottom: 0;
   }
@@ -71,6 +72,13 @@
 
   .card-post__author {
     padding-top: 24px;
+
+    &:hover,
+    &:focus {
+      .info-author {
+        text-decoration: underline;
+      }
+    }
   }
 
   .card-post__avatar {
@@ -79,9 +87,11 @@
   }
 
   @include respond-to($sm) {
+    padding-top: 40px;
     &__thumb {
       padding-top: 0;
       margin-bottom: 46px;
+
       img {
         position: relative;
         transform: none;
@@ -93,7 +103,7 @@
     &__header {
       margin-bottom: 31px;
     }
-    .card-post__author{
+    .card-post__author {
       padding-top: 10px;
     }
   }

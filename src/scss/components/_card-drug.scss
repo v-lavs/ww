@@ -107,7 +107,12 @@
   @include respond-to($xs) {
     .wrap-btn {
       right: -27px;
+      display: none;
     }
+    &__img-wrap {
+      padding-top: 55%;
+    }
+
   }
   @include respond-to($xxs) {
     &__img-wrap {
@@ -140,7 +145,7 @@
   width: 340px;
   opacity: 0;
   transition: opacity .5s;
-  z-index: 100;
+  z-index: 600;
   pointer-events: none;
 
   &.active {
@@ -185,4 +190,5 @@
       flex-shrink: 0;
     }
   }
+
 }
