@@ -3,6 +3,7 @@
 * */
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
+//= include ../lib/swiper/swiper-bundle.min.js
 //= include ../lib/waypoints/index.js
 
 // CUSTOM SCRIPTS
@@ -62,7 +63,7 @@ $(document).ready(function () {
                     slidesPerView: 1.48,
                     spaceBetween: 120,
                     slidesOffsetBefore: 230,
-                    slidesOffsetAfter: 230,
+                    slidesOffsetAfter: 260,
                 },
             },
             pagination: {
