@@ -1781,7 +1781,7 @@ body {
 
 .section-help:after {
   background-image: linear-gradient(180deg, rgba(228, 242, 255, 0) 5%, #F7FBFF 62%);
-  height: 105px;
+  height: 200px;
 }
 
 .section-help .container {
