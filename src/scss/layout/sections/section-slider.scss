@@ -1,3 +1,4 @@
+
 .section-slider {
   position: relative;
   background-image: linear-gradient(177.86deg, #F8FBFF 35.61%, #EEEEEE 98.2%);
@@ -19,20 +20,6 @@
     z-index: 0;
   }
 
-  .wrapper-gif {
-    width: 68%;
-    margin-left: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-
-    img {
-      mix-blend-mode: screen;
-    }
-  }
 
   .wrapper-slider {
     position: relative;
@@ -51,19 +38,19 @@
   }
 
   .slide-about {
-    position: relative;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: auto;
-    padding-left: 150px;
     opacity: .5;
-
-    width: 67%;
+    width: 75%;
 
     &__content {
-      width: 50%;
+      position: relative;
+      width: 48%;
       padding-top: 108px;
+      padding-left: 150px;
       padding-bottom: 77px;
     }
 
@@ -85,9 +72,7 @@
     }
 
     &__img {
-      position: relative;
-      width: 50%;
-      z-index: -1;
+      width: 52%;
 
       img {
         vertical-align: middle;
@@ -96,40 +81,43 @@
   }
 
   @media all and (max-width: 1480px) {
+    .slide-about{
+      width: 65%;
+    }
     .slide-about__heading {
       font-size: 50px;
     }
     .wrapper-slider {
       min-height: 744px;
     }
+    .slide-about__content {
+      padding-left: 100px;
+    }
   }
   @include respond-to($xl) {
-    .counter-slide {
-      font-size: 82px;
+    .slide-about .counter-slide {
+      font-size: 70px;
     }
-    .slide-about {
-      padding-left: 130px;
-    }
+
   }
   @include respond-to($lg) {
-    .about-urolesan{
-      padding-bottom: 0;
+    .about-urolesan {
+      padding-bottom: 120px;
     }
     .wrapper-slider {
-      min-height: 500px;
+      min-height: 0;
+      height: auto;
     }
-    .slide-about {
-      padding-left: 100px;
 
-      .counter-slide {
-        font-size: 70px;
-      }
+    .counter-slide {
+      font-size: 70px;
     }
-    .slide-about__img {
-      width: 40%;
+    .btn{
+      font-size: 14px;
+      min-width: 208px;
     }
     .slide-about__heading {
-      font-size: 38px;
+      font-size: 33px;
     }
   }
   @include respond-to($md) {
@@ -139,28 +127,28 @@
       display: none;
     }
     .slide-about {
-      padding-left: 0;
-
       .counter-slide {
         line-height: .8;
         top: 0;
         font-size: 56px;
       }
     }
+
     .slide-about__content {
+      padding-left: 0;
       padding-top: 55px;
       padding-bottom: 20px;
     }
   }
   @include respond-to($sm) {
-    .slide-about__img,
-    .wrapper-gif {
+    .slide-about__img{
       display: none;
     }
-    .wrapper-slider {
-      min-height: 0;
-      height: auto;
+    .slide-about__content{
+      max-width: 340px;
+      width: 100%;
     }
+
     .about-urolesan {
       padding-bottom: 41px;
     }

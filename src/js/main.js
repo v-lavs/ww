@@ -39,31 +39,26 @@ $(document).ready(function () {
             slidesPerView: 1.48,
             spaceBetween: 66,
             slidesOffsetBefore: 43,
-            slidesOffsetAfter: 43,
             breakpoints: {
                 320: {
                     slidesPerView: 1.5,
                     spaceBetween: 66,
                     slidesOffsetBefore: 43,
-                    slidesOffsetAfter: 43,
                 },
                 680: {
                     slidesPerView: 1.5,
-                    spaceBetween: 60,
-                    slidesOffsetBefore: 130,
-                    slidesOffsetAfter: 130,
+                    spaceBetween: 65,
+                    slidesOffsetBefore: 100,
                 },
                 1180: {
-                    slidesPerView: 1.25,
+                    slidesPerView: 'auto',
                     spaceBetween: 60,
                     slidesOffsetBefore: 100,
-                    slidesOffsetAfter: 100,
                 },
                 1340: {
-                    slidesPerView: 1.48,
-                    spaceBetween: 120,
+                    slidesPerView: 'auto',
+                    spaceBetween: 0,
                     slidesOffsetBefore: 230,
-                    slidesOffsetAfter: 260,
                 },
             },
             pagination: {

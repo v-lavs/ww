@@ -2718,21 +2718,6 @@ body {
   z-index: 0;
 }
 
-.section-slider .wrapper-gif {
-  width: 68%;
-  margin-left: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-}
-
-.section-slider .wrapper-gif img {
-  mix-blend-mode: screen;
-}
-
 .section-slider .wrapper-slider {
   position: relative;
   min-height: 810px;
@@ -2749,19 +2734,19 @@ body {
 }
 
 .section-slider .slide-about {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: auto;
-  padding-left: 150px;
   opacity: .5;
-  width: 67%;
+  width: 75%;
 }
 
 .section-slider .slide-about__content {
-  width: 50%;
+  position: relative;
+  width: 48%;
   padding-top: 108px;
+  padding-left: 150px;
   padding-bottom: 77px;
 }
 
@@ -2783,9 +2768,7 @@ body {
 }
 
 .section-slider .slide-about__img {
-  position: relative;
-  width: 50%;
-  z-index: -1;
+  width: 52%;
 }
 
 .section-slider .slide-about__img img {
@@ -4027,12 +4010,8 @@ body {
     font-size: 54px;
   }
 
-  .section-slider .counter-slide {
-    font-size: 82px;
-  }
-
-  .section-slider .slide-about {
-    padding-left: 130px;
+  .section-slider .slide-about .counter-slide {
+    font-size: 70px;
   }
 
   .members-list__item {
@@ -4041,12 +4020,20 @@ body {
 }
 
 @media all and (max-width: 1480px) {
+  .section-slider .slide-about {
+    width: 65%;
+  }
+
   .section-slider .slide-about__heading {
     font-size: 50px;
   }
 
   .section-slider .wrapper-slider {
     min-height: 744px;
+  }
+
+  .section-slider .slide-about__content {
+    padding-left: 100px;
   }
 }
 
@@ -4183,27 +4170,25 @@ body {
   }
 
   .section-slider .about-urolesan {
-    padding-bottom: 0;
+    padding-bottom: 120px;
   }
 
   .section-slider .wrapper-slider {
-    min-height: 500px;
+    min-height: 0;
+    height: auto;
   }
 
-  .section-slider .slide-about {
-    padding-left: 100px;
-  }
-
-  .section-slider .slide-about .counter-slide {
+  .section-slider .counter-slide {
     font-size: 70px;
   }
 
-  .section-slider .slide-about__img {
-    width: 40%;
+  .section-slider .btn {
+    font-size: 14px;
+    min-width: 208px;
   }
 
   .section-slider .slide-about__heading {
-    font-size: 38px;
+    font-size: 33px;
   }
 
   .reason-list__item_5 {
@@ -4664,10 +4649,6 @@ body {
     display: none;
   }
 
-  .section-slider .slide-about {
-    padding-left: 0;
-  }
-
   .section-slider .slide-about .counter-slide {
     line-height: .8;
     top: 0;
@@ -4675,6 +4656,7 @@ body {
   }
 
   .section-slider .slide-about__content {
+    padding-left: 0;
     padding-top: 55px;
     padding-bottom: 20px;
   }
@@ -5175,14 +5157,13 @@ body {
     width: 50%;
   }
 
-  .section-slider .slide-about__img,
-  .section-slider .wrapper-gif {
+  .section-slider .slide-about__img {
     display: none;
   }
 
-  .section-slider .wrapper-slider {
-    min-height: 0;
-    height: auto;
+  .section-slider .slide-about__content {
+    max-width: 340px;
+    width: 100%;
   }
 
   .section-slider .about-urolesan {
