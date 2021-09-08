@@ -2,12 +2,60 @@
   position: relative;
   padding-top: 120px;
   min-height: 800px;
-  background-position: center;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   overflow: hidden;
+  &.active-banner{
+    .hand {
+        transform: rotate(-15deg);
+    }
+    .bg-effect-1,
+    .bg-effect-gif{
+      visibility:visible;
+    }
+  }
+
+  .bg-window,
+  .bg-effect-1,
+  .bg-effect-gif,
+  .bg-effect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg-effect {
+    z-index: 0;
+  }
+
+  .bg-window {
+    background-image: url(../assets/img/1.png);
+    z-index: 1;
+  }
+
+  .bg-effect-1 {
+    left: -6px;
+    background-image: url(../assets/img/effect_1.png);
+    z-index: 0;
+    transition:  .35s;
+    visibility:hidden;
+  }
+
+  .bg-effect-gif {
+    background-image: url(../assets/img/effect.gif);
+    z-index: 0;
+    transition: .35s;
+    visibility:hidden;
+  }
 
   &:before,
   &:after {
@@ -32,6 +80,7 @@
   }
 
   &__slogan {
+    position: relative;
     width: 100%;
     max-width: 670px;
     font-size: 64px;
@@ -65,16 +114,14 @@
       bottom: -12%;
       right: 0;
       width: 30%;
-      transition: .8s;
-      &.rotate{
-        transform: rotate(-15deg);
-      }
+      transition: .5s;
     }
 
     .tablet {
       width: 83%;
     }
-    .btn{
+
+    .btn {
       display: block;
     }
   }
@@ -100,6 +147,10 @@
   @include respond-to($sm) {
     padding-top: 95px;
     .wrap-img {
+      display: none;
+    }
+    .bg-effect-1,
+    .bg-effect-gif{
       display: none;
     }
   }

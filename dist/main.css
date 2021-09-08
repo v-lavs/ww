@@ -2366,12 +2366,60 @@ body {
   position: relative;
   padding-top: 120px;
   min-height: 800px;
-  background-position: center;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   overflow: hidden;
+}
+
+.section-banner.active-banner .hand {
+  transform: rotate(-15deg);
+}
+
+.section-banner.active-banner .bg-effect-1,
+.section-banner.active-banner .bg-effect-gif {
+  visibility: visible;
+}
+
+.section-banner .bg-window,
+.section-banner .bg-effect-1,
+.section-banner .bg-effect-gif,
+.section-banner .bg-effect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-banner .bg-effect {
+  z-index: 0;
+}
+
+.section-banner .bg-window {
+  background-image: url(../assets/img/1.png);
+  z-index: 1;
+}
+
+.section-banner .bg-effect-1 {
+  left: -6px;
+  background-image: url(../assets/img/effect_1.png);
+  z-index: 0;
+  transition: .35s;
+  visibility: hidden;
+}
+
+.section-banner .bg-effect-gif {
+  background-image: url(../assets/img/effect.gif);
+  z-index: 0;
+  transition: .35s;
+  visibility: hidden;
 }
 
 .section-banner:before,
@@ -2397,6 +2445,7 @@ body {
 }
 
 .section-banner__slogan {
+  position: relative;
   width: 100%;
   max-width: 670px;
   font-size: 64px;
@@ -2431,11 +2480,7 @@ body {
   bottom: -12%;
   right: 0;
   width: 30%;
-  transition: .8s;
-}
-
-.section-banner .wrap-img .hand.rotate {
-  transform: rotate(-15deg);
+  transition: .5s;
 }
 
 .section-banner .wrap-img .tablet {
@@ -5076,6 +5121,11 @@ body {
   }
 
   .section-banner .wrap-img {
+    display: none;
+  }
+
+  .section-banner .bg-effect-1,
+  .section-banner .bg-effect-gif {
     display: none;
   }
 

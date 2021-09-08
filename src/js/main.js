@@ -228,13 +228,13 @@ $(document).ready(function () {
     });
 
     //  HOVER BANNER
-
-    $(' .btn').hover(function () {
-        $('.hand').addClass('rotate')
-    }, function () {
-        $('.hand').removeClass('rotate')
-    });
-
+    setTimeout(function () {
+        $(' .btn').hover(function () {
+            $('.section-banner').addClass('active-banner')
+        }, function () {
+            $('.section-banner').removeClass('active-banner')
+        });
+    }, 300);
 //    ANIMATION
 
 
