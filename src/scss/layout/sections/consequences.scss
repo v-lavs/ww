@@ -111,6 +111,7 @@ text-shadow: none;
       background-color: rgba(255,255,255,.5);
       width: 35px;
       height: 1px;
+      z-index: 1;
     }
 
     &:after {

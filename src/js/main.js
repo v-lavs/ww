@@ -248,5 +248,22 @@ $(document).ready(function () {
         });
     }, 300);
 
+//    ANIMATION DRUG
+
+
+
+    $(window).scroll(function() {
+            let scroll = $('.selection-drug').offset().top;
+
+            console.log(scroll , (window.scrollY ))
+            if (
+                scroll <= (window.scrollY + $(window).height() * 0.3) &&
+                scroll >= (window.scrollY - $('.selection-drug').height() * 0.25)
+            ) {
+                $('.pills').addClass('anim-pills');
+            } else {
+                $('.pills').removeClass('anim-pills');
+            }
+    });
 });
 

@@ -2344,6 +2344,11 @@ body {
   color: #0088EC;
 }
 
+.footer .design a:hover,
+.footer .design a:focus {
+  text-decoration: underline;
+}
+
 .footer .disclaimer {
   background-size: cover;
   overflow: hidden;
@@ -3203,6 +3208,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   width: 35px;
   height: 1px;
+  z-index: 1;
 }
 
 .consequences-list__item:after {
@@ -3447,11 +3453,76 @@ body {
 }
 
 .selection-drug .bg-section {
-  min-height: 906px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
   padding-top: 188px;
+}
+
+.selection-drug .pills {
+  position: absolute;
+  z-index: 0;
+  transition: 2s transform;
+}
+
+.selection-drug .pills img {
+  width: 100%;
+}
+
+.selection-drug .pills.anim-pills {
+  transform: rotate(70deg);
+  transition: 2s transform;
+}
+
+.selection-drug .pills-1 {
+  left: 21.25%;
+  top: 9.5%;
+  width: 71px;
+  height: 73px;
+}
+
+.selection-drug .pills-2 {
+  right: 21.25%;
+  top: 10.75%;
+  width: 62px;
+  height: 57px;
+}
+
+.selection-drug .pills-3 {
+  width: 130px;
+  height: 97px;
+  right: 4.5%;
+  top: 36%;
+}
+
+.selection-drug .pills-4 {
+  width: 255px;
+  height: 259px;
+  left: 1.5%;
+  bottom: 14%;
+}
+
+.selection-drug .pills-5 {
+  width: 73px;
+  height: 58px;
+  bottom: 9.5%;
+  right: 35%;
+}
+
+.selection-drug .pills-bg {
+  position: absolute;
+  z-index: 0;
+}
+
+.selection-drug .pills-bg-l {
+  width: 141px;
+  height: 211px;
+  top: 14%;
+}
+
+.selection-drug .pills-bg-r {
+  width: 122px;
+  height: 197px;
+  right: 0;
+  bottom: 10%;
 }
 
 .selection-drug .section__heading {
@@ -4083,6 +4154,29 @@ body {
 
   .section-slider .slide-about__content {
     padding-left: 100px;
+  }
+
+  .selection-drug .pills-3 {
+    width: 107px;
+    height: 80px;
+    right: -1.5%;
+  }
+
+  .selection-drug .pills-4 {
+    width: 189px;
+    height: 178px;
+    left: -5.5%;
+  }
+
+  .selection-drug .pills-bg-l {
+    width: 109px;
+    height: 161px;
+  }
+
+  .selection-drug .pills-bg-r {
+    width: 99px;
+    height: 168px;
+    bottom: 18%;
   }
 }
 
@@ -4793,6 +4887,22 @@ body {
     margin-bottom: 50px;
   }
 
+  .selection-drug .pills-1 {
+    left: 10.25%;
+    top: 1.5%;
+  }
+
+  .selection-drug .pills-2 {
+    right: 2.25%;
+    top: 2.75%;
+  }
+
+  .selection-drug .pills-3,
+  .selection-drug .pills-4,
+  .selection-drug .pills-bg {
+    display: none;
+  }
+
   .single-article .inner-content {
     padding-left: 8%;
   }
@@ -5278,6 +5388,10 @@ body {
   .disease-list__title {
     font-size: 20px;
     padding-bottom: 5px;
+  }
+
+  .selection-drug .pills {
+    display: none;
   }
 
   .page-count {

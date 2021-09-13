@@ -3,12 +3,76 @@
   overflow: hidden;
 
   .bg-section {
-    min-height: 906px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    position: relative;
     padding-top: 188px;
+  }
 
+  .pills {
+    position: absolute;
+    z-index: 0;
+    transition: 2s transform;
+
+    img {
+      width: 100%;
+    }
+
+    &.anim-pills {
+      transform: rotate(70deg);
+      transition: 2s transform;
+    }
+
+    &-1 {
+      left: 21.25%;
+      top: 9.5%;
+      width: 71px;
+      height: 73px;
+    }
+
+    &-2 {
+      right: 21.25%;
+      top: 10.75%;
+      width: 62px;
+      height: 57px;
+    }
+
+    &-3 {
+      width: 130px;
+      height: 97px;
+      right: 4.5%;
+      top: 36%;
+    }
+
+    &-4 {
+      width: 255px;
+      height: 259px;
+      left: 1.5%;
+      bottom: 14%;
+    }
+
+    &-5 {
+      width: 73px;
+      height: 58px;
+      bottom: 9.5%;
+      right: 35%;
+    }
+  }
+
+  .pills-bg {
+    position: absolute;
+    z-index: 0;
+
+    &-l {
+      width: 141px;
+      height: 211px;
+      top: 14%;
+    }
+
+    &-r {
+      width: 122px;
+      height: 197px;
+      right: 0;
+      bottom: 10%;
+    }
   }
 
   .section__heading {
@@ -23,7 +87,8 @@
     text-align: center;
     color: #909090;
   }
-  .small{
+
+  .small {
     display: block;
   }
 
@@ -38,8 +103,34 @@
     }
   }
 
+  @media all and (max-width: 1480px) {
+    .pills {
+
+      &-3 {
+        width: 107px;
+        height: 80px;
+        right: -1.5%;
+      }
+
+      &-4 {
+        width: 189px;
+        height: 178px;
+        left: -5.5%;
+      }
+
+    }
+    .pills-bg-l {
+      width: 109px;
+      height: 161px;
+    }
+    .pills-bg-r {
+      width: 99px;
+      height: 168px;
+      bottom: 18%;
+    }
+  }
   @include respond-to($md) {
-    .bg-section{
+    .bg-section {
       padding-top: 0;
     }
     .drugs-list {
@@ -48,6 +139,24 @@
     .drugs-list__item {
       width: 50%;
       margin-bottom: 50px;
+    }
+    .pills-1 {
+      left: 10.25%;
+      top: 1.5%;
+    }
+    .pills-2 {
+      right: 2.25%;
+      top: 2.75%;
+    }
+    .pills-3,
+    .pills-4,
+    .pills-bg{
+      display: none;
+    }
+  }
+  @include respond-to($sm) {
+    .pills{
+      display: none;
     }
   }
   @include respond-to($xs) {
