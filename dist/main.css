@@ -1185,13 +1185,15 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
+  align-items: center;
   line-height: 1;
   color: #24243F;
 }
 
 .menu__item {
   padding: 5px 22px;
+  text-align: center;
 }
 
 .menu__link {
@@ -1954,7 +1956,7 @@ body {
   position: relative;
   background-image: url(../assets/img/prevention.jpg);
   background-repeat: no-repeat;
-  background-position: 0;
+  background-position: top;
   background-size: cover;
   color: #ffffff;
   padding: 53px 0 70px;
@@ -2946,7 +2948,7 @@ body {
   align-items: center;
   background-clip: padding-box;
   border: 3px solid transparent;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 17px;
   color: #000000;
 }
@@ -3185,6 +3187,7 @@ body {
   border: 1px solid #ffffff;
   color: #ffffff;
   margin: 0 17px 50px;
+  text-shadow: none;
 }
 
 .consequences-list__item:before,
@@ -5829,6 +5832,7 @@ body {
     background-position: top right 24px;
     background-repeat: no-repeat;
     background-size: 62% 105%;
+    font-size: 14px;
     max-width: 308px;
     height: 164px;
   }

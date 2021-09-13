@@ -39,6 +39,7 @@ $(document).ready(function () {
             slidesPerView: 1.48,
             spaceBetween: 66,
             slidesOffsetBefore: 43,
+            speed:3000,
             breakpoints: {
                 320: {
                     slidesPerView: 1.5,
