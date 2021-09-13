@@ -3200,6 +3200,7 @@ body {
 
 .consequences-list__item:before {
   right: -35px;
+  background-color: rgba(255, 255, 255, 0.5);
   width: 35px;
   height: 1px;
 }
