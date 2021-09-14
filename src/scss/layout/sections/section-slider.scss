@@ -48,7 +48,7 @@
 
     &__content {
       position: relative;
-      width: 48%;
+      width: 53%;
       padding-top: 108px;
       padding-left: 150px;
       padding-bottom: 77px;
@@ -72,7 +72,7 @@
     }
 
     &__img {
-      width: 52%;
+      width: 47%;
 
       img {
         vertical-align: middle;
@@ -85,7 +85,7 @@
       width: 65%;
     }
     .slide-about__heading {
-      font-size: 50px;
+      font-size: 46px;
     }
     .wrapper-slider {
       min-height: 744px;
@@ -105,8 +105,7 @@
       padding-bottom: 120px;
     }
     .wrapper-slider {
-      min-height: 0;
-      height: auto;
+      min-height: 555px;
     }
 
     .counter-slide {
@@ -126,6 +125,11 @@
     &:before {
       display: none;
     }
+    .wrapper-slider {
+      min-height: 0;
+      height: auto;
+    }
+
     .slide-about {
       .counter-slide {
         line-height: .8;

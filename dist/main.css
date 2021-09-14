@@ -1954,10 +1954,10 @@ body {
 
 .prevention {
   position: relative;
-  background-image: url(../assets/img/prevention.jpg);
-  background-repeat: no-repeat;
+  background-image: url(../assets/img/prevention.png);
+  background-repeat: repeat-y;
   background-position: top;
-  background-size: cover;
+  background-size: contain;
   color: #ffffff;
   padding: 53px 0 70px;
 }
@@ -2796,7 +2796,7 @@ body {
 
 .section-slider .slide-about__content {
   position: relative;
-  width: 48%;
+  width: 53%;
   padding-top: 108px;
   padding-left: 150px;
   padding-bottom: 77px;
@@ -2820,7 +2820,7 @@ body {
 }
 
 .section-slider .slide-about__img {
-  width: 52%;
+  width: 47%;
 }
 
 .section-slider .slide-about__img img {
@@ -3507,21 +3507,17 @@ body {
   right: 35%;
 }
 
-.selection-drug .pills-bg {
-  position: absolute;
-  z-index: 0;
-}
-
-.selection-drug .pills-bg-l {
-  width: 141px;
+.selection-drug .pills-6 {
+  width: 236px;
   height: 211px;
   top: 14%;
+  left: -6.5%;
 }
 
-.selection-drug .pills-bg-r {
-  width: 122px;
+.selection-drug .pills-7 {
+  width: 200px;
   height: 197px;
-  right: 0;
+  right: -5%;
   bottom: 10%;
 }
 
@@ -4145,7 +4141,7 @@ body {
   }
 
   .section-slider .slide-about__heading {
-    font-size: 50px;
+    font-size: 46px;
   }
 
   .section-slider .wrapper-slider {
@@ -4317,8 +4313,7 @@ body {
   }
 
   .section-slider .wrapper-slider {
-    min-height: 0;
-    height: auto;
+    min-height: 555px;
   }
 
   .section-slider .counter-slide {
@@ -4790,6 +4785,11 @@ body {
 
   .section-slider:before {
     display: none;
+  }
+
+  .section-slider .wrapper-slider {
+    min-height: 0;
+    height: auto;
   }
 
   .section-slider .slide-about .counter-slide {

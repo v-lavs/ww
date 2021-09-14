@@ -55,22 +55,18 @@
       bottom: 9.5%;
       right: 35%;
     }
-  }
 
-  .pills-bg {
-    position: absolute;
-    z-index: 0;
-
-    &-l {
-      width: 141px;
+    &-6 {
+      width: 236px;
       height: 211px;
       top: 14%;
+      left: -6.5%;
     }
 
-    &-r {
-      width: 122px;
+    &-7 {
+      width: 200px;
       height: 197px;
-      right: 0;
+      right: -5%;
       bottom: 10%;
     }
   }
@@ -129,6 +125,7 @@
       bottom: 18%;
     }
   }
+
   @include respond-to($md) {
     .bg-section {
       padding-top: 0;
@@ -150,15 +147,17 @@
     }
     .pills-3,
     .pills-4,
-    .pills-bg{
+    .pills-bg {
       display: none;
     }
   }
+
   @include respond-to($sm) {
-    .pills{
+    .pills {
       display: none;
     }
   }
+
   @include respond-to($xs) {
     padding-bottom: 49px;
 
@@ -169,9 +168,11 @@
       font-size: 14px;
     }
   }
+
   @include respond-to($xxs) {
     .drugs-list__item {
       margin-bottom: 30px;
     }
   }
+
 }
